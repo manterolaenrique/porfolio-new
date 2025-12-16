@@ -80,6 +80,7 @@ export interface Project {
   order: number
 }
 export interface ContactInfo {
+  _id?: string
   headline: string
   subtitle: string
   cvFile: {
