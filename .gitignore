@@ -1,0 +1,77 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Testing
+/coverage
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Next.js
+/.next/
+/out/
+.next/
+
+# Production
+/build
+/dist
+
+# Misc
+.DS_Store
+*.pem
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.idea/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Local env files
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Vercel
+.vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.sln
+*.sw?
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Sanity
+.sanity/
+.sanity
+sanity-export.tar.gz
+
+# Temporary files
+tmp/
+temp/
+*.log
+test-sanity.js

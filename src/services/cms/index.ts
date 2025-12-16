@@ -1,0 +1,7 @@
+export { getSiteSettings } from './siteSettings'
+export { getHero } from './hero'
+export { getAbout } from './about'
+export { getFeaturedProjects, getAllProjects, getProjectBySlug } from './projects'
+export { client, urlFor } from './sanityClient'
+export { getSkillsByGroup } from './skills'
+export { getContactInfo } from './contact'

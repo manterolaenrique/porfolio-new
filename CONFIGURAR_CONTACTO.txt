@@ -1,0 +1,227 @@
+════════════════════════════════════════════════════════════════════════════
+  🎯 CONFIGURAR SECCIÓN CONTACTO EN SANITY - GUÍA RÁPIDA
+════════════════════════════════════════════════════════════════════════════
+
+SITUACIÓN ACTUAL:
+─────────────────
+✓ La sección Contacto ESTÁ IMPLEMENTADA en tu sitio
+✓ El link en la navbar funciona (scroll suave)
+✓ Los 6 cards están LISTOS para ser usados
+
+✗ Pero muestra un mensaje de advertencia porque NO HAY DATOS EN SANITY AÚN
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 1: ACCEDER A SANITY STUDIO
+════════════════════════════════════════════════════════════════════════════
+
+Abre este URL en tu navegador:
+
+    http://localhost:3001/admin
+
+✓ Deberías ver la interfaz de Sanity con tus schemas en el lado izquierdo
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 2: BUSCAR "INFORMACIÓN DE CONTACTO"
+════════════════════════════════════════════════════════════════════════════
+
+En el panel izquierdo de Sanity, busca:
+    
+    "Información de Contacto"
+
+También puede estar listado como:
+    - contactInfo
+    - Contacto
+    - Un botón "+" para crear nuevo
+
+Si no lo ves:
+→ Recarga Sanity (F5)
+→ O reinicia el servidor de Sanity (npm run sanity)
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 3: CREAR Y COMPLETAR EL DOCUMENTO
+════════════════════════════════════════════════════════════════════════════
+
+Haz clic para crear un nuevo documento. Completa los siguientes CAMPOS REQUERIDOS:
+
+  1. ENCABEZADO PRINCIPAL
+     Texto:    ¿Interesado en trabajar conmigo?
+     
+  2. SUBTÍTULO
+     Texto:    Descarga mi CV o contáctame por tus medios preferidos.
+     
+  3. EMAIL PRINCIPAL ⭐ REQUERIDO
+     Texto:    contacto@enriquemanterola.com
+     ┗ Reemplaza con TU EMAIL
+     
+  4. URL LINKEDIN ⭐ REQUERIDO
+     Texto:    https://linkedin.com/in/enriquemanterola
+     ┗ Reemplaza con TU URL de LinkedIn
+     
+  5. ARCHIVO CV (PDF) ⭐⭐⭐ MUY IMPORTANTE
+     Haz clic en "Upload" y selecciona tu archivo PDF
+     Espera a que se cargue completamente
+     ┗ SIN ESTO, el card de descargar CV no aparecerá
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 4: CAMPOS OPCIONALES (PERO RECOMENDADOS)
+════════════════════════════════════════════════════════════════════════════
+
+  6. USUARIO GITHUB (Opcional)
+     Texto:    enriquemanterola
+     ┗ Solo el username, sin @
+     ┗ Si lo rellenas, se mostrarán tus estadísticas de GitHub en vivo
+     
+  7. MOSTRAR ESTADÍSTICAS GITHUB (Opcional)
+     Casilla:  ✓ Marcada (checked)
+     
+  8. ZONA HORARIA
+     Seleccionar: América/Argentina/Buenos Aires
+     
+  9. HORA INICIO LABORAL
+     Hora:     09:00
+     
+  10. HORA FIN LABORAL
+      Hora:    17:00
+      
+  11. MOSTRAR CÓDIGO QR (Opcional)
+      Casilla: ✓ Marcada (checked)
+      
+  12. NOMBRE COMPLETO (para QR)
+      Texto:   Enrique Manterola
+      ┗ Reemplaza con TU NOMBRE
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 5: PUBLICAR EL DOCUMENTO
+════════════════════════════════════════════════════════════════════════════
+
+Una vez completados TODOS los campos:
+
+  1. Haz clic en el botón "PUBLISH" (esquina superior derecha)
+  2. Espera a que aparezca el checkbox ✓
+  3. ¡Listo! El documento fue publicado
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 PASO 6: ACTUALIZAR TU SITIO
+════════════════════════════════════════════════════════════════════════════
+
+Vuelve a tu navegador en http://localhost:3000
+
+Actualiza la página:
+    → Presiona F5
+    → O Ctrl+R (Cmd+R en Mac)
+
+Espera 5-10 segundos y después...
+
+✨ VERÁS LOS 6 CARDS EN LA SECCIÓN CONTACTO:
+    • 📄 MI CV - Descargar
+    • 🌍 TIMEZONE - Mostrar hora actual
+    • 🐙 GITHUB - Estadísticas en vivo
+    • 📧 EMAIL - Copiar o enviar
+    • 💼 LINKEDIN - Ir a tu perfil
+    • 📱 QR CODE - Escanear para contacto
+
+
+════════════════════════════════════════════════════════════════════════════
+  ⚠️ PROBLEMAS COMUNES
+════════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: "No veo la sección Contacto"
+SOLUCIÓN: 
+  → No hay documento en Sanity
+  → Sigue los pasos 1-5 arriba
+  → Recarga la página
+
+PROBLEMA: "Veo el mensaje de advertencia en Contacto"
+SOLUCIÓN:
+  → El documento existe pero falta algún dato
+  → Edítalo en Sanity y completa todos los campos
+  → Haz clic en "Publish"
+  → Recarga tu sitio
+
+PROBLEMA: "El PDF no se carga"
+SOLUCIÓN:
+  → Asegúrate de que sea un archivo PDF válido
+  → Intenta subir el archivo nuevamente
+  → Verifica que sea menor a 20MB
+
+PROBLEMA: "Los stats de GitHub no aparecen"
+SOLUCIÓN:
+  → Verifica que el usuario sea correcto (sin espacios, sin @)
+  → Activa "Mostrar Estadísticas GitHub"
+  → Recarga después de 1-2 minutos
+
+PROBLEMA: "El link de Contacto en navbar no funciona"
+SOLUCIÓN:
+  → Recarga la página completa (Ctrl+Shift+R)
+  → Comprueba que hay un documento en Sanity
+  → Limpia el cache del navegador
+
+
+════════════════════════════════════════════════════════════════════════════
+  📋 CHECKLIST FINAL
+════════════════════════════════════════════════════════════════════════════
+
+☐ Accedí a http://localhost:3001/admin
+☐ Encontré "Información de Contacto" en Sanity
+☐ Creé un nuevo documento
+☐ Complété: Email, LinkedIn, PDF
+☐ Agregué (opcional): GitHub username
+☐ Agregué: Zona horaria, nombre completo
+☐ Hice clic en "Publish"
+☐ Recargué mi sitio (F5)
+☐ Veo los 6 cards en la sección Contacto
+☐ El link "Contacto" en navbar funciona
+
+
+════════════════════════════════════════════════════════════════════════════
+  ✨ PRÓXIMOS PASOS DESPUÉS DE CONFIGURAR
+════════════════════════════════════════════════════════════════════════════
+
+Una vez que veas los 6 cards:
+
+1. Prueba descargar el CV
+   → Haz clic en "📄 MI CV"
+   → Debería descargarse tu PDF
+
+2. Prueba copiar el email
+   → Haz clic en "📧 EMAIL"
+   → Tu email se copiará al portapapeles
+
+3. Prueba el link de LinkedIn
+   → Haz clic en "💼 LINKEDIN"
+   → Debería abrirse tu perfil en una nueva pestaña
+
+4. Escanea el QR
+   → Usa tu celular para escanear el código QR
+   → Debería agregarte como contacto
+
+5. Verifica GitHub stats
+   → Los stats se actualizan cada hora
+   → Muestra: ⭐ stars, 👥 followers, 💡 contributions
+
+
+════════════════════════════════════════════════════════════════════════════
+  🔗 ACCESOS RÁPIDOS
+════════════════════════════════════════════════════════════════════════════
+
+Sanity Studio:      http://localhost:3001/admin
+Tu Sitio:           http://localhost:3000
+Tu Sitio (Contacto): http://localhost:3000#contact
+
+
+════════════════════════════════════════════════════════════════════════════
+  ✅ ¿YA CONFIGURASTE? ¡ADELANTE!
+════════════════════════════════════════════════════════════════════════════
+
+Abre Sanity Studio y comienza a llenar los datos:
+
+    http://localhost:3001/admin
+
+¡Nos vemos en el Contacto! 🚀
+
+════════════════════════════════════════════════════════════════════════════

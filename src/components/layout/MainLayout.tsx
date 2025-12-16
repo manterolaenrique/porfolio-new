@@ -1,0 +1,21 @@
+import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
+
+interface MainLayoutProps {
+  children: React.ReactNode
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-brand-bgSoft dark:bg-brand-bg">
+      <Navbar />
+      <main className="pt-16">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default MainLayout

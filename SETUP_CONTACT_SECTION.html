@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía: Configurar Sección Contacto - Sanity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .warning strong {
+            color: #856404;
+        }
+        
+        .step {
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+        }
+        
+        .step h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .field-list {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .field-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .field-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .field-label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .field-value {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            color: #666;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        
+        .field-optional {
+            background: #e3f2fd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            color: #1976d2;
+            margin-left: 10px;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+        
+        .link-button:hover {
+            background: #764ba2;
+        }
+        
+        .checklist {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .faq {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #667eea;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Configurar Contacto en Sanity</h1>
+            <p>Guía paso a paso para habilitar la sección de contacto</p>
+        </div>
+        
+        <div class="content">
+            <div class="warning">
+                <strong>⚠️ Nota:</strong> La sección de Contacto está lista en tu sitio, pero muestra un mensaje porque <strong>no hay datos configurados en Sanity aún</strong>. Sigue esta guía para completar la configuración.
+            </div>
+            
+            <!-- PASO 1 -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">1</span>
+                    Accede a Sanity Studio
+                </h2>
+                <p>Abre este enlace en tu navegador:</p>
+                <a href="http://localhost:3001/admin" class="link-button" target="_blank">
+                    Abrir Sanity Studio →
+                </a>
+                <p style="margin-top: 10px; color: #666;">
+                    O escribe manualmente en la barra de direcciones:
+                </p>
+                <div class="code-block">http://localhost:3001/admin</div>
+            </div>
+            
+            <!-- PASO 2 -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">2</span>
+                    Busca "Información de Contacto"
+                </h2>
+                <p>En el panel izquierdo de Sanity Studio, verás una lista de tipos de contenido. Busca:</p>
+                <div class="code-block">Información de Contacto</div>
+                <p style="color: #666; margin-top: 10px;">O puede estar listado como:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><code>contactInfo</code></li>
+                    <li><code>Contacto</code></li>
+                    <li>Un botón "+" para crear nuevo</li>
+                </ul>
+            </div>
+            
+            <!-- PASO 3 -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">3</span>
+                    Completa los campos (REQUERIDOS)
+                </h2>
+                <p style="margin-bottom: 15px;">Llena los siguientes campos con tu información:</p>
+                
+                <div class="field-list">
+                    <div class="field-item">
+                        <label class="field-label">📝 Encabezado Principal</label>
+                        <div class="field-value">¿Interesado en trabajar conmigo?</div>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">📝 Subtítulo</label>
+                        <div class="field-value">Descarga mi CV o contáctame por tus medios preferidos.</div>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">📧 Email Principal</label>
+                        <div class="field-value">contacto@enriquemanterola.com</div>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Reemplaza con tu email</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">💼 URL LinkedIn</label>
+                        <div class="field-value">https://linkedin.com/in/enriquemanterola</div>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Reemplaza con tu perfil</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">📄 Archivo CV (PDF) <span class="field-optional">REQUERIDO</span></label>
+                        <p style="color: #d32f2f; font-weight: bold; margin-top: 5px;">⚠️ IMPORTANTE: Debes subir un archivo PDF</p>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                            Haz clic en el campo "Upload" y selecciona tu CV en PDF. Espera a que se cargue completamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PASO 4 - OPCIONAL -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">4</span>
+                    Campos Opcionales
+                </h2>
+                <p style="margin-bottom: 15px;">Estos campos son opcionales pero recomendados:</p>
+                
+                <div class="field-list">
+                    <div class="field-item">
+                        <label class="field-label">🐙 Usuario GitHub <span class="field-optional">Opcional</span></label>
+                        <div class="field-value">enriquemanterola</div>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Sin @ ni espacios. Si lo agregas, se mostrarán tus estadísticas de GitHub en vivo.</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">✓ Mostrar Estadísticas GitHub <span class="field-optional">Opcional</span></label>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Marca esta casilla para mostrar tus stats de GitHub (⭐ stars, 👥 followers, etc.)</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">🌍 Zona Horaria</label>
+                        <div class="field-value">América/Argentina/Buenos Aires (UTC -3)</div>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Selecciona tu zona horaria de la lista desplegable</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">⏰ Horas Laborales</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                            <div>
+                                <label style="font-size: 0.9em;">Inicio</label>
+                                <div class="field-value">09:00</div>
+                            </div>
+                            <div>
+                                <label style="font-size: 0.9em;">Fin</label>
+                                <div class="field-value">17:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">📱 Mostrar Código QR <span class="field-optional">Opcional</span></label>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Marca para mostrar un código QR de contacto que otros puedan escanear</p>
+                    </div>
+                    
+                    <div class="field-item">
+                        <label class="field-label">👤 Nombre Completo (para QR)</label>
+                        <div class="field-value">Enrique Manterola</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PASO 5 -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">5</span>
+                    Publicar los cambios
+                </h2>
+                <p>Cuando termines de llenar los campos:</p>
+                <ol style="margin: 15px 0 15px 20px;">
+                    <li>Haz clic en el botón <strong>"Publish"</strong> (parte superior derecha)</li>
+                    <li>Espera la confirmación ✓</li>
+                    <li>Espera 5-10 segundos a que se revalide el cache</li>
+                </ol>
+                <div class="code-block">✓ Documento publicado</div>
+            </div>
+            
+            <!-- PASO 6 -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">6</span>
+                    Actualiza tu sitio
+                </h2>
+                <p>Vuelve a tu sitio y recarga la página:</p>
+                <div class="code-block">Presiona F5 o Ctrl+R (Cmd+R en Mac)</div>
+                <div class="success">
+                    ✅ Deberías ver los 6 cards en la sección "Contacto" ahora
+                </div>
+            </div>
+            
+            <!-- RESULTADO ESPERADO -->
+            <div class="step">
+                <h2>
+                    <span class="step-number">✨</span>
+                    Resultado esperado
+                </h2>
+                <p>Verás una grid de 6 tarjetas:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📄</div>
+                        <strong>MI CV</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">Descargar</p>
+                    </div>
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">🌍</div>
+                        <strong>TIMEZONE</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">15:45</p>
+                    </div>
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">🐙</div>
+                        <strong>GITHUB</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">156 ⭐</p>
+                    </div>
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📧</div>
+                        <strong>EMAIL</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">Copiar</p>
+                    </div>
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">💼</div>
+                        <strong>LINKEDIN</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">Ir a perfil</p>
+                    </div>
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📱</div>
+                        <strong>QR CODE</strong>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 5px;">Escanear</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CHECKLIST -->
+            <div class="step">
+                <h2>📋 Checklist final</h2>
+                <div class="checklist">
+                    <label>
+                        <input type="checkbox">
+                        Accedí a Sanity Studio
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Creé un documento "Información de Contacto"
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Complété el email principal
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Complété el URL de LinkedIn
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Subí un archivo PDF en el campo "Archivo CV"
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Agregué mi usuario de GitHub (opcional)
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Hice clic en "Publish"
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Esperé 5-10 segundos
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Recargué la página (F5)
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Veo los 6 cards en la sección Contacto
+                    </label>
+                </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="step">
+                <h2>❓ Preguntas Frecuentes</h2>
+                
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué pasa si no subo un PDF?</div>
+                        <div class="faq-answer">
+                            El card de "Descargar CV" no aparecerá. Es recomendable subir tu CV.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Los cambios se ven al instante?</div>
+                        <div class="faq-answer">
+                            No, el sitio tiene cache de 1 hora. Después de publicar en Sanity, espera 5-10 segundos y recarga (F5). Los cambios pueden tardarse.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo cambiar los datos después?</div>
+                        <div class="faq-answer">
+                            Sí, siempre. Solo vuelve a Sanity Studio, edita el documento y publica de nuevo.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Dónde aparece esta sección?</div>
+                        <div class="faq-answer">
+                            Al final del sitio. El link "Contacto" en la navbar te lleva aquí con scroll suave.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué es el código QR?</div>
+                        <div class="faq-answer">
+                            Es un código que otros pueden escanear con su celular para guardarte como contacto automáticamente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SIGUIENTE PASO -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; text-align: center; margin-top: 30px;">
+                <h3 style="margin-bottom: 15px;">🚀 ¿Listo para configurar?</h3>
+                <p style="margin-bottom: 20px;">Abre Sanity Studio y completa los datos ahora mismo:</p>
+                <a href="http://localhost:3001/admin" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: transform 0.2s;" target="_blank">
+                    Abrir Sanity Studio →
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Guía de configuración - ContactInfo para Enrique Manterola</p>
+        </footer>
+    </div>
+</body>
+</html>
