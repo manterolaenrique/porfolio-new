@@ -49,7 +49,7 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         ref={ref as React.Ref<HTMLButtonElement>}
-        {...props}
+        {...(props as any)}
       >
         {children}
       </motion.button>
