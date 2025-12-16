@@ -8,11 +8,11 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 export const revalidate = 3600
 
 interface PageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  const { slug } = params
+  const { slug } = await params
   const project = await getProjectBySlug(slug)
 
   if (!project) {
