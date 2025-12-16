@@ -7,14 +7,15 @@ interface CardProps {
   className?: string
   hover3D?: boolean
   glassEffect?: boolean
-  
+  onClick?: () => void
 }
 
 const Card: React.FC<CardProps> = ({ 
   children, 
   className, 
   hover3D = false,
-  glassEffect = false
+  glassEffect = false,
+  onClick
 }) => {
   const baseStyles = 'rounded-xl overflow-hidden transition-all duration-300'
   
@@ -36,6 +37,7 @@ const Card: React.FC<CardProps> = ({
           transformStyle: 'preserve-3d',
           perspective: 1000,
         }}
+        onClick={onClick}
       >
         {children}
       </motion.div>
@@ -43,7 +45,7 @@ const Card: React.FC<CardProps> = ({
   }
   
   return (
-    <div className={cn(baseStyles, glassStyles, className)}>
+    <div className={cn(baseStyles, glassStyles, className)} onClick={onClick}>
       {children}
     </div>
   )
