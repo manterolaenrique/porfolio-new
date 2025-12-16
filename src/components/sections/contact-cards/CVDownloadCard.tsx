@@ -30,8 +30,8 @@ const CVDownloadCard: React.FC<CVDownloadCardProps> = ({
       setIsDownloading(true)
       window.open(cvFile.asset.url, '_blank')
       // Track analytics if available
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'cv_download', {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'cv_download', {
           filename: cvFile.asset.filename,
         })
       }
