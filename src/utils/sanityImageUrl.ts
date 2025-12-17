@@ -108,7 +108,10 @@ export function getOptimizedImageUrl(
       .url()
   } catch (error) {
     console.error('Error building optimized image URL:', error)
-    return source.asset.url ?? null
+    if (typeof source.asset === 'object' && source.asset?.url) {
+      return source.asset.url
+    }
+    return null
   }
 }
 
