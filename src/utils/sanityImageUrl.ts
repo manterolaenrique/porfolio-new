@@ -60,7 +60,7 @@ export function getImageUrl(source: SanityImage): string | null {
   if (typeof source.asset === 'object' && source.asset?._ref) {
     try {
       console.log('🔧 [getImageUrl] Asset con _ref, procesando con imageUrlBuilder:', source.asset._ref)
-      const builtUrl = urlFor(source.asset).url()
+      const builtUrl = urlFor(source as any).url()
       console.log('✅ [getImageUrl] URL construida desde _ref:', builtUrl)
       return builtUrl
     } catch (error) {
@@ -72,7 +72,7 @@ export function getImageUrl(source: SanityImage): string | null {
   if (typeof source.asset === 'object' && source.asset?._id) {
     try {
       console.log('🔧 [getImageUrl] Procesando con imageUrlBuilder desde _id')
-      return urlFor({ asset: source.asset }).url()
+      return urlFor(source as any).url()
     } catch (error) {
       console.error('❌ Error building image URL from _id:', error)
     }
