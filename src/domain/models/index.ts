@@ -127,6 +127,7 @@ export interface GithubStats {
   contributions30days: number
   profileUrl: string
   avatarUrl?: string
+  totalStars: number
 }
 
 export interface ContactGroup {
