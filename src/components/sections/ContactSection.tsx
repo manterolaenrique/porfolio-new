@@ -7,13 +7,6 @@ export const revalidate = 3600 // Revalidate every hour
 export default async function ContactSection() {
   const contactInfo = await getContactInfo()
   
-  // 🔍 DEBUG: Verificar qué retorna Sanity
-  console.log('📋 [ContactSection] contactInfo recibida:', {
-    hasContactInfo: !!contactInfo,
-    hasCvPreviewImage: !!contactInfo?.cvPreviewImage,
-    cvPreviewImageData: contactInfo?.cvPreviewImage,
-  })
-
   // Default data if not configured in Sanity yet
   const displayData = contactInfo || {
     headline: '¿Interesado en trabajar conmigo?',

@@ -43,6 +43,13 @@ export default defineConfig({
                   .schemaType('about')
                   .documentId('about')
               ),
+            S.listItem()
+              .title('Visión Comercial')
+              .child(
+                S.document()
+                  .schemaType('commercialProfile')
+                  .documentId('commercialProfile')
+              ),
             S.divider(),
             S.listItem()
               .title('Información de Contacto')

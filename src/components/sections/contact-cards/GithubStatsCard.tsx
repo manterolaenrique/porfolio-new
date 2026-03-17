@@ -10,6 +10,7 @@ interface GithubStatsCardProps {
 }
 
 const GithubStatsCard: React.FC<GithubStatsCardProps> = ({ stats }) => {
+  console.log('GithubStatsCard stats:', stats)
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -58,9 +59,9 @@ const GithubStatsCard: React.FC<GithubStatsCardProps> = ({ stats }) => {
           </div>
           <div>
             <p className="text-xl font-bold text-brand-primary">
-              {stats.contributions30days}
+              {stats.totalStars}
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">Cons.</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">⭐</p>
           </div>
         </div>
 

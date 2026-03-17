@@ -5,3 +5,4 @@ export { getFeaturedProjects, getAllProjects, getProjectBySlug } from './project
 export { client, urlFor } from './sanityClient'
 export { getSkillsByGroup } from './skills'
 export { getContactInfo } from './contact'
+export { getCommercialProfile } from './commercialProfile'

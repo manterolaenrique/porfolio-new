@@ -30,13 +30,6 @@ const CONTACT_INFO_QUERY = `
 export async function getContactInfo(): Promise<ContactInfo | null> {
   try {
     const contact = await client.fetch<ContactInfo>(CONTACT_INFO_QUERY)
-    
-    console.log('🔗 [getContactInfo] Datos de Sanity:', {
-      id: contact?._id,
-      hasCvPreviewImage: !!contact?.cvPreviewImage,
-      cvPreviewImageValue: contact?.cvPreviewImage,
-    })
-    
     return contact
   } catch (error) {
     console.error('❌ Error fetching contact info:', error)

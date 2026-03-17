@@ -25,6 +25,9 @@ export async function getGithubStats(
 
     // Fetch contributions (using GraphQL for better accuracy)
     const contributionsCount = await getGithubContributions(username)
+    
+    // Fetch total stars from all repositories
+    const totalStars = await getGithubTotalStars(username)
 
     return {
       username,
@@ -33,6 +36,7 @@ export async function getGithubStats(
       contributions30days: contributionsCount,
       profileUrl: userData.html_url,
       avatarUrl: userData.avatar_url,
+      totalStars,
     }
   } catch (error) {
     console.error('Error fetching GitHub stats:', error)
@@ -66,6 +70,52 @@ async function getGithubContributions(
     return match ? parseInt(match[1], 10) : 0
   } catch (error) {
     console.error('Error fetching GitHub contributions:', error)
+    return 0
+  }
+}
+
+async function getGithubTotalStars(
+  username: string
+): Promise<number> {
+  try {
+    let totalStars = 0
+    let page = 1
+    let hasMore = true
+
+    // Paginate through all repos to get total stars
+    while (hasMore) {
+      const response = await fetch(
+        `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`,
+        {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+          },
+        }
+      )
+
+      if (!response.ok) {
+        break
+      }
+
+      const repos = await response.json()
+
+      if (repos.length === 0) {
+        hasMore = false
+        break
+      }
+
+      totalStars += repos.reduce((sum: number, repo: any) => sum + (repo.stargazers_count || 0), 0)
+
+      if (repos.length < 100) {
+        hasMore = false
+      }
+
+      page++
+    }
+
+    return totalStars
+  } catch (error) {
+    console.error('Error fetching GitHub total stars:', error)
     return 0
   }
 }
