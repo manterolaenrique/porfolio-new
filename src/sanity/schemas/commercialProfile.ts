@@ -200,8 +200,9 @@ export default defineType({
       ],
       validation: (Rule) =>
         Rule.custom((value, context) => {
-          if (context?.parent?.showTransformationRoute === false) return true
-          if (!value || value.length < 3) return 'Cargá al menos 3 fases para la ruta de transformación'
+          const parent = context?.parent as { showTransformationRoute?: boolean } | undefined
+          if (parent?.showTransformationRoute === false) return true
+          if (!Array.isArray(value) || value.length < 3) return 'Cargá al menos 3 fases para la ruta de transformación'
           return true
         }),
     },
@@ -239,8 +240,9 @@ export default defineType({
       initialValue: ['Startup', 'PyME', 'Corporativo'],
       validation: (Rule) =>
         Rule.custom((value, context) => {
-          if (context?.parent?.showDecisionHub === false) return true
-          if (!value || value.length < 2) return 'Definí al menos 2 opciones de tipo de cliente'
+          const parent = context?.parent as { showDecisionHub?: boolean } | undefined
+          if (parent?.showDecisionHub === false) return true
+          if (!Array.isArray(value) || value.length < 2) return 'Definí al menos 2 opciones de tipo de cliente'
           return true
         }),
     },
@@ -253,8 +255,9 @@ export default defineType({
       initialValue: ['Discovery', 'Propuesta', 'Entrega'],
       validation: (Rule) =>
         Rule.custom((value, context) => {
-          if (context?.parent?.showDecisionHub === false) return true
-          if (!value || value.length < 2) return 'Definí al menos 2 opciones de etapa'
+          const parent = context?.parent as { showDecisionHub?: boolean } | undefined
+          if (parent?.showDecisionHub === false) return true
+          if (!Array.isArray(value) || value.length < 2) return 'Definí al menos 2 opciones de etapa'
           return true
         }),
     },
@@ -267,8 +270,9 @@ export default defineType({
       initialValue: ['Velocidad', 'Reducir riesgo', 'Claridad técnica'],
       validation: (Rule) =>
         Rule.custom((value, context) => {
-          if (context?.parent?.showDecisionHub === false) return true
-          if (!value || value.length < 2) return 'Definí al menos 2 prioridades'
+          const parent = context?.parent as { showDecisionHub?: boolean } | undefined
+          if (parent?.showDecisionHub === false) return true
+          if (!Array.isArray(value) || value.length < 2) return 'Definí al menos 2 prioridades'
           return true
         }),
     },
