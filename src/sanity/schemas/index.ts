@@ -6,6 +6,7 @@ import skillGroup from './skillGroup'
 import skill from './skill'
 import socialLink from './socialLink'
 import contactInfo from './contactInfo'
+import commercialProfile from './commercialProfile'
 
 export const schemaTypes = [
   siteSettings,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   skill,
   socialLink,
   contactInfo,
+  commercialProfile,
 ]

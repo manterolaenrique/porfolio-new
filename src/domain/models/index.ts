@@ -145,3 +145,47 @@ export interface ContactCard {
   order: number
   enabled: boolean
 }
+
+export interface CommercialExperienceItem {
+  title: string
+  description: string
+  order: number
+}
+
+export interface PreSalesCapability {
+  title: string
+  description: string
+  order: number
+}
+
+export interface TransformationPhase {
+  title: string
+  subtitle: string
+  body: string
+  glow?: string
+  order: number
+}
+
+export interface CommercialProfile {
+  sectionTitle: string
+  sectionSubtitle?: string
+  anchorId?: string
+  introNarrative: any[]
+  experienceItems: CommercialExperienceItem[]
+  preSalesCapabilities: PreSalesCapability[]
+  evolutionStatement: string
+  targetRoles: string[]
+  ctaLabel?: string
+  ctaHref?: string
+  showTransformationRoute?: boolean
+  transformationRouteTitle?: string
+  transformationRoutePhases?: TransformationPhase[]
+  showDecisionHub?: boolean
+  decisionHubTitle?: string
+  decisionHubSubtitle?: string
+  decisionHubClientTypes?: string[]
+  decisionHubStages?: string[]
+  decisionHubPriorities?: string[]
+  isEnabled: boolean
+  order: number
+}
