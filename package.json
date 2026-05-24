@@ -14,7 +14,8 @@
     "sanity:deploy": "sanity deploy",
     "type-check": "tsc --noEmit",
     "seed:sanity": "node scripts/seedSanity.js",
-    "seed:commercial": "node scripts/seedCommercialProfile.js"
+    "seed:commercial": "node scripts/seedCommercialProfile.js",
+    "backup:prod": "node -e \"const {execSync}=require('node:child_process'); const {mkdirSync}=require('node:fs'); const projectId=process.env.NEXT_PUBLIC_SANITY_PROJECT_ID; const writeToken=process.env.SANITY_WRITE_TOKEN; if(!projectId||!writeToken){console.error('Missing NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_WRITE_TOKEN'); process.exit(1);} mkdirSync('backups',{recursive:true}); const date=new Date().toISOString().slice(0,10); const cmd='npx sanity dataset export production ./backups/prod-backup-'+date+'.tar.gz --project-id='+projectId+' --token='+writeToken; execSync(cmd,{stdio:'inherit'});\""
   },
   "dependencies": {
     "@portabletext/react": "^3.1.0",

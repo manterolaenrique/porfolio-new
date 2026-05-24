@@ -341,3 +341,58 @@ Si el seed falla por permisos, revisa que `SANITY_WRITE_TOKEN` tenga permisos de
 - [Vercel Docs](https://vercel.com/docs)
 - [Next.js Deployment](https://nextjs.org/docs/deployment)
 - [Sanity Webhooks](https://www.sanity.io/docs/webhooks)
+
+## Sanity Revalidation Workflow (on-demand)
+
+Este repo usa `POST /api/revalidate?secret=...` para invalidar cache cuando cambia contenido en Sanity.
+
+### Variables requeridas en Vercel (Production)
+
+```env
+REVALIDATE_SECRET=un-valor-largo-y-aleatorio
+NEXT_PUBLIC_SANITY_PROJECT_ID=<project-id>
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_READ_TOKEN=<token-read>
+SANITY_WRITE_TOKEN=<token-write-opcional-para-seed-y-backup>
+```
+
+### Crear webhook en Sanity
+
+1. Sanity Manage -> API -> Webhooks -> Create webhook
+2. URL: `https://<tu-dominio>/api/revalidate?secret=<REVALIDATE_SECRET>`
+3. Dataset: `production`
+4. Triggers: `Create`, `Update`, `Delete`
+
+### Prueba manual de revalidacion
+
+```bash
+curl -X POST "https://<tu-dominio>/api/revalidate?secret=<REVALIDATE_SECRET>" -H "content-type: application/json" -d "{\"paths\":[\"/\",\"/projects\"]}"
+```
+
+Respuesta esperada:
+
+```json
+{"revalidated":true,"paths":["/","/projects"]}
+```
+
+### Flujo para editores de contenido
+
+1. Editar contenido en `/admin`.
+2. Publicar cambios.
+3. Sanity dispara el webhook.
+4. Vercel registra el `POST /api/revalidate`.
+5. La web publica refleja cambios en la siguiente visita.
+
+### Backup y rollback de dataset
+
+Export (backup):
+
+```bash
+npm run backup:prod
+```
+
+Import (rollback):
+
+```bash
+npx sanity dataset import ./backups/<archivo>.tar.gz production --replace --project-id <project-id> --token <sanity-manage-o-write-token>
+```
