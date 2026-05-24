@@ -20,6 +20,20 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  async headers() {
+    return [
+      {
+        // Permitir que Sanity (preview iframe) embeba el sitio
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self' https://*.sanity.io",
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig
