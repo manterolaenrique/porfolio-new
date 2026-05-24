@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const frameAncestorsCsp = "frame-ancestors 'self' https://*.sanity.io"
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -23,12 +25,24 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Permitir que Sanity (preview iframe) embeba el sitio
+        // Allow Sanity managed domains to embed the site for Studio previews.
         source: '/(.*)',
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "frame-ancestors 'self' https://*.sanity.io",
+            value: frameAncestorsCsp,
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
           },
         ],
       },
