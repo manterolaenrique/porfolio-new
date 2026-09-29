@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useContactInteraction } from '@/hooks/useContactInteraction'
 
@@ -15,12 +15,19 @@ const StatusTimezoneCard: React.FC<StatusTimezoneCardProps> = ({
   businessHoursStart,
   businessHoursEnd,
 }) => {
-  const { getWorkingHoursStatus, getStatusColor, getAvailabilityMessage } =
-    useContactInteraction()
+  const { getWorkingHoursStatus, getStatusColor } = useContactInteraction()
 
-  const status = getWorkingHoursStatus(timezone, businessHoursStart, businessHoursEnd)
+  const [status, setStatus] = useState<
+    'available' | 'outside' | 'unknown'
+  >('unknown')
+  const [currentTime, setCurrentTime] = useState('--:--')
   const statusColor = getStatusColor(status)
-  const message = getAvailabilityMessage(timezone, businessHoursStart, businessHoursEnd)
+  const message =
+    status === 'available'
+      ? '\u{1F7E2} Disponible ahora'
+      : status === 'outside'
+        ? '\u{1F534} Fuera del horario'
+        : '\u26AA Estado desconocido'
 
   // Formatear zona horaria
   const formatTimezone = (tz: string) => {
@@ -28,23 +35,36 @@ const StatusTimezoneCard: React.FC<StatusTimezoneCardProps> = ({
     return parts[parts.length - 1].replace(/_/g, ' ')
   }
 
-  // Obtener hora actual en la zona horaria
-  const getCurrentTime = () => {
-    try {
-      const now = new Date()
-      const timeInTimezone = new Date(
-        now.toLocaleString('en-US', { timeZone: timezone })
+  useEffect(() => {
+    const updateAvailability = () => {
+      setStatus(
+        getWorkingHoursStatus(timezone, businessHoursStart, businessHoursEnd)
       )
-      return timeInTimezone.toLocaleTimeString('es-ES', {
-        hour: '2-digit',
-        minute: '2-digit',
-      })
-    } catch {
-      return '--:--'
-    }
-  }
 
-  const currentTime = getCurrentTime()
+      try {
+        setCurrentTime(
+          new Intl.DateTimeFormat('es-AR', {
+            timeZone: timezone,
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+          }).format(new Date())
+        )
+      } catch {
+        setCurrentTime('--:--')
+      }
+    }
+
+    updateAvailability()
+    const interval = setInterval(updateAvailability, 60000)
+
+    return () => clearInterval(interval)
+  }, [
+    businessHoursEnd,
+    businessHoursStart,
+    getWorkingHoursStatus,
+    timezone,
+  ])
   const pulseAnimation = status === 'available'
 
   const containerVariants = {
