@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-      <body className="antialiased">
+      <body className="overflow-x-hidden antialiased">
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
