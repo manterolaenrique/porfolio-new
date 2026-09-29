@@ -124,10 +124,17 @@ export interface GithubStats {
   username: string
   publicRepos: number
   followers: number
-  contributions30days: number
+  commitsThisMonth: number | null
+  dailyCommits: GithubDailyCommit[]
+  activityStatus: 'available' | 'unavailable'
   profileUrl: string
   avatarUrl?: string
   totalStars: number
+}
+
+export interface GithubDailyCommit {
+  date: string
+  count: number
 }
 
 export interface ContactGroup {

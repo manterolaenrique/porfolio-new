@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useMemo, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Button from '@/components/ui/Button'
 import type {
   CommercialExperienceItem,
@@ -21,36 +21,35 @@ interface CommercialDecisionHubProps {
   decisionHubPriorities?: string[]
   experienceItems: CommercialExperienceItem[]
   preSalesCapabilities: PreSalesCapability[]
-  ctaLabel?: string
   ctaHref?: string
 }
 
 const defaultTimelinePhases: TransformationPhase[] = [
   {
-    title: 'Codigo',
-    subtitle: 'Base tecnica solida',
-    body: 'Arquitectura, calidad y velocidad de ejecucion para construir productos sostenibles.',
+    title: 'Código',
+    subtitle: 'Base técnica sólida',
+    body: 'Arquitectura, calidad y velocidad de ejecución para construir productos sostenibles.',
     glow: 'from-brand-primary/30 to-transparent',
     order: 1,
   },
   {
     title: 'Negocio',
     subtitle: 'Decisiones con contexto',
-    body: 'Priorizacion por impacto comercial real y alineacion con objetivos de negocio.',
+    body: 'Priorización por impacto comercial real y alineación con objetivos de negocio.',
     glow: 'from-brand-secondary/25 to-transparent',
     order: 2,
   },
   {
     title: 'Preventa',
     subtitle: 'Puente cliente-equipo',
-    body: 'Traduccion de necesidades a alcance viable para cerrar mejor y reducir friccion.',
+    body: 'Traducción de necesidades a alcance viable para cerrar mejor y reducir fricción.',
     glow: 'from-brand-primarySoft/25 to-transparent',
     order: 3,
   },
   {
     title: 'Impacto',
     subtitle: 'Resultado medible',
-    body: 'Combinacion de experiencia de usuario, ejecucion tecnica y valor tangible.',
+    body: 'Combinación de experiencia de usuario, ejecución técnica y valor tangible.',
     glow: 'from-brand-secondary/30 to-transparent',
     order: 4,
   },
@@ -68,11 +67,8 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
   decisionHubPriorities,
   experienceItems,
   preSalesCapabilities,
-  ctaLabel,
   ctaHref,
 }) => {
-  const reduceMotion = useReducedMotion()
-
   const routePhases =
     transformationRoutePhases && transformationRoutePhases.length > 0
       ? transformationRoutePhases
@@ -114,7 +110,7 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
     return {
       experience: experienceItems[experienceIndex],
       preSales: preSalesCapabilities[preSalesIndex],
-      summary: `Para ${businessType} en etapa ${stage}, priorizo ${priority.toLowerCase()} con una hoja de ruta comercial-tecnica concreta.`,
+      summary: `Para ${businessType} en etapa ${stage}, priorizo ${priority.toLowerCase()} con una hoja de ruta comercial-técnica concreta.`,
     }
   }, [
     businessType,
@@ -151,17 +147,15 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
                 width:
                   progressPercent <= 0 ? '0%' : `calc(${progressPercent}% - 4px)`,
               }}
-              transition={{ duration: reduceMotion ? 0 : 0.35, ease: 'easeOut' }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
             />
-            {!reduceMotion && (
-              <motion.span
-                className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-brand-primary/50 bg-brand-primarySoft shadow-[0_0_16px_rgba(56,189,248,0.6)]"
-                initial={false}
-                animate={{ left: `calc(${progressPercent}% + 2px)` }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
-                aria-hidden="true"
-              />
-            )}
+            <motion.span
+              className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-brand-primary/50 bg-brand-primarySoft shadow-[0_0_16px_rgba(56,189,248,0.6)] motion-reduce:hidden"
+              initial={false}
+              animate={{ left: `calc(${progressPercent}% + 2px)` }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              aria-hidden="true"
+            />
           </div>
 
           <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
@@ -203,8 +197,8 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
           <motion.div
             key={`glow-${currentPhase.title}`}
             className={`pointer-events-none absolute inset-0 bg-gradient-to-r ${currentPhase.glow || 'from-brand-primary/30 to-transparent'}`}
-            initial={reduceMotion ? false : { opacity: 0 }}
-            animate={reduceMotion ? {} : { opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.35 }}
             aria-hidden="true"
           />
@@ -212,9 +206,9 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
           <AnimatePresence mode="wait">
             <motion.div
               key={currentPhase.title}
-              initial={reduceMotion ? false : { opacity: 0, x: 18 }}
-              animate={reduceMotion ? {} : { opacity: 1, x: 0 }}
-              exit={reduceMotion ? {} : { opacity: 0, x: -18 }}
+              initial={{ opacity: 0, x: 18 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -18 }}
               transition={{ duration: 0.24, ease: 'easeOut' }}
               className="relative"
             >
@@ -231,10 +225,10 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
       {showDecisionHub && (
       <div className="rounded-2xl border border-white/10 bg-brand-surfaceDark/80 p-5 md:p-6">
         <h4 className="text-xl md:text-2xl font-semibold text-white mb-2">
-          {decisionHubTitle || 'Mesa de decision comercial (20s)'}
+          {decisionHubTitle || 'Mesa de decisión comercial (20s)'}
         </h4>
         <p className="text-sm text-gray-300 mb-4">
-          {decisionHubSubtitle || 'Elegi contexto y obtene una recomendacion de enfoque para este escenario.'}
+          {decisionHubSubtitle || 'Elegí el contexto y obtené una recomendación para este escenario.'}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -263,9 +257,9 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
         <AnimatePresence mode="wait">
           <motion.div
             key={`${businessType}-${stage}-${priority}`}
-            initial={reduceMotion ? false : { opacity: 0, y: 10, scale: 0.985 }}
-            animate={reduceMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
-            exit={reduceMotion ? {} : { opacity: 0, y: -8, scale: 0.99 }}
+            initial={{ opacity: 0, y: 10, scale: 0.985 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.99 }}
             transition={{ duration: 0.24, ease: 'easeOut' }}
             className="mt-5 rounded-xl border border-brand-primary/30 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 p-4 md:p-5"
           >
@@ -274,8 +268,8 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {recommendation.experience && (
                 <motion.div
-                  initial={reduceMotion ? false : { opacity: 0, x: -8 }}
-                  animate={reduceMotion ? {} : { opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.05 }}
                   className="rounded-lg border border-white/10 bg-black/15 p-3"
                 >
@@ -289,13 +283,13 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
 
               {recommendation.preSales && (
                 <motion.div
-                  initial={reduceMotion ? false : { opacity: 0, x: 8 }}
-                  animate={reduceMotion ? {} : { opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 8 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.08 }}
                   className="rounded-lg border border-white/10 bg-black/15 p-3"
                 >
                   <p className="text-xs uppercase tracking-wider text-brand-primarySoft mb-1">
-                    Accion de preventa
+                    Acción de preventa
                   </p>
                   <p className="font-medium text-white">{recommendation.preSales.title}</p>
                   <p className="text-sm text-gray-300 mt-1">{recommendation.preSales.description}</p>
@@ -309,14 +303,8 @@ const CommercialDecisionHub: React.FC<CommercialDecisionHubProps> = ({
                 asLink
                 className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white"
               >
-                {ctaLabel || 'Hablemos de tu caso'}
+                Contactarme
               </Button>
-              <a
-                href="#contact"
-                className="inline-flex items-center rounded-lg border border-white/20 px-4 py-2 text-sm text-gray-200 hover:bg-white/5"
-              >
-                Ver enfoque completo
-              </a>
             </div>
           </motion.div>
         </AnimatePresence>

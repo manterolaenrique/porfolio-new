@@ -31,10 +31,26 @@ const PROJECT_BY_SLUG_QUERY = `
   *[_type == "project" && slug.current == $slug][0] ${PROJECTS_BASE_QUERY}
 `
 
+const ENCODING_REPAIRS: Array<[string, string]> = [
+  ['c?rculo', 'círculo'],
+  ['micr?fono', 'micrófono'],
+  ['autenticaci?n', 'autenticación'],
+]
+
+function repairProjectEncoding(project: Project): Project {
+  const shortDescription = ENCODING_REPAIRS.reduce(
+    (description, [brokenText, repairedText]) =>
+      description.replaceAll(brokenText, repairedText),
+    project.shortDescription
+  )
+
+  return { ...project, shortDescription }
+}
+
 export async function getFeaturedProjects(): Promise<Project[]> {
   try {
     const projects = await client.fetch<Project[]>(FEATURED_PROJECTS_QUERY)
-    return projects || []
+    return (projects || []).map(repairProjectEncoding)
   } catch (error) {
     console.error('Error fetching featured projects:', error)
     return []
@@ -44,7 +60,7 @@ export async function getFeaturedProjects(): Promise<Project[]> {
 export async function getAllProjects(): Promise<Project[]> {
   try {
     const projects = await client.fetch<Project[]>(ALL_PROJECTS_QUERY)
-    return projects || []
+    return (projects || []).map(repairProjectEncoding)
   } catch (error) {
     console.error('Error fetching all projects:', error)
     return []
@@ -54,7 +70,7 @@ export async function getAllProjects(): Promise<Project[]> {
 export async function getProjectBySlug(slug: string): Promise<Project | null> {
   try {
     const project = await client.fetch<Project>(PROJECT_BY_SLUG_QUERY, { slug })
-    return project
+    return project ? repairProjectEncoding(project) : null
   } catch (error) {
     console.error('Error fetching project by slug:', error)
     return null

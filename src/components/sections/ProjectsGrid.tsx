@@ -72,6 +72,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
                     src={getImageUrl(project.thumbnail, 400, 300)!}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover transition-transform duration-300 hover:scale-110"
                   />
                 ) : (
@@ -190,6 +191,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
                       src={getImageUrl(selectedProject.thumbnail, 800, 600)!}
                       alt={selectedProject.title}
                       fill
+                      sizes="(max-width: 767px) 100vw, 800px"
                       className="object-cover"
                     />
                   ) : (
@@ -209,6 +211,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
                             src={getImageUrl(image, 400, 300)!}
                             alt={`${selectedProject.title} - ${index + 1}`}
                             fill
+                            sizes="(max-width: 767px) 50vw, 200px"
                             className="object-cover"
                           />
                         ) : (

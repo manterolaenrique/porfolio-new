@@ -13,13 +13,10 @@ const CTAGroup: React.FC<CTAGroupProps> = ({ primaryLabel, primaryHref }) => {
   if (!primaryLabel || !primaryHref) return null
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+    <div className="flex justify-center">
       <Button href={primaryHref} asLink className={commercialTokens.ctaPrimary}>
         {primaryLabel}
       </Button>
-      <a href="#contact" className={commercialTokens.ctaSecondary}>
-        Cómo trabajo con clientes
-      </a>
     </div>
   )
 }

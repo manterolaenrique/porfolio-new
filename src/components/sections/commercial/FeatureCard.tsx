@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FiBarChart2 } from 'react-icons/fi'
 import { commercialTokens } from './commercialTokens'
 
@@ -12,13 +12,11 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, index }) => {
-  const reduceMotion = useReducedMotion()
-
   return (
     <motion.article
       className={commercialTokens.featureCard}
-      initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-      whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.35, delay: index * 0.06 }}
     >

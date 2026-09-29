@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FiZap } from 'react-icons/fi'
 import { commercialTokens } from './commercialTokens'
 
@@ -11,13 +11,11 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => {
-  const reduceMotion = useReducedMotion()
-
   return (
     <div className="mb-12 text-center">
       <motion.div
-        initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-        whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.45 }}
       >
@@ -29,8 +27,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => {
 
       <motion.h2
         className={`${commercialTokens.headerTitle} mt-5`}
-        initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-        whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55, delay: 0.05 }}
       >
@@ -40,8 +38,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => {
       {subtitle && (
         <motion.p
           className={`${commercialTokens.headerSubtitle} mt-4`}
-          initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-          whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.1 }}
         >
@@ -52,8 +50,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => {
       <div className="mt-6 flex justify-center">
         <motion.div
           className="h-1 rounded-full bg-gradient-to-r from-brand-primary via-brand-primarySoft to-brand-secondary"
-          initial={reduceMotion ? false : { width: 0, opacity: 0 }}
-          whileInView={reduceMotion ? {} : { width: 120, opacity: 1 }}
+          initial={{ width: 0, opacity: 0 }}
+          whileInView={{ width: 120, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.15 }}
         />

@@ -10,7 +10,6 @@ interface GithubStatsCardProps {
 }
 
 const GithubStatsCard: React.FC<GithubStatsCardProps> = ({ stats }) => {
-  console.log('GithubStatsCard stats:', stats)
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },

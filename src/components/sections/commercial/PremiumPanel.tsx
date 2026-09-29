@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { PortableText } from '@portabletext/react'
 import { commercialTokens } from './commercialTokens'
 
@@ -11,12 +11,10 @@ interface PremiumPanelProps {
 }
 
 const PremiumPanel: React.FC<PremiumPanelProps> = ({ title, body }) => {
-  const reduceMotion = useReducedMotion()
-
   return (
     <motion.div
-      initial={reduceMotion ? false : { opacity: 0, y: 14, filter: 'blur(6px)' }}
-      whileInView={reduceMotion ? {} : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+      initial={{ opacity: 0, y: 14, filter: 'blur(6px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true }}
       transition={{ duration: 0.55 }}
       className={commercialTokens.premiumPanel}

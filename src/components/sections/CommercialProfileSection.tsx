@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Tag from '@/components/ui/Tag'
 import type { CommercialProfile } from '@/domain/models'
 import SectionShell from './commercial/SectionShell'
@@ -17,8 +17,6 @@ interface CommercialProfileSectionProps {
 }
 
 const CommercialProfileSection: React.FC<CommercialProfileSectionProps> = ({ data }) => {
-  const reduceMotion = useReducedMotion()
-
   if (!data || !data.isEnabled) return null
 
   const sectionId = data.anchorId || 'business-vision'
@@ -31,17 +29,14 @@ const CommercialProfileSection: React.FC<CommercialProfileSectionProps> = ({ dat
       <SectionHeader title={data.sectionTitle} subtitle={subtitle} />
 
       <div className="space-y-10">
-        <PremiumPanel title="Introducción personal" body={data.introNarrative} />
+        <PremiumPanel title="Mi recorrido" body={data.introNarrative} />
 
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-          whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >
-          <h3 className="text-2xl md:text-3xl font-semibold text-white mb-5">
-            Revolucion comercial: de experiencia a decision
-          </h3>
           <CommercialDecisionHub
             showTransformationRoute={data.showTransformationRoute}
             transformationRouteTitle={data.transformationRouteTitle}
@@ -54,19 +49,18 @@ const CommercialProfileSection: React.FC<CommercialProfileSectionProps> = ({ dat
             decisionHubPriorities={data.decisionHubPriorities}
             experienceItems={data.experienceItems}
             preSalesCapabilities={data.preSalesCapabilities}
-            ctaLabel={data.ctaLabel}
             ctaHref={data.ctaHref}
           />
         </motion.div>
 
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-          whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >
           <h3 className="text-2xl md:text-3xl font-semibold text-white mb-5">
-            Conexión con ventas técnicas y preventa
+            Cómo acompaño una preventa técnica
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {data.preSalesCapabilities.map((capability, index) => (
@@ -84,8 +78,8 @@ const CommercialProfileSection: React.FC<CommercialProfileSectionProps> = ({ dat
 
         <motion.div
           className="rounded-2xl border border-white/10 bg-brand-surfaceDark/80 p-7 md:p-8 text-center"
-          initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-          whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >

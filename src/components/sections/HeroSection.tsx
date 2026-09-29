@@ -207,6 +207,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
                     src={avatarUrl}
                     alt={data.name}
                     fill
+                    sizes="(max-width: 1023px) 320px, 384px"
                     className="object-cover"
                     priority
                   />

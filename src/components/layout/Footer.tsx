@@ -1,15 +1,30 @@
 import React from 'react'
-import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaHeart, FaLinkedin } from 'react-icons/fa'
+import { getContactInfo } from '@/services/cms'
 
-const Footer: React.FC = () => {
+const Footer = async () => {
   const currentYear = new Date().getFullYear()
+  const contactInfo = await getContactInfo()
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-  ]
+    contactInfo?.githubUsername
+      ? {
+          icon: FaGithub,
+          href: `https://github.com/${contactInfo.githubUsername}`,
+          label: 'GitHub',
+        }
+      : null,
+    contactInfo?.linkedinUrl
+      ? { icon: FaLinkedin, href: contactInfo.linkedinUrl, label: 'LinkedIn' }
+      : null,
+    contactInfo?.primaryEmail
+      ? {
+          icon: FaEnvelope,
+          href: `mailto:${contactInfo.primaryEmail}`,
+          label: 'Email',
+        }
+      : null,
+  ].filter((link): link is NonNullable<typeof link> => Boolean(link))
 
   return (
     <footer className="bg-brand-surfaceDark text-gray-300 py-12">
@@ -22,7 +37,7 @@ const Footer: React.FC = () => {
               <span className="text-brand-primary"> Manterola</span>
             </h3>
             <p className="text-gray-400">
-              Full Stack Developer apasionado por crear experiencias digitales excepcionales.
+              Preventa técnica y soluciones Full Stack orientadas a resultados de negocio.
             </p>
           </div>
 

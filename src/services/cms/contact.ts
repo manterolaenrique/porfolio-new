@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { client } from './sanityClient'
 import type { ContactInfo } from '@/domain/models'
 
@@ -27,7 +28,7 @@ const CONTACT_INFO_QUERY = `
   }
 `
 
-export async function getContactInfo(): Promise<ContactInfo | null> {
+export const getContactInfo = cache(async (): Promise<ContactInfo | null> => {
   try {
     const contact = await client.fetch<ContactInfo>(CONTACT_INFO_QUERY)
     return contact
@@ -35,4 +36,4 @@ export async function getContactInfo(): Promise<ContactInfo | null> {
     console.error('❌ Error fetching contact info:', error)
     return null
   }
-}
+})

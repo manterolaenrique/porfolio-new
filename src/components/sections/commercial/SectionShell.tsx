@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { commercialTokens } from './commercialTokens'
 
 interface SectionShellProps {
@@ -10,8 +10,6 @@ interface SectionShellProps {
 }
 
 const SectionShell: React.FC<SectionShellProps> = ({ id, children }) => {
-  const reduceMotion = useReducedMotion()
-
   return (
     <section id={id} className={commercialTokens.section}>
       <div className="pointer-events-none absolute inset-0">
@@ -20,8 +18,8 @@ const SectionShell: React.FC<SectionShellProps> = ({ id, children }) => {
       </div>
       <motion.div
         className={commercialTokens.container}
-        initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-        whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
       >

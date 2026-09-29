@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FiTrendingUp } from 'react-icons/fi'
 import { commercialTokens } from './commercialTokens'
 
@@ -10,13 +10,11 @@ interface InsightBoxProps {
 }
 
 const InsightBox: React.FC<InsightBoxProps> = ({ text }) => {
-  const reduceMotion = useReducedMotion()
-
   return (
     <motion.aside
       className={commercialTokens.insightBox}
-      initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-      whileInView={reduceMotion ? {} : { opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
     >
