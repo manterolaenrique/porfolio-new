@@ -23,7 +23,7 @@ const HERO_QUERY = `
   }
 `
 
-const DEVELOPMENT_HERO_COPY = {
+const PORTFOLIO_HERO_COPY = {
   role: 'Preventa técnica y soluciones Full Stack',
   shortPitch:
     'Conecto necesidades de negocio con soluciones técnicas claras, viables y escalables.',
@@ -40,11 +40,11 @@ const DEVELOPMENT_HERO_COPY = {
 export async function getHero(): Promise<Hero | null> {
   try {
     const hero = await client.fetch<Hero>(HERO_QUERY)
-    if (!hero || process.env.NODE_ENV !== 'development') return hero
+    if (!hero) return hero
 
     return {
       ...hero,
-      ...DEVELOPMENT_HERO_COPY,
+      ...PORTFOLIO_HERO_COPY,
     }
   } catch (error) {
     console.error('Error fetching hero:', error)
