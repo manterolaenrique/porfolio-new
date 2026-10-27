@@ -86,6 +86,13 @@ export default defineType({
       validation: (Rule) => Rule.required().min(1),
     },
     {
+      name: 'devicePreviews',
+      title: 'Capturas por dispositivo (opcional)',
+      type: 'object',
+      fields: [{ name: 'mobile', title: 'Captura móvil real', type: 'image' }],
+      description: 'Reutilizada por Nexora cuando este proyecto está relacionado. La imagen principal sigue siendo la captura desktop.',
+    },
+    {
       name: 'role',
       title: 'Rol en el Proyecto',
       type: 'string',

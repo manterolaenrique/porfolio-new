@@ -55,6 +55,13 @@ export default defineType({
 
     // === CONTACTO DIRECTO ===
     {
+      name: 'whatsappNumber',
+      title: 'WhatsApp (portfolio y Nexora)',
+      type: 'string',
+      description: 'Número completo con código de país. Nexora reutiliza este mismo dato para las consultas; no se configura en variables de entorno.',
+      validation: (Rule) => Rule.custom((value) => !value || (typeof value === 'string' && /^\+?[\d\s().-]+$/.test(value) && /^[1-9]\d{6,14}$/.test(value.replace(/\D/g, ''))) ? true : 'Ingresá un número internacional válido, con código de país.'),
+    },
+    {
       name: 'primaryEmail',
       title: 'Email Principal',
       type: 'string',

@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.env
+.env.*
+!.env.docker.example
+.vercel
+.cache
+backups
+test-results
+playwright-report
+docs/nexora/assets
+docs/nexora/screens

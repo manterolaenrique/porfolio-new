@@ -1,0 +1,32 @@
+name: nexora-development
+services:
+  web:
+    build: .
+    init: true
+    ports:
+      - "127.0.0.1:${NEXORA_PORT:-3000}:3000"
+    env_file:
+      - .env.docker.local
+    environment:
+      NEXT_PUBLIC_SANITY_DATASET: development
+      NODE_ENV: development
+      NEXORA_PUBLIC_PORT: "${NEXORA_PORT:-3000}"
+      WATCHPACK_POLLING: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXORA_MAIL_MODE: test
+      NEXORA_ENABLE_EMAIL_QUOTES: "false"
+      NEXT_PUBLIC_SITE_URL: "http://localhost:${NEXORA_PORT:-3000}"
+      NEXORA_ALLOWED_ORIGINS: "http://localhost:${NEXORA_PORT:-3000},http://127.0.0.1:${NEXORA_PORT:-3000}"
+    volumes:
+      - .:/app
+      - dependencies:/app/node_modules
+      - next-cache:/app/.next
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/nexora').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 10s
+      start_period: 90s
+      retries: 15
+volumes:
+  dependencies:
+  next-cache:

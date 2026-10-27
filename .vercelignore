@@ -1,0 +1,16 @@
+.git
+.next
+.cache
+node_modules
+backups
+.env
+.env.*
+docs
+tests
+playwright-report
+test-results
+playwright.config.ts
+Dockerfile
+compose.yml
+.dockerignore
+scripts

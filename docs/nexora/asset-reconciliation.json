@@ -1,0 +1,280 @@
+[
+  {
+    "key": "inicio-desktop",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuC5JFPRYO7appStrIk8RnskYiHWxCwbL4LsFrCOOai4YgPlyPQVd8F7zi1kOIcum2iKm7clMUGjP3RwN2zNq2ZWlqsjEkO_FY0pH0dw7yUHWGbc6TXlPYqvF6S-OXv3bG-qfk0FDZyV7u7q8v4SR7wN4acJ_NT1ll5NutGED6ymLIjVuDID6mXZxIpziAQf2rFHc44zlAQtKtLzOcHBZkjT8pcRhMuqD-13JW_GzsY58MuuKM6KNsC0EtlaklbfW3QQr1OQwUoJf5A",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCSPKg5Txz727E0hB3NL2fkr_Ff92zPz0mcMFI5_u9ZVhVomW-auNiZVf_pLI6B8iq4OdVPfLNtGAnXWCjETIo8GJwQ_zBnQE_PPQ0lzljBkS5L6CBMwTROSSAPjZTWrpIzPOA_ASs7z7rkdLA4LKT7fNJJ31PmTWqnHfIuVl1hDpQqz1YU1LIVNSiV5gAKMajXfdDaUqGv2NqJGLRVa6u8K-0km01LiZICP183_xvFdjRmz-Yt_KSRH2IVdXFQZnVbcyIzUStkZiI",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAfgmJRoT1Oa4ffp7vjAPyoD3YZGbIzm1lx3l5-09LcPOhmJ7_a_3yRcnF4HKboX2P-x5yCQJH7HZ9gQO4SRBLjVEW9FGPiCWSV8BNPHzHJvVyAam8DiPGyvbAeDpSTu0q5lQdot8J7J5LDdUCqlKS1dsCctXmBMyM7qRA7HEpxObTCOJgA1c8cS0vn0JGXqz3szBCMSqIf3hoRaBAHOoolIkp5A4dsuNPyBKzrkgYXScBwaGZK1GFtzkaOuuuwEF5wyQxgBzU-LTY",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvOE_qSTGpmVXOAceKhbmzu5rtU3zf3vZO3Usdr50AKzxzCpqVH6kro1tPhx2PFiqdzOS1DZQM2B0F6QWzK3XMewfLGiWDQQzyEXYtdgIaDCa8q3wE_Zt215yZc7fZZX-DLOzduzA0CPKPUgMwb6z_dcECPFPQZmQh_mnUj859jFooGvy5gPW4syPLAKnR4HkMzoZNTfGfPovo0vUByorX1t7sFEPSZJX7BmJPceesLbHhO709Ek-zrn_dgfSq6WP3EDmV27e-vC8",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "inicio-tablet",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmZBGof72ZhreCC5PN5V2m1pWzlkUlWSSFD7OJXkZTgzAO9W0FbxTu6L-pGxLrpr_0KQ3NmgnTvzNpNBEEoKVqTfyjM3VAmJr_FqlqV1Aeb_bHOAhGfkOCZWn6dKZ3hv2ZZxGDgOcTBReMubFGjMMucYcfCHpu4YK870yIAdk16lckXpdfF6hk9bGwWrKW3l8GuNxDPyoysn2ZKl-h_u7Hk9aCM8pUWpMzUH23nu_XOon3QM_GPeqEZcAAiNhveefLRawx8n0GMGg",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLzVeVk6-FrL-nK_hsfGiPbg0h-1L4kskO1BKLeBauS5PmhsbkvNqR5-9hHvTcN0fq79fXdUeYCeCyQBhV8OJ8sBYj9JvWPSDgfxhDoLrjRHkFyhuE18kG-Mk94d1JPG0lCNqNAtn74IQjFXTXlOc53ePuLvT6RWzU80VeliK_DdfrxAjQAX-KJWjsJ9hzZoLRAsy4emx8cigJnKy39z15mKeCa49Ko6hdXHwbTbRFwLetlVtrPBnWUyJWrb_QUH8zya9hG_0I1Ok",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1o5woVFwCWq3uQ758QqjfJpHe-JzBnfdz4P7CyeeTZaqVkEg99kSipL4N-3Nx8JLWow03rcN4WsADydxVJm6q2wH6dp3LhvzqqXyYsqZ94sb5DUBjS3-CXuZIC-vzbCo608G8HD9Yb7cD_8Qv5-OaN4mpK34pjkCSKdd9_mEHkQKDCPLgjHDsNij8oM895hdWEfBm-0PlrsmUHRADSRTfytsZ44GXCVb9DtWDPo3a8wOV_cDXAYBG0n_Xw20ew0wEAUlG_Y4XkAI",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuDeJe4-s4JWXW0iZZYOR1A_gvgOkzhx2pGlXe2XoLFyQYSY8aNeFPCBSvsj6xaV-G4mDC-WzQqUUU5JmkOA9SVwhIT3w2gAZ6kIFkWEu_vXLqbR-gpx6v7ZG5ulRMSZc7LvP5p2zpgHKADAYalINcsKPtSQADQhuna6s5QKAk-awSfX76TJuV0C9BNdz6O1fTBf4c86Izowz1J7pLWlV4vov1tcYxYGgDEbUKSaM1ZHgTVvsMfiRUho9GEO1zSzHspFwRbwi6t1nAI",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "inicio-mobile",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCF7nwK-3EgWfWUWOLY_2EZ4Ao5pzvRZHbP5fU0O8U0On8coyT4Zx4yzDbd0wAkb7lMDfKwoZ7YzFw-ee4um80StclmuRqVAcsnmvmghyagnHc3RVoA8TWHS-021GeJOC8ktBtI82BdxisbXOGeULp0KBQJiMjjFUBpCMnU-hM-ce_5qOavdjmuSvXYQ98QSgFDYzLVkL29BWWKAyfl4m-tG6QNU-ZGQLTPcqdnhFKBduT_d1BlfeU0H8-lCHiJyGMmQZWCxFGkvNk",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuA9THi6WhfPHJ__K_Poc2yOLBBtOf12z5r8NQ8s8Qcuxt2I6GPME6TNkw1BUmKbQmSKdHyMbLqZsKGHvrXtJsmkRJQC0JSWsAWULztendNP9kVxdex5ks74Q-tpqJIuVyekBG4BSD7JSl6a6Ha6lg182pscx9ypZIGsIzxmFCUadmFaHdbv7e6PPHCMuCkFRcjpv92YWvPgdfQ0zXRXKhhzTZrUfDXpA4VVtru9qRYvmbm3pLMElRn1PXJU2l6Feh0QI5GhRyb7fEQ",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuDD6krfNSrZPzTloiwm0_PjFU0hOdNZaw-nzoLcSpTOPazDkfTpCabB961J7uVi7hVLv5TKOhVKD1TkLM_fqQywzLbr2G77THu7oEPJo-3FWJO1Ci4wZNTXBgO7ZvAUL6mYxJJTSJtQltZc2XqLu7mkRrsrwUpkKt4ZnjBXwx7g1eVVmiaOMaWVXZKWFHZHvnwKKRZlGC9rh505Fpi6ZpOxY6ZqVMygB1ZfikGarJ23IpxPPMtm3WiuRnvOXkjnRnkwZm9Tqr5BUcE",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuC2CB-_GJTxZOosBVQU5AQZM5ONuSeE51CTkx8H939TsjzzokQTRSIchba-HQsw-_gnDFJB8VW8aXs2W3WQSTlYoatbzGpoMOnOMLqVYVB1tPmQLn7cWnn01kHvVeBNeBiiHfBzJlN--z3K5aEzH7HrItTMwKONdqUWUgBziCf5bN_D6WRnLB6qvXWg_T_1qKlYaikDaQVMhSqKwMvfmay6V2nkEQZt4W17WkVKaWtFiz-QqsgUcZix4ZDCxwqgaAI0AV6KxG-0qg4",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "servicios-desktop",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "servicios-tablet",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "servicios-mobile",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "proyectos-desktop",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAbfXanGKlFJi2zPJdtKSPOWyElMvmtKwN7Ehvt2xMrQyHt2w8Fqe64weA8QVixG5RNYqm1Fj4accF7unAHW7rz3xLVz_Ik5AndmbOgeB6cgNo9I6lvz9CgjOpnGU1LGns28I2jCMGNUl4WR-3hn3fEv7HFo6xBDDF3Vg2Jh-a0ETbRGe6NUANjYHw8ffdOr1pkVr4ofWUpG8--ojMFrUG-LkPO2BC8zmYX2kr9TO8-Zt_K-S5zLgrA0vE-pEmoMWp9lXZKNOKAKHw",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq3BOWQ32qBmYL-Ux5ODAhBIagnjiarTdPfiOYcGJB6Zd2oXB_r81BM-bwT8-8ilpah6ORttYcbo6Xn_Ne5agWkhKPloO5pj9f2uC2BVP6OSEC1KaJr_afgiAKIx8eUm4neulZ-yTGCsEmOgDNracuY09_lnTsuA5pId7eqxOpdD3iGDdUkQ23UQG0cmCDnT8y697R6-nxnu2quuvXfiEPd7VzEuEBNqrXnASFzB81sH44xtKUIVxAULd8RKE1aF4K-q5LPS56be0",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCr_snOXZ5A0u9xwntOuASWuVYbOfDXXJDDClzGqPfVvwIOTtokPB5MoTbXRb8jBoDRtITTizWyHB48ujDcH8S7YRz0Z0BPfeEpsBUKaO47dqSrmDXrKhyUAslHaCF7EvjuLv3_3bvjJ-rZgdeZnFXRdIzCvxxk7uINDVhMVUM7HHl-YRCQcF6rU2WXClHtcNXtcKBxrQTvD58DiZXQ_A-kS91SJPCQH1hKv7D23feLswx5buFZrDy1eJN9Xk5erqSuxt1QYOz3Rtg",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIXHXPbdvw04YZZMI6anofILoJ8ixElq5nq8hFysgY007CX_sFBQ5NwJ7H_8ZFyNDtiBjlFyfatNZ0tG84EzQ1vL5hsKq2pHUXPKTsyIpWiodR7GbFONAt15_pjTSJl5ix_-stC7QbAuekaaGgHgO6kmHMTxDEkSGXnEbNLfgBNATNQ8DeFnMahFL_DcwfJhx-q707ZZgbcrxzBXpnVgpsoejAresXvQRJLdwW4nlBr2aIq6msfT64IStNsfOfdPa-xmSGySEs6GQ",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuA__W0l-3ic9D6aCg-epctKHeXwBQIg3MoiPwqgFbsSSnTd4g49rqPmLeliDoVmNvrKbnINFGLt5shFRfybwMC7fJyqGINxxDKjHHdNja_A_zpCzSyr-h3gpS4NfnqfhE7b8k0V7OVzjUmQw7exUrIaXVvFPTtv2Kt5W4_gzPciCWk6sF4FELzMMHAX8co71qtbMV3kSrZrCo9auw9eNtG9KYGChqwGzeQFdK0QB6osEWUguctJluz-EWsJpI7EAVac72j7UwBmFvY",
+        "local": "../../../assets/bandas.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuC2nBrkhHo239wUqRVFNneDAN2d257QlMg9DB1jjHwjulnlmNlBqyEyFBs-yOcbxU8eZWRCST370D_4EOI2VVEQeYtpmjMG54FnB-v0oGz1i4cfRTM0wxwYPA4I-0H-CbldyAArjEzZpWsuW2DghwItBFgSVa-afmWKVTwPLj4BWPr1pr0OVQHopMMhYX62DT4c8FWxCUwsXiEj6S0KyOj0j4aoRJkkC9c1S4iiyzIWzTSFL9GcrGTmtRqiFgocc_qHVj8w6KIFGWk",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "proyectos-tablet",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuDlGMwViY7SiDmaZSKCThwPpX1ysot0EaD5AhYqrCRja37QmL0ciRnk6nO-JSQNzbS1KsXYWI2JsAFi5smgGgEqQKRV-7TarEzDSXsw_py2ZQKsPiGoQ9vK4tLthIMHYiquvPnV6s4sdZAN1qI4NaBHI_tmEG8M5tm5T4k4_jzjjzDja-b9OkMzXsP9VL62Jm92qHgxcblFZvvC3i3GMuy9FE46QTTjSXov6mL8h2c-9QhIEOVjkYaI_2zXlabqYU55DaT7zLoerPg",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuBXla-_RMx-WKZHBStEIT-xLr9vXWFWlA9FXxA4yHFmUyK4Mwojejz_ebix2mKDVwa8Mc6PKgEqlW8slHkZE-DCci4M64z5LyLduMQMLNW_AxtNmwSuopNP0oJRz-27WGO-e8vPkSvbmA0lj9v1lKygY5plZxg9Rs_gnRCRS9s0ZCD1OF5NQKdI4S7NK9T8t8badeNtFyCqC08K-qGafNtjaEN7sP0RMf8dVLxIwYxp54R8fv9GXFPh33gdIo0qh7SIMFLNSaB3lh0",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAc52Eh5LsKNDjKmkyaBf-b6pL3cuqwUoyosv3vZJ0ETQT_LkAl1GoHj_8ygFwttiWn2p28jn7WT8nyBuw76VVV8QA4te815_ioX1KHMdS06PQ9pfGnsyR7A6Bt76NI2zZoSS-tWoEmHsAMQ1RhjxJ-G8pnN7669Z9SZCxfxDxaF78L7pZyUycWrLaA3j-_TGKvVZ6cHDQUp5k-jY6eeXdpxbPALi_8sLUf7IqBZwyLrLyDUlkJnC1gGPo_GruJDd1faUW-8xNCt0s",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "proyectos-mobile",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuC3oLOyrfQNtSzR4NUEEPtTKejQy50uU_XvEwPdLN0-NULUxMolPfp7WnF3cBYPHYABWu5b_U_cTymkO3de8CZ3mldwOsTKh2CJho9Hhe3Mkd3gTTKHT1LWOrFqgM4DzUTP9Mk0UXIkjoKP7gM7f9vD05MNu4y8LsLkU3EaVqs7gwOsgC-zkc7CUuTb-8VJGlhPJHFSAksQmh7FvsJ_3muwDnn4js9Of_EmHm4XNTsIkeNZgaKIW2u-LRZF31Z84-acpt8kApyg-OY",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuChgGAojDm5UDofx5YiGiESlP0bXwwJqIC1Zf6vXLb6dVQM8JF3qy21kygJQhd6PX1bBvNCcVkfBcYW95fAXci_TlBE-VJrNuPDLtOdYf88EDt-_4f6jxKXxYZyzKkP0LarXI7Tjah7thwabc1H1c9uZBWT3rGLzLekNU6giYnnGM441YRnkw8YJE2scz91_UQD6Er9NGCqj0Pk28Zoe-GqXHfVeGuPZzd0stpbj7dKNwzfneJnMX1b6iSUT8E4T_IIvz-u6iV0kbg",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCy-Qr4dvRUqDh1Rd4zmEZGpPNtp31fTiKniwfzihV1TWWJPAFX6YAXAAd7TYPsUMwG628sYQIVTI4N27W8HLhl3lFbxfu19BzPInwi-JpP1DC10gUzzlsw9DLgRNxCPQv_MAndiY1QNI9AkOEIc01q2O_4BZyC70QN4c6DeL_4A0gMx8rFgMuh8Hit5ANKlilVc4mYo2664CUDa8OOOjCubyQnwTSlV62K-B_09zTPhX6ejRklEh7k78_VTWjPhu52DBaMx_zU0V8",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "detalle-desktop",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuA2Vucm2qVQfBguZv7szCWW4aSuwkyqNmCnoaZ8ff0cNisu-ZozIkU3tptFHCztIjwtxNAdfYCdSRA3QgPH-y5FEClC_XyUOpRs12tVP3z6qqRUznm6_I6z9mGwmw9OIrGPPLTU1TTJDb6-jkfFyBnWpp5GKKr9CzGrJEAMUeXbSBjMtpk6rbCI__5M39bG0WvvjGkTQcMMlhRs0rCOxhsz4d0r-hU5BYoazFxvA4pz-q_mdz2DMqaHehq1zM6NyLjPPrivCk3zzlk",
+        "local": "../../../assets/digitalflow.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "guitarra",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCvDS6GOGJKnCsWujLDVzsJdfjSrY49e-7L-wpjnQJPT8cyehDxBazs-FsCOHvKyj-OWrhcIVdQkqmdQL1nMFf5ThqFX-Ro_3xDsjUzEkZGwoPM3qNzpHS9tJwbI62zpfK0maLGEK_4pXT6AWsZ7Vt1RYY3_GlrkPfwN474MCNYGA73yIuExro6arOuoEQsRTVnlBk84CYzzRCNbK_25bSXC8cxwrsWjoMMkXVzxiI",
+        "local": "../../../assets/guitarra.png"
+      },
+      {
+        "action": "reuse_verified_asset",
+        "product": "bandas",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQE0wGJrVSEZO--KYnivSJQQzVjCETw7nVo6ET0R17zrTrZ95DqUDsyX1xG_Y-XL9JCdmsIMwX5_e-t1exBV-cuZCk0xEvkAn41ZKcGvbfbfgaFiSN8K4WcSES21zVRVqbxF2-UdETuLbibn1gloTxjJv3VZLq5z6Vlr5uPWge4MIUXobus7nRRxYoZRxxIPJVt-_uMxAoehbXUUiDFBNKJisP19myShzQP7gWsvg",
+        "local": "../../../assets/bandas.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "detalle-tablet",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuBCJRBd7ud1zcQl_uosxsPCCsRkNNBIcQY2KYQ3ISK4e0CmbrHprx5flccYu6c49KIRcjfHRS7SS10m6jEjOJVszC8Mvt-s3QHJKEYPqXXXaEaSU7Dyyfb12gvclL6rLWsjhjAspDRMZBBDvfsNHQT36tnno3WczOW450HMuekxCVYX26F-5HGz1kAVywa4pUuNckS8x1EGAnAF_fj9ok3oBYDG-aBYQ8vzuWXdtfJ-wpWK3D29Ktvwy1iOZs0CpAVhCwQzX6cqejs",
+        "local": "../../../assets/digitalflow.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "detalle-mobile",
+    "assets": [
+      {
+        "action": "reuse_verified_asset",
+        "product": "digitalflow",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAtutMeoZZIUbG2UyzqPn-XphqXk4rBbv5Y4YF2qN7BWOwpUHvzBKKXJJsYUqWmG5A9PdeE6x5Zy2wnfpmnHzgFF6X62C8pAZ1T-DM9xCCIkZBgWJ0vHWENdP1OuVM3Cd0K2lN42U4atpTmeif4WqTT4OQbl8FKik7Q0rSaTFShsy3DsrJ9qH6eLj-OXG00JdLzeJgsYcl0SLerSc55lEMFnkSAOLRfuJS9vMNBGh26ViGtEAHbZIXeTVyo8b8VHB20JzDmizLXI",
+        "local": "../../../assets/digitalflow.png"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "nosotros-desktop",
+    "assets": [
+      {
+        "action": "omit_unsupplied_portrait",
+        "original": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8kNtkUKDH7U2GwRrXvRC_caJ-l0yaUQY5g9LohqgeYkrkQhHyqplzu86cS46f1LLcWZ15pOU8sHltVX_34tH-oPmeyjpJZSnj_uplbj5TXVGuRHeaKb8NDmVRAJFs_0lO4QtTzxmg_r-lFtZQ_CJchcuxOaZqnTBuoX-b8OANn1D7KUkfrlxkH_T4kWHw98Cppb-tp2PKEUceZ_grx5rGeZE2iPGrpq2n_fsWdUF8crMwX1PV63dVmH17kNC5tgSr0XUPwGI_vRE"
+      }
+    ],
+    "offlineStyles": true
+  },
+  {
+    "key": "nosotros-tablet",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "nosotros-mobile",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "contacto-desktop",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "contacto-tablet",
+    "assets": [],
+    "offlineStyles": true
+  },
+  {
+    "key": "contacto-mobile",
+    "assets": [],
+    "offlineStyles": true
+  }
+]

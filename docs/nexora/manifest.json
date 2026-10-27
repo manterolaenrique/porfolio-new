@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "phase": "1B_dev_review",
+  "implementationGate": "continued_after_user_request",
+  "continuationRequest": "Continuar, que fue o quer bloqueo",
+  "projectId": "2133477259622614950",
+  "designSystem": "assets/146e1f30406c453facfc10e43e82a4d4",
+  "branch": "feat/nexora-design-review",
+  "updatedAt": "2026-10-26",
+  "pages": [
+    {
+      "key": "inicio-desktop",
+      "page": "inicio",
+      "route": "/nexora",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "f27f9d76047548beb576830708dc014b",
+      "screenName": "projects/2133477259622614950/screens/f27f9d76047548beb576830708dc014b",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/8b47436649e34841bbc8bc48c997c91e",
+        "screenshot": "projects/2133477259622614950/files/5359fdeb36f544948c03dbb4eeea4d92"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/inicio/desktop/source.html",
+        "html": "docs/nexora/stitch/inicio/desktop/design.html",
+        "image": "docs/nexora/stitch/inicio/desktop/screen.png"
+      },
+      "previousScreenId": "72eff6d178324fb79021a0fbff640f09",
+      "exportedImage": {
+        "width": 2560,
+        "height": 11462,
+        "sha256": "cc4c04208ab900ee42f12ee329d3bbcde0baf6e1854fa8d6c521f1571d3cbec5"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "inicio-tablet",
+      "page": "inicio",
+      "route": "/nexora",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "2520e9449a654d11beaecd42a36b3697",
+      "screenName": "projects/2133477259622614950/screens/2520e9449a654d11beaecd42a36b3697",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/5482514de27644f6af28bf3360abd81a",
+        "screenshot": "projects/2133477259622614950/files/0dc526ba35c44b7ebc4e4d7ebb34e98b"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/inicio/tablet/source.html",
+        "html": "docs/nexora/stitch/inicio/tablet/design.html",
+        "image": "docs/nexora/stitch/inicio/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 1420,
+        "height": 10976
+      },
+      "exportedImage": {
+        "width": 1420,
+        "height": 11008,
+        "sha256": "660ea98d9bfc53ef8060b42f4f4204ccf103dacf13011b5f9a26fd4b91974da5"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "inicio-mobile",
+      "page": "inicio",
+      "route": "/nexora",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "98ea59c3af2c4edaafa375c64356f2d4",
+      "screenName": "projects/2133477259622614950/screens/98ea59c3af2c4edaafa375c64356f2d4",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/f536ae05d1ad4552b6bc6ed1a3f1fbdc",
+        "screenshot": "projects/2133477259622614950/files/57f9e9c2f9ae4d1e8eb322367b0e66c5"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/inicio/mobile/source.html",
+        "html": "docs/nexora/stitch/inicio/mobile/design.html",
+        "image": "docs/nexora/stitch/inicio/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 10188
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 10188,
+        "sha256": "0fc90d9a51f46ee1a831a285b37b71f5a0e9ec8c1ac046d0e601e2ec90da866a"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "servicios-desktop",
+      "page": "servicios",
+      "route": "/nexora/servicios",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "a628164bc1324331ba749a4c62d7d236",
+      "screenName": "projects/2133477259622614950/screens/a628164bc1324331ba749a4c62d7d236",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/a12a60f4626c4f51a510797d6a9c966b",
+        "screenshot": "projects/2133477259622614950/files/bf8bffadf82b416ba1431dec1bacff02"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/servicios/desktop/source.html",
+        "html": "docs/nexora/stitch/servicios/desktop/design.html",
+        "image": "docs/nexora/stitch/servicios/desktop/screen.png"
+      },
+      "previousScreenId": "f84a9d97424843f4aa8bd59ebbb80417",
+      "exportedImage": {
+        "width": 2560,
+        "height": 5856,
+        "sha256": "36ec08b955ba97333401c446382c2a9239b31dca64f1f60fafd72b34037f5eee"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "servicios-tablet",
+      "page": "servicios",
+      "route": "/nexora/servicios",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "f4be6a17d04342a99c8179d3ff407364",
+      "screenName": "projects/2133477259622614950/screens/f4be6a17d04342a99c8179d3ff407364",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/4816a8acf3d4446caad2db51c5284fa5",
+        "screenshot": "projects/2133477259622614950/files/1a5576b727d2431c9d5b0f30032c7033"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/servicios/tablet/source.html",
+        "html": "docs/nexora/stitch/servicios/tablet/design.html",
+        "image": "docs/nexora/stitch/servicios/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 1420,
+        "height": 9266
+      },
+      "exportedImage": {
+        "width": 2060,
+        "height": 9266,
+        "sha256": "8d7188db0424a3948b426f3f50641cb3f07720a46e92d9d4562477f89546269d"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "servicios-mobile",
+      "page": "servicios",
+      "route": "/nexora/servicios",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "220af2ac4dc64628b6ffef33f3dff2a6",
+      "screenName": "projects/2133477259622614950/screens/220af2ac4dc64628b6ffef33f3dff2a6",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/1d10909e854c4367a69cf5907df98923",
+        "screenshot": "projects/2133477259622614950/files/91663f2564db45aa8e88034df5074c01"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/servicios/mobile/source.html",
+        "html": "docs/nexora/stitch/servicios/mobile/design.html",
+        "image": "docs/nexora/stitch/servicios/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 6836
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 6836,
+        "sha256": "004530afdf3c253c7b1ee5161ec25e37623703bc1ef674544c0f2b68ec744553"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "proyectos-desktop",
+      "page": "proyectos",
+      "route": "/nexora/proyectos",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "547891fdf3834a57b25e12945cf3af74",
+      "screenName": "projects/2133477259622614950/screens/547891fdf3834a57b25e12945cf3af74",
+      "revision": 2,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/207f1ec25e6545acbb0b91deb8495cad",
+        "screenshot": "projects/2133477259622614950/files/58b2f3899d0a4d178ad1a39902999f7f"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/proyectos/desktop/source.html",
+        "html": "docs/nexora/stitch/proyectos/desktop/design.html",
+        "image": "docs/nexora/stitch/proyectos/desktop/screen.png"
+      },
+      "previousScreenId": "bd21f85ba2d64b87ad03bf2db38ebd44",
+      "revisions": [
+        {
+          "screenId": "cf8afce0417e4c6e864226b07ac6c0ed",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/files/589065f2f6914a52874db2737ecd33dd",
+            "screenshot": "projects/2133477259622614950/files/6080044cbcae4d8b9a2b633cd4a0e7ad"
+          }
+        }
+      ],
+      "reportedDimensions": {
+        "width": 2560,
+        "height": 5434
+      },
+      "exportedImage": {
+        "width": 2560,
+        "height": 5434,
+        "sha256": "fb8f5c3ca8014d920e51f03da7bccba92a78eb001c3fb7aac5bb4c6247bab63b"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "proyectos-tablet",
+      "page": "proyectos",
+      "route": "/nexora/proyectos",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "4a6a2012d85640858bb4cefa9af5f365",
+      "screenName": "projects/2133477259622614950/screens/4a6a2012d85640858bb4cefa9af5f365",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/13a12a5776744090877c45352b05cae2",
+        "screenshot": "projects/2133477259622614950/files/2f18275c23f04e04a0951c78e29d3842"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/proyectos/tablet/source.html",
+        "html": "docs/nexora/stitch/proyectos/tablet/design.html",
+        "image": "docs/nexora/stitch/proyectos/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 7166
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 7166,
+        "sha256": "5a74fda9ee34320504efc191025f9c45210c2378622501bf4cb2e415f1aea770"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "proyectos-mobile",
+      "page": "proyectos",
+      "route": "/nexora/proyectos",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "78dc68304f354dbeb8f2c50587648970",
+      "screenName": "projects/2133477259622614950/screens/78dc68304f354dbeb8f2c50587648970",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/811c81d402074b8c8e9aedfaf30c35dd",
+        "screenshot": "projects/2133477259622614950/files/9e7d6ae31f8d4975ae23758b36d1908e"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/proyectos/mobile/source.html",
+        "html": "docs/nexora/stitch/proyectos/mobile/design.html",
+        "image": "docs/nexora/stitch/proyectos/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 5188
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 5188,
+        "sha256": "92b20a442ac7091b8aa6fc842e08f7610dce9453fdd8ca70ac0c6bf5857495fb"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "detalle-desktop",
+      "page": "detalle",
+      "route": "/nexora/proyectos/[slug]",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "1d479ec57c6942cbb798025947e0fa0b",
+      "screenName": "projects/2133477259622614950/screens/1d479ec57c6942cbb798025947e0fa0b",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/c2cc7ae98cf64429a8214d70a8d3c48d",
+        "screenshot": "projects/2133477259622614950/files/9192d7f2630f4315a243a0c5baddb4b2"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/detalle/desktop/source.html",
+        "html": "docs/nexora/stitch/detalle/desktop/design.html",
+        "image": "docs/nexora/stitch/detalle/desktop/screen.png"
+      },
+      "revisions": [
+        {
+          "screenId": "e5da36e1a4c74fb0b2a5c43188e2df88",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/screens/e5da36e1a4c74fb0b2a5c43188e2df88/fileEntries/html",
+            "screenshot": "projects/2133477259622614950/screens/e5da36e1a4c74fb0b2a5c43188e2df88/fileEntries/screenshot"
+          }
+        }
+      ],
+      "reportedDimensions": {
+        "width": 2560,
+        "height": 8926
+      },
+      "reportedDeviceType": "DESKTOP",
+      "exportedImage": {
+        "width": 2560,
+        "height": 8926,
+        "sha256": "b9793f014a18417b8e929d30af78b3dcf44076ae9db61096b1c762f2f82c360f"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "detalle-tablet",
+      "page": "detalle",
+      "route": "/nexora/proyectos/[slug]",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "402f30b3a86f41469dcd31bb4a1a7b9e",
+      "screenName": "projects/2133477259622614950/screens/402f30b3a86f41469dcd31bb4a1a7b9e",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/f9b3a950697d41b7b547bdd935840602",
+        "screenshot": "projects/2133477259622614950/files/e4fb25a363f1453c863fd043b3ca61f4"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/detalle/tablet/source.html",
+        "html": "docs/nexora/stitch/detalle/tablet/design.html",
+        "image": "docs/nexora/stitch/detalle/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 1158,
+        "height": 7882
+      },
+      "exportedImage": {
+        "width": 1348,
+        "height": 7882,
+        "sha256": "3387b239dab22c189e4c69bf057a9bd5cf5ace772b4b3a4c500487011a02473f"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "detalle-mobile",
+      "page": "detalle",
+      "route": "/nexora/proyectos/[slug]",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "8154edfda23e423a9485939be715ebad",
+      "screenName": "projects/2133477259622614950/screens/8154edfda23e423a9485939be715ebad",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/c0a44ef11d5d4713964cac81c181f84c",
+        "screenshot": "projects/2133477259622614950/files/5078c19d6faa4d21bb463844ae794086"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/detalle/mobile/source.html",
+        "html": "docs/nexora/stitch/detalle/mobile/design.html",
+        "image": "docs/nexora/stitch/detalle/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 6910
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 6910,
+        "sha256": "443cf7274474a1b2be8f5e0c61f11057d6d0f0764dacab416f19015a4455d6f1"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "nosotros-desktop",
+      "page": "nosotros",
+      "route": "/nexora/nosotros",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "cdbfed90ce524954ba939648775b86e9",
+      "screenName": "projects/2133477259622614950/screens/cdbfed90ce524954ba939648775b86e9",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/30cb1909716d43d9904aa873ed9ded79",
+        "screenshot": "projects/2133477259622614950/files/9b8c3af8d32c46aca8236e897257b6e4"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/nosotros/desktop/source.html",
+        "html": "docs/nexora/stitch/nosotros/desktop/design.html",
+        "image": "docs/nexora/stitch/nosotros/desktop/screen.png"
+      },
+      "revisions": [
+        {
+          "screenId": "0d7c62efdd8f4a40a1b263e3561128ab",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/screens/0d7c62efdd8f4a40a1b263e3561128ab/fileEntries/html",
+            "screenshot": "projects/2133477259622614950/screens/0d7c62efdd8f4a40a1b263e3561128ab/fileEntries/screenshot"
+          }
+        }
+      ],
+      "reportedDimensions": {
+        "width": 2560,
+        "height": 10480
+      },
+      "exportedImage": {
+        "width": 2560,
+        "height": 10480,
+        "sha256": "b80583bca0a0a2ce9e07b8dbcb2c6b950ddb749864e70b8b42ca6d45905bd1a4"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "nosotros-tablet",
+      "page": "nosotros",
+      "route": "/nexora/nosotros",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "e6f67e350dd34e19a6d7e8c9d07f3446",
+      "screenName": "projects/2133477259622614950/screens/e6f67e350dd34e19a6d7e8c9d07f3446",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/63e38fc5b0f545e8970b229166d4a78d",
+        "screenshot": "projects/2133477259622614950/files/738b913fa941460ab71015f7680fb100"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/nosotros/tablet/source.html",
+        "html": "docs/nexora/stitch/nosotros/tablet/design.html",
+        "image": "docs/nexora/stitch/nosotros/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 11572
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 11572,
+        "sha256": "cc72601dbd2a7fae597cadedb93971d9b2d1d0ea80f77ff45b178cab4f785622"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "nosotros-mobile",
+      "page": "nosotros",
+      "route": "/nexora/nosotros",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "049826d5af324b1db4d2110e398e2843",
+      "screenName": "projects/2133477259622614950/screens/049826d5af324b1db4d2110e398e2843",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/eebdd9dd67134296972258382b719674",
+        "screenshot": "projects/2133477259622614950/files/6458faf48a494513b1f87359a05bae98"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/nosotros/mobile/source.html",
+        "html": "docs/nexora/stitch/nosotros/mobile/design.html",
+        "image": "docs/nexora/stitch/nosotros/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 9080
+      },
+      "exportedImage": {
+        "width": 780,
+        "height": 9080,
+        "sha256": "f7f8203eeeea877a4deda87b42d1f002ba9f4da1b8a3c914751d47ea58dfb2c5"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "contacto-desktop",
+      "page": "contacto",
+      "route": "/nexora/contacto",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440
+      },
+      "screenId": "1ac3b72787a143d7ad17b59c76fca1d2",
+      "screenName": "projects/2133477259622614950/screens/1ac3b72787a143d7ad17b59c76fca1d2",
+      "revision": 1,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/5b9b958e7696412bafc5ef1fe2dd4f86",
+        "screenshot": "projects/2133477259622614950/files/bfb9aaa0159d4d29b115a4d710dec5dc"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/contacto/desktop/source.html",
+        "html": "docs/nexora/stitch/contacto/desktop/design.html",
+        "image": "docs/nexora/stitch/contacto/desktop/screen.png"
+      },
+      "revisions": [
+        {
+          "screenId": "dfda2481d84d429c9f8c7e732045ffb6",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/screens/dfda2481d84d429c9f8c7e732045ffb6/fileEntries/html",
+            "screenshot": "projects/2133477259622614950/screens/dfda2481d84d429c9f8c7e732045ffb6/fileEntries/screenshot"
+          }
+        }
+      ],
+      "reportedDimensions": {
+        "width": 2560,
+        "height": 4456
+      },
+      "reportedDeviceType": "DESKTOP",
+      "exportedImage": {
+        "width": 2560,
+        "height": 4456,
+        "sha256": "bb3949e50d2e8787f0db567563526203d334c8f73a288db6b4236ef59b2c2d94"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "contacto-tablet",
+      "page": "contacto",
+      "route": "/nexora/contacto",
+      "device": "tablet",
+      "viewport": {
+        "width": 768
+      },
+      "screenId": "29dce51654f4437196339a7a42e3801b",
+      "screenName": "projects/2133477259622614950/screens/29dce51654f4437196339a7a42e3801b",
+      "revision": 2,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/b5b9f89bfcc840b6818fa85d4a551f2c",
+        "screenshot": "projects/2133477259622614950/files/1515b90b270b4d19a8a116581e534334"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/contacto/tablet/source.html",
+        "html": "docs/nexora/stitch/contacto/tablet/design.html",
+        "image": "docs/nexora/stitch/contacto/tablet/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 4804
+      },
+      "revisions": [
+        {
+          "screenId": "be205b9654fd4ad3ba5b01b5d2c86126",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/files/9446458ec326462aaafc5e6db2c0bd94",
+            "screenshot": "projects/2133477259622614950/files/dd52ee4dc5e94e468abf14f7d2c9c88f"
+          }
+        }
+      ],
+      "reportedDeviceType": "MOBILE",
+      "exportedImage": {
+        "width": 780,
+        "height": 4804,
+        "sha256": "5992d0dab56bbd6f118c27c8d83b980a39c20c57cbf919bdf7ffd485ebb45052"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    },
+    {
+      "key": "contacto-mobile",
+      "page": "contacto",
+      "route": "/nexora/contacto",
+      "device": "mobile",
+      "viewport": {
+        "width": 390
+      },
+      "screenId": "dd4cfb7117a14dc8a56c32372a5bdea1",
+      "screenName": "projects/2133477259622614950/screens/dd4cfb7117a14dc8a56c32372a5bdea1",
+      "revision": 2,
+      "status": "ready_for_visual_review",
+      "approval": "pending",
+      "sourceResources": {
+        "html": "projects/2133477259622614950/files/763819a4e6364c52856fcd1b892ea61f",
+        "screenshot": "projects/2133477259622614950/files/ee98a5c4fde142eca3c4d31f049690de"
+      },
+      "exports": {
+        "sourceHtml": "docs/nexora/stitch/contacto/mobile/source.html",
+        "html": "docs/nexora/stitch/contacto/mobile/design.html",
+        "image": "docs/nexora/stitch/contacto/mobile/screen.png"
+      },
+      "reportedDimensions": {
+        "width": 780,
+        "height": 3998
+      },
+      "revisions": [
+        {
+          "screenId": "9f83c03d55a4439580d876707d6a1f30",
+          "sourceResources": {
+            "html": "projects/2133477259622614950/files/7af644324e324c7e9ececc5307c17505",
+            "screenshot": "projects/2133477259622614950/files/07b7579f6c284bac8a6159fb1a6ff1a1"
+          }
+        }
+      ],
+      "reportedDeviceType": "MOBILE",
+      "exportedImage": {
+        "width": 780,
+        "height": 3998,
+        "sha256": "d706e85ca3a72609600aa48f4297460dd5ad4b9402fde2b8e6c5ece6cbe4506a"
+      },
+      "reviewAdjustments": {
+        "verifiedAssets": true,
+        "localCompiledStyles": true,
+        "originalScreenshotIsCompositionReference": true
+      }
+    }
+  ],
+  "unchangedPortfolioScreens": [
+    "projects/2133477259622614950/screens/08d6ae8c0b304b739227660030ac971d",
+    "projects/2133477259622614950/screens/4a17adbe71bd43ec8cf0cddb3c9d1251",
+    "projects/2133477259622614950/screens/34e4329e79c7473a93b394ee058be2d0",
+    "projects/2133477259622614950/screens/3419891661484b99a4930e1951c775f4"
+  ],
+  "operations": [
+    {
+      "type": "edit_screens",
+      "status": "completed",
+      "sourceIds": [
+        "72eff6d178324fb79021a0fbff640f09",
+        "f84a9d97424843f4aa8bd59ebbb80417",
+        "bd21f85ba2d64b87ad03bf2db38ebd44"
+      ],
+      "resultIds": [
+        "a628164bc1324331ba749a4c62d7d236",
+        "f27f9d76047548beb576830708dc014b",
+        "cf8afce0417e4c6e864226b07ac6c0ed"
+      ],
+      "note": "Stitch edit_screens returns revision IDs; original IDs retained as history, never generated again."
+    }
+  ],
+  "exportNotes": [
+    "All 18 canonical references use full HTML/file resources returned by Stitch. Incremental desktop edit events are archived but superseded by full regeneration where necessary.",
+    "list_screens may omit returned revision IDs; manifest records canonical IDs from generation and direct file retrieval.",
+    "download_assets did not produce a directory on this machine; download_file is used instead.",
+    "Browser security policy blocks local file previews. No alternate browser, raw CDP, local server, or other workaround is used. Visual inspection uses exported Stitch PNGs."
+  ],
+  "motion": [
+    {
+      "name": "Scroll Reveal",
+      "status": "specified_for_phase_1B",
+      "specification": "ANIMATIONS.md"
+    },
+    {
+      "name": "Hero con entrada escalonada",
+      "status": "specified_for_phase_1B",
+      "specification": "ANIMATIONS.md"
+    },
+    {
+      "name": "Tarjetas 3D",
+      "status": "specified_for_phase_1B",
+      "specification": "ANIMATIONS.md"
+    },
+    {
+      "name": "Mockups desktop/mobile",
+      "status": "specified_for_phase_1B",
+      "specification": "ANIMATIONS.md"
+    },
+    {
+      "name": "Glow con cursor",
+      "status": "specified_for_phase_1B",
+      "specification": "ANIMATIONS.md"
+    }
+  ]
+}

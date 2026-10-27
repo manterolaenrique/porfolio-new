@@ -14,6 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://henrymanterola.dev.ar'),
   title: 'Enrique Manterola - Full Stack Developer',
   description: 'Portfolio profesional de Enrique Manterola - Desarrollador Full Stack especializado en React, Next.js, TypeScript y más.',
   keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'Web Development'],

@@ -1,0 +1,470 @@
+[
+  {
+    "key": "inicio-desktop",
+    "title": "Nexora Software Studio",
+    "headings": [
+      "Nexora Software Studio",
+      "Soluciones y Servicios de Software",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización e integraciones",
+      "Mantenimiento y evolución",
+      "Proyectos Reales",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "Proceso de Trabajo",
+      "Diagnóstico Técnico",
+      "Propuesta y Arquitectura",
+      "Desarrollo Iterativo con Demos",
+      "Entrega y Soporte",
+      "Enrique Manterola",
+      "¿Tienes un proyecto en mente? Conversemos sobre tu solución técnica."
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "inicio-tablet",
+    "title": "Nexora Software Studio | Inicio",
+    "headings": [
+      "Nexora Software Studio",
+      "Servicios de Ingeniería de Software",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización de procesos e integraciones",
+      "Mantenimiento y evolución de software",
+      "Proyectos Destacados",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "Metodología de Trabajo",
+      "Diagnóstico Técnico",
+      "Propuesta & Arquitectura",
+      "Diseño UX & Arquitectura",
+      "Sprints Semanales con Demos",
+      "Deploy Seguro & Traspaso",
+      "Mantenimiento & Evolución",
+      "Enrique Manterola",
+      "¿Listo para transformar tu idea en software de grado industrial?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "inicio-mobile",
+    "title": "Nexora | Inicio | Mobile",
+    "headings": [
+      "Nexora Software Studio",
+      "Soluciones y Servicios de Software",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización e integraciones",
+      "Mantenimiento y evolución",
+      "Proyectos Verificados",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "Proceso de Trabajo",
+      "1. Diagnóstico Técnico",
+      "2. Propuesta y Arquitectura",
+      "3. Desarrollo Iterativo con Demos",
+      "4. Entrega y Soporte",
+      "Enrique Manterola",
+      "¿Tienes un proyecto en mente?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "servicios-desktop",
+    "title": "Nexora Software Studio - Servicios",
+    "headings": [
+      "Servicios de Ingeniería y Desarrollo de Software",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización de procesos e integraciones",
+      "Mantenimiento y evolución de software",
+      "Metodología de Trabajo",
+      "Diagnóstico inicial sin compromiso",
+      "Presupuesto cerrado y alcance claro",
+      "Sprints semanales con demos funcionales",
+      "Traspaso total de código e infraestructura",
+      "¿Listo para llevar adelante tu proyecto de software?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "servicios-tablet",
+    "title": "Nexora | Servicios | Tablet",
+    "headings": [
+      "Servicios de Ingeniería y Desarrollo de Software",
+      "Servicios Verificados",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización de procesos e integraciones",
+      "Mantenimiento y evolución de software",
+      "Metodología de Trabajo",
+      "¿Listo para llevar adelante tu proyecto de software?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "servicios-mobile",
+    "title": "Nexora | Servicios | Mobile",
+    "headings": [
+      "Servicios de Software",
+      "Desarrollo de aplicaciones web",
+      "Sistemas de gestión a medida",
+      "Desarrollo de plataformas SaaS",
+      "Automatización de procesos e integraciones",
+      "Mantenimiento y evolución de aplicaciones",
+      "Metodología de Trabajo",
+      "Diagnóstico inicial sin compromiso",
+      "Presupuesto cerrado y alcance claro",
+      "Sprints semanales con demos funcionales",
+      "Traspaso total de código e infraestructura",
+      "¿Listo para llevar adelante tu proyecto de software?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "proyectos-desktop",
+    "title": "Productos y Proyectos — Nexora Software Studio",
+    "headings": [
+      "Productos y Proyectos",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "No se encontraron proyectos en esta categoría",
+      "¿Tienes una visión técnica que necesita ser construida?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "proyectos-tablet",
+    "title": "Nexora | Proyectos | Tablet",
+    "headings": [
+      "Productos y Proyectos",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "Sin resultados coincidentes",
+      "¿Tienes una visión técnica que necesita ser construida?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "proyectos-mobile",
+    "title": "Nexora | Proyectos | Mobile",
+    "headings": [
+      "Productos y Proyectos",
+      "DigitalFlow",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "No se encontraron proyectos con esta categoría",
+      "¿Tienes una visión técnica que necesita ser construida?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "detalle-desktop",
+    "title": "Nexora | Detalle | Desktop",
+    "headings": [
+      "DigitalFlow",
+      "El Problema de Negocio vs. La Solución",
+      "Fricción en venta y entregas manuales",
+      "Infraestructura autónoma con Webhooks y Drive API",
+      "Funcionalidades Principales Verificadas",
+      "Pasarela Mercado Pago con Webhooks Resilientes",
+      "Despacho Seguro respaldado por Google Drive API",
+      "Panel de Gestión y Analytics",
+      "Multi-tenant con Row Level Security",
+      "Stack Tecnológico Verificado",
+      "Next.js & React",
+      "TypeScript",
+      "Supabase & PostgreSQL",
+      "Mercado Pago API",
+      "Google Drive API",
+      "Tailwind CSS & Zod",
+      "Proyectos Relacionados Verificados",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "¿Quieres construir un SaaS o plataforma con este nivel técnico?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "detalle-tablet",
+    "title": "DigitalFlow — Nexora Software Studio",
+    "headings": [
+      "DigitalFlow — Gestión y Venta de Productos Digitales",
+      "Problema / Necesidad",
+      "Solución Desarrollada",
+      "developer_board\nFuncionalidades Principales",
+      "Pasarela Mercado Pago",
+      "Despacho Seguro de Archivos",
+      "Panel de Analytics",
+      "Arquitectura Multi-tenant",
+      "Stack Tecnológico Verificado",
+      "auto_stories\nProyectos Relacionados",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "¿Quieres construir una plataforma SaaS con este nivel de rigor?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "detalle-mobile",
+    "title": "Nexora | Detalle | Mobile — DigitalFlow",
+    "headings": [
+      "DigitalFlow — Gestión y Venta de Productos Digitales",
+      "Problema / Necesidad",
+      "Solución Desarrollada",
+      "Funcionalidades Principales",
+      "Pasarela Mercado Pago",
+      "Despacho Seguro de Archivos",
+      "Panel de Analytics",
+      "Arquitectura Multi-tenant",
+      "Stack Tecnológico Verificado",
+      "Proyectos Relacionados",
+      "Herramientas de Guitarra",
+      "Sitio para Bandas Musicales",
+      "¿Quieres construir una plataforma SaaS con este nivel de rigor?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "nosotros-desktop",
+    "title": "Nexora Software Studio | Sobre Nosotros",
+    "headings": [
+      "Ingeniería directa,\nsin capas de intermediarios.",
+      "El fin del intermediario inútil en la ingeniería de software",
+      "El modelo tradicional de agencia",
+      "Ingeniería directa, ágil y con propiedad total",
+      "Principios irrenunciables en cada línea de código",
+      "Zero-Bloat Engineering",
+      "Propiedad Intelectual Total",
+      "Arquitectura Sostenible",
+      "Compromiso de Mantenimiento",
+      "Quién está detrás de Nexora",
+      "Enrique Manterola",
+      "Proceso transparente en 6 fases",
+      "1. Diagnóstico Técnico Inicial",
+      "2. Propuesta Técnica & Económica Cerrada",
+      "3. Diseño UX & Arquitectura",
+      "4. Sprints Semanales con Demos",
+      "5. Deploy Seguro & Traspaso",
+      "6. Mantenimiento & Evolución",
+      "¿Listo para construir software confiable?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "nosotros-tablet",
+    "title": "Nexora | Nosotros | Tablet",
+    "headings": [
+      "Ingeniería directa, sin capas de intermediarios.",
+      "Modelo Tradicional vs Nexora",
+      "Nuestros 4 Principios de Ingeniería",
+      "Zero-Bloat Engineering",
+      "Propiedad Intelectual Total",
+      "Arquitectura Sostenible",
+      "Compromiso de Mantenimiento",
+      "Manos expertas en el código",
+      "Enrique Manterola",
+      "Metodología de Desarrollo en 6 Fases",
+      "¿Listo para construir software confiable?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "nosotros-mobile",
+    "title": "Nexora | Nosotros | Mobile",
+    "headings": [
+      "Ingeniería directa, sin capas de intermediarios.",
+      "Modelo Tradicional vs Nexora",
+      "El modelo tradicional de agencia",
+      "Ingeniería directa Nexora",
+      "Principios de Ingeniería",
+      "Zero-Bloat Engineering",
+      "Propiedad Intelectual Total",
+      "Arquitectura Sostenible",
+      "Compromiso de Mantenimiento",
+      "Quién está detrás de Nexora",
+      "Enrique Manterola",
+      "Metodología de 6 Fases",
+      "Diagnóstico Técnico Inicial",
+      "Propuesta Técnica & Económica Cerrada",
+      "Diseño UX & Arquitectura",
+      "Sprints Semanales con Demos",
+      "Deploy Seguro & Traspaso",
+      "Mantenimiento & Evolución",
+      "¿Listo para construir software confiable?"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": null
+  },
+  {
+    "key": "contacto-desktop",
+    "title": "Nexora | Contacto | Desktop",
+    "headings": [
+      "Hablemos de tu proyecto y planifiquemos tu software",
+      "Solicitud registrada en modo maqueta",
+      "Recepción interna exitosa — Acuse al cliente pendiente",
+      "mark_email_read\n              Previsualización de plantillas de email transactional",
+      "Coordinación de proyectos"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": {
+      "projectTypes": [
+        "Web",
+        "SaaS",
+        "Sistema a medida",
+        "Automatización / integración",
+        "Otro"
+      ],
+      "budgets": [
+        "unknown",
+        "defined",
+        "discuss"
+      ],
+      "maxDescription": [
+        2000
+      ],
+      "checkedConsent": false,
+      "testCopy": true,
+      "networkCalls": false
+    }
+  },
+  {
+    "key": "contacto-tablet",
+    "title": "Nexora | Contacto | Tablet",
+    "headings": [
+      "Hablemos de tu proyecto y planifiquemos tu software",
+      "¡Solicitud recibida con éxito!",
+      "Vistas previas de plantillas de email (Codex)"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": {
+      "projectTypes": [
+        "Web",
+        "SaaS",
+        "Sistema a medida",
+        "Automatización / integración",
+        "Otro"
+      ],
+      "budgets": [
+        "Aún no lo sé",
+        "Tengo un presupuesto",
+        "Prefiero conversarlo"
+      ],
+      "maxDescription": [
+        2000
+      ],
+      "checkedConsent": false,
+      "testCopy": true,
+      "networkCalls": false
+    }
+  },
+  {
+    "key": "contacto-mobile",
+    "title": "Nexora | Contacto | Mobile",
+    "headings": [
+      "Hablemos de tu proyecto y planifiquemos tu software",
+      "¡Solicitud simulada con éxito!",
+      "Canal directo y atención técnica"
+    ],
+    "hasNosotrosRoute": true,
+    "placeholderLinks": 0,
+    "unverifiedNexoraEmail": false,
+    "operations": [],
+    "form": {
+      "projectTypes": [
+        "Web",
+        "SaaS",
+        "Sistema a medida",
+        "Automatización / integración",
+        "Otro"
+      ],
+      "budgets": [
+        "unknown",
+        "defined",
+        "discuss"
+      ],
+      "maxDescription": [
+        2000
+      ],
+      "checkedConsent": false,
+      "testCopy": true,
+      "networkCalls": false
+    }
+  }
+]

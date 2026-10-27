@@ -1,0 +1,475 @@
+<!DOCTYPE html><html class="dark" lang="es" data-nexora-artifact="design-review-only"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nexora | Nosotros | Mobile</title>
+<!-- Fonts: Sora & Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined (Exact link specification) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+
+
+<style>
+    body {
+      letter-spacing: 0;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Glow utilities matching tokens */
+    .glow-violet {
+      box-shadow: 0 0 20px -2px rgba(117, 75, 255, 0.5);
+    }
+    .pulse-dot {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="./review.css"></head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex justify-center">
+<!-- Mobile Viewport Container (390px canonical test frame) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface flex flex-col relative overflow-x-hidden border-x border-outline-variant/40">
+<!-- Ambient Chromatic Blooms (Atmospheric Glassmorphism) -->
+<div class="absolute -top-16 -left-20 w-64 h-64 bg-primary-container/15 rounded-full blur-[100px] pointer-events-none -z-0"></div>
+<div class="absolute top-[680px] -right-24 w-72 h-72 bg-tertiary/10 rounded-full blur-[90px] pointer-events-none -z-0"></div>
+<div class="absolute top-[1480px] -left-16 w-60 h-60 bg-primary-container/10 rounded-full blur-[100px] pointer-events-none -z-0"></div>
+<!-- SHARED COMPONENT 1: TopAppBar -->
+<header class="docked full-width top sticky top-0 z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/60 shadow-sm flex justify-between items-center w-full px-space-margin-mobile py-space-sm h-14">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-sm" data-icon="terminal">terminal</span>
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight active:scale-95 transition-transform duration-150" href="/nexora">Nexora</a>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Direct Portfolio Quick Link -->
+<a class="text-label-sm font-label-sm text-tertiary px-space-sm py-1 rounded bg-tertiary/10 border border-tertiary/30 hover:text-tertiary transition-colors duration-150 flex items-center gap-1 active:scale-95" href="/">
+<span>Portafolio</span>
+<span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+<button aria-label="Abrir menú" class="text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:scale-95 p-1 flex items-center justify-center" id="menu-toggle-btn">
+<span class="material-symbols-outlined text-headline-sm" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- SHARED COMPONENT 2: NavigationDrawer (Off-canvas sliding overlay) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300" id="drawer-backdrop"></div>
+<aside aria-label="Menú de Navegación" class="fixed inset-y-0 right-0 w-full max-w-xs z-50 flex flex-col bg-surface-container border-l border-outline-variant/60 shadow-2xl translate-x-full transition-transform duration-300 ease-out" id="nav-drawer">
+<div class="flex flex-col h-full justify-between p-space-margin-mobile">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/40">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Nexora Studio</span>
+</div>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-tertiary p-1 rounded-lg" id="drawer-close-btn">
+<span class="material-symbols-outlined text-headline-sm" data-icon="close">close</span>
+</button>
+</div>
+<!-- Drawer Navigation Items: 5 tabs from JSON, active set to 'Nosotros' according to route /nexora/nosotros -->
+<nav class="flex flex-col gap-2 my-auto py-space-md">
+<!-- 1. Inicio -->
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all duration-150" href="/nexora">
+<span class="material-symbols-outlined text-outline" data-icon="home">home</span>
+<span>Inicio</span>
+</a>
+<!-- 2. Servicios -->
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/servicios">
+<span class="material-symbols-outlined text-outline" data-icon="code">code</span>
+<span>Servicios</span>
+</a>
+<!-- 3. Proyectos -->
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/proyectos">
+<span class="material-symbols-outlined text-outline" data-icon="folder_open">folder_open</span>
+<span>Proyectos</span>
+</a>
+<!-- 4. Nosotros (ACTIVE MATCH FOR /nexora/nosotros) -->
+<a class="bg-secondary-container text-on-secondary-container font-medium rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/nosotros">
+<span class="material-symbols-outlined text-tertiary" data-icon="groups">groups</span>
+<span>Nosotros</span>
+</a>
+<!-- 5. Contacto -->
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/contacto">
+<span class="material-symbols-outlined text-outline" data-icon="mail">mail</span>
+<span>Contacto</span>
+</a>
+</nav>
+<!-- Drawer Footer Meta -->
+<div class="pt-space-md border-t border-outline-variant/40 flex flex-col gap-2">
+<a class="text-label-sm font-label-sm text-tertiary flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant/60" href="/">
+<span>Portfolio Personal E. Manterola</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Arquitectura &amp; Código Resiliente</span>
+</div>
+</div>
+</aside>
+<!-- MAIN CONTENT -->
+<main class="flex flex-col w-full relative z-10">
+<!-- SECTION 1: HERO -->
+<section class="px-space-margin-mobile pt-8 pb-10 flex flex-col gap-5">
+<!-- Live Status Chip / Badge -->
+<div class="inline-flex items-center gap-2 self-start rounded-full px-3 py-1 bg-tertiary/10 border border-tertiary/30">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary pulse-dot"></span>
+<span class="text-label-sm font-label-sm text-tertiary">Identidad &amp; Filosofía de Desarrollo</span>
+</div>
+<!-- H1 Mobile Display -->
+<h1 class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface leading-tight">
+          Ingeniería directa, sin capas de intermediarios.
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Nexora nace para cerrar la brecha entre la visión del negocio y la construcción técnica de software. Creemos en el código mantenible, la arquitectura moderna y la transparencia radical.
+        </p>
+<!-- Métricas de principios (Tarjetas 2x2 en grilla móvil) -->
+<div class="grid grid-cols-2 gap-3 pt-2">
+<!-- Metric 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md border border-outline-variant/60 flex flex-col gap-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">Directo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Burocracia o intermediarios</span>
+</div>
+<!-- Metric 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md border border-outline-variant/60 flex flex-col gap-1">
+<span class="font-headline-md text-headline-md font-bold text-tertiary">Propio</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Propiedad de código e infra</span>
+</div>
+<!-- Metric 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md border border-outline-variant/60 flex flex-col gap-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">Iterativo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sprints con software funcional</span>
+</div>
+<!-- Metric 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md border border-outline-variant/60 flex flex-col gap-1">
+<span class="font-headline-md text-headline-md font-bold text-tertiary">1:1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contacto directo Lead Tech</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: COMPARATIVA (Modelo Tradicional vs Modelo Nexora) -->
+<section class="px-space-margin-mobile py-8 bg-surface-container-lowest/60 border-y border-outline-variant/40 flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Diferencial Estructural</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Modelo Tradicional vs Nexora</h2>
+</div>
+<!-- Tarjeta 1: Tradicional -->
+<div class="rounded-2xl p-5 bg-surface-container-low border border-outline-variant/50 relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface-variant">El modelo tradicional de agencia</h3>
+<span class="material-symbols-outlined text-outline-variant" data-icon="block">block</span>
+</div>
+<ul class="flex flex-col gap-2.5 font-body-sm text-body-sm text-outline">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-base shrink-0 mt-0.5" data-icon="close">close</span>
+<span>Comisiones operativas infladas y gestores de cuentas no técnicos.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-base shrink-0 mt-0.5" data-icon="close">close</span>
+<span>Cajas negras sin visibilidad real del progreso ni revisiones en vivo.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-base shrink-0 mt-0.5" data-icon="close">close</span>
+<span>Código legacy difícil de escalar y sin estándares rigurosos de tipado.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-base shrink-0 mt-0.5" data-icon="close">close</span>
+<span>Vendor lock-in: dependencias forzadas para cualquier cambio menor.</span>
+</li>
+</ul>
+</div>
+<!-- Tarjeta 2: Nexora (Card Level 2 / Glass & Accent Highlight) -->
+<div class="rounded-2xl p-5 bg-surface-container-high/90 border border-primary/40 relative overflow-hidden shadow-lg">
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-3 relative z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified">verified</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Ingeniería directa Nexora</h3>
+</div>
+<span class="text-label-sm font-label-sm text-tertiary font-semibold px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/20">Óptimo</span>
+</div>
+<ul class="flex flex-col gap-2.5 font-body-sm text-body-sm text-on-surface relative z-10">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span><strong>Código 100% tuyo:</strong> Repositorios git transferidos desde el día cero.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span><strong>Stack moderno:</strong> TypeScript estricto, Next.js, Node.js y cloud nativa.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span><strong>Sprints con demos:</strong> Despliegues funcionales cada 7 días en staging.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span><strong>Línea directa:</strong> Conversaciones técnicas sin filtros ni retrasos comerciales.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- SECTION 3: PRINCIPIOS DE INGENIERÍA -->
+<section class="px-space-margin-mobile py-10 flex flex-col gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Fundamentos</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Principios de Ingeniería</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pilares que guían cada línea de código y decisión de diseño.</p>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Principio 01 -->
+<div class="p-4 rounded-xl bg-surface-container-low/85 border border-outline-variant/60 flex flex-col gap-1.5 transition-all">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">01</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="memory">memory</span>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Zero-Bloat Engineering</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Rechazamos dependencias innecesarias y librerías monolíticas. Cada paquete en producción tiene una justificación medible en rendimiento.
+            </p>
+</div>
+<!-- Principio 02 -->
+<div class="p-4 rounded-xl bg-surface-container-low/85 border border-outline-variant/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-tertiary font-bold">02</span>
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="lock_open">lock_open</span>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Propiedad Intelectual Total</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Sin licencias opacas ni retención de credenciales. La infraestructura, los scripts de CI/CD y los pipelines pertenecen a tu organización.
+            </p>
+</div>
+<!-- Principio 03 -->
+<div class="p-4 rounded-xl bg-surface-container-low/85 border border-outline-variant/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">03</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="account_tree">account_tree</span>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Arquitectura Sostenible</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Diseño desacoplado y tipado de extremo a extremo que permite a futuros ingenieros incorporarse y modificar módulos sin fricción.
+            </p>
+</div>
+<!-- Principio 04 -->
+<div class="p-4 rounded-xl bg-surface-container-low/85 border border-outline-variant/60 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-tertiary font-bold">04</span>
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Compromiso de Mantenimiento</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              No abandonamos el software tras el lanzamiento. Proporcionamos garantías operativas, monitoreo telemétrico y planes continuos de evolución.
+            </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: QUIÉN ESTÁ DETRÁS DE NEXORA (Strictly Typographic Monogram EM - No AI portraits) -->
+<section class="px-space-margin-mobile py-9 bg-surface-container-lowest border-y border-outline-variant/40 flex flex-col gap-5">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Liderazgo Técnico</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Quién está detrás de Nexora</h2>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container border border-outline-variant/60 flex flex-col gap-4">
+<!-- Monograma Tipográfico Elegante "EM" (Regla estricta: NO retratos IA) -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest border border-primary/50 flex items-center justify-center font-headline-lg font-bold text-on-primary-container tracking-wider shadow-inner">
+              EM
+            </div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">Enrique Manterola</h3>
+<span class="font-label-md text-label-md text-tertiary font-medium">Fundador &amp; Lead Architect</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Ingeniero de software y arquitecto de sistemas con amplia trayectoria construyendo plataformas escalables, APIs de alto rendimiento e interfaces web modernas. En Nexora lidera directamente el diseño de la arquitectura y la ejecución del código sin intermediación operativa.
+          </p>
+<!-- Studio Terminal Spec snippet -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-2 mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error/70"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="w-2 h-2 rounded-full bg-tertiary/70"></span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">lead-profile.json</span>
+</div>
+<div class="text-on-surface-variant">
+<span class="text-primary font-semibold">role:</span> <span class="text-tertiary">"Solutions &amp; System Architect"</span>,<br>
+<span class="text-primary font-semibold">core_stack:</span> ["TypeScript", "Next.js", "Node", "PostgreSQL", "Cloud"],<br>
+<span class="text-primary font-semibold">approach:</span> <span class="text-on-surface">"Ingenieria directa"</span>
+</div>
+</div>
+<!-- Professional Portfolio Link -->
+<a class="mt-1 inline-flex items-center justify-between p-3 rounded-xl bg-surface-container-high border border-outline-variant hover:border-tertiary transition-colors duration-150 active:scale-[0.98]" href="/">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ver portfolio profesional de Enrique Manterola</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="north_east">north_east</span>
+</a>
+</div>
+</section>
+<!-- SECTION 5: METODOLOGÍA DE 6 FASES -->
+<section class="px-space-margin-mobile py-10 flex flex-col gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Proceso Riguroso</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-1">Metodología de 6 Fases</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Secuencia vertical predecible sin sorpresas de costes ni alcances.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-outline-variant/50 flex flex-col gap-6 ml-2">
+<!-- Fase 01 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-primary font-bold">Fase 01</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Diagnóstico Técnico Inicial</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evaluación de requisitos, viabilidad tecnológica, dependencias críticas y selección del stack de producción.</p>
+</div>
+<!-- Fase 02 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-outline border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">Fase 02</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Propuesta Técnica &amp; Económica Cerrada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto inamovible, calendario semanal de hitos y definición transparente de entregables.</p>
+</div>
+<!-- Fase 03 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-outline border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-primary font-bold">Fase 03</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Diseño UX &amp; Arquitectura</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Modelado de bases de datos, diagramas de microservicios, contratos OpenAPI y prototipado enfocado en conversión.</p>
+</div>
+<!-- Fase 04 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-outline border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">Fase 04</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Sprints Semanales con Demos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Iteraciones de 7 días con software desplegado y testeado en entornos de staging accesibles por el cliente.</p>
+</div>
+<!-- Fase 05 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-outline border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-primary font-bold">Fase 05</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Deploy Seguro &amp; Traspaso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pase a producción con zero-downtime, transferencia total de credenciales, documentación técnica y sesiones 1:1.</p>
+</div>
+<!-- Fase 06 -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-[31px] top-0 w-3.5 h-3.5 rounded-full bg-tertiary border-4 border-surface"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">Fase 06</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Mantenimiento &amp; Evolución</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitorización activa de rendimiento, parches de seguridad periódicos y roadmap para iteraciones funcionales.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CTA FINAL -->
+<section class="px-space-margin-mobile py-10 relative overflow-hidden bg-gradient-to-b from-surface-container to-surface-container-lowest border-t border-outline-variant/60">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="forum">forum</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">
+            ¿Listo para construir software confiable?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+            Sin rodeos comerciales. Analizamos tu requerimiento técnico directamente con nuestro Lead Architect.
+          </p>
+<!-- Primary Button per Design System Token Specs -->
+<a class="w-full mt-2 py-3.5 px-6 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold text-center glow-violet hover:bg-[#855EFF] transition-all duration-150 active:scale-95 flex items-center justify-center gap-2" href="/nexora/contacto">
+<span>Iniciar conversación directa</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- SHARED COMPONENT 3: Footer (Exact Labels & Exact Copyright String from JSON) -->
+<footer class="w-full border-t border-outline-variant/40 bg-surface-container-lowest flat no shadows">
+<div class="flex flex-col w-full px-space-margin-mobile py-space-xl gap-space-lg">
+<!-- Brand & Vision Header -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm" data-icon="terminal">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Nexora</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Bespoke enterprise software development studio. Direct engineering, modern architecture.
+          </p>
+</div>
+<!-- Links Grid matching exact JSON array labels: ["Portafolio", "Servicios", "Proyectos", "Nosotros", "Contacto", "GitHub", "LinkedIn"] -->
+<div class="grid grid-cols-2 gap-y-3 gap-x-4 pt-2 border-t border-outline-variant/30">
+<!-- Portafolio (maps to /) -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80 flex items-center gap-1" href="/">
+<span>Portafolio</span>
+<span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+<!-- Servicios -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80" href="/nexora/servicios">
+            Servicios
+          </a>
+<!-- Proyectos -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80" href="/nexora/proyectos">
+            Proyectos
+          </a>
+<!-- Nosotros (Active Page) -->
+<a class="text-label-sm font-label-sm text-tertiary font-semibold hover:text-tertiary transition-colors duration-150 active:opacity-80" href="/nexora/nosotros">
+            Nosotros
+          </a>
+<!-- Contacto -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80" href="/nexora/contacto">
+            Contacto
+          </a>
+<!-- GitHub -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80 flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>GitHub</span>
+<span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+<!-- LinkedIn -->
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-150 active:opacity-80 flex items-center gap-1" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span>LinkedIn</span>
+<span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Copyright exact string from JSON: "© 2024 Nexora Software Studio. Todos los derechos reservados." -->
+<div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<p>© 2024 Nexora Software Studio. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+<!-- Lightweight Inline Drawer Controller Script -->
+<script>
+    const menuBtn = document.getElementById('menu-toggle-btn');
+    const closeBtn = document.getElementById('drawer-close-btn');
+    const drawer = document.getElementById('nav-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+
+    function openDrawer() {
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+  </script>
+
+</body></html>

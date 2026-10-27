@@ -1,0 +1,518 @@
+<!DOCTYPE html><html class="dark" lang="es" data-nexora-artifact="design-review-only"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Nexora | Detalle | Desktop</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+
+<style>
+    * {
+      letter-spacing: 0 !important;
+    }
+    body {
+      overscroll-behavior: none;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<link rel="stylesheet" href="./review.css"></head>
+<body class="bg-background font-geist text-text min-h-screen flex flex-col selection:bg-primary selection:text-text">
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border">
+<div class="h-20 max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3 group" href="/nexora">
+<img alt="Nexora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v">
+<span class="font-sora font-bold text-xl text-text group-hover:text-primary transition-colors">Nexora</span>
+</a>
+<a class="hidden xl:inline-flex items-center gap-1.5 text-xs text-accent hover:underline transition-all" href="/">
+<span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          Portfolio Enrique Manterola
+          <span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm text-muted hover:text-text transition-colors" href="/nexora">Inicio</a>
+<a class="text-sm text-muted hover:text-text transition-colors" href="/nexora/servicios">Servicios</a>
+<a class="text-sm text-text font-semibold hover:text-primary transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="text-sm text-muted hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a>
+<a class="text-sm text-muted hover:text-text transition-colors" href="/nexora/contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-primary text-text font-medium text-sm hover:brightness-110 transition-all shadow-[0_0_20px_-3px_rgba(117,75,255,0.4)]" href="/nexora/contacto">
+          Hablemos de tu proyecto
+        </a>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT -->
+<main class="w-full pt-20 flex-grow">
+<!-- BREADCRUMB & HEADER SECTION -->
+<section class="w-full border-b border-border bg-background py-8">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-6">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-muted">
+<a class="hover:text-text transition-colors flex items-center gap-1" href="/nexora">
+<span class="material-symbols-outlined text-[15px]">home</span> Inicio
+          </a>
+<span class="text-border">/</span>
+<a class="hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a>
+<span class="text-border">/</span>
+<span class="text-text font-medium">DigitalFlow</span>
+</nav>
+<!-- Project Hero Titles & Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface border border-border text-accent font-mono text-xs font-medium">PROYECTO VERIFICADO</span>
+<span class="text-muted text-xs">SaaS Multi-tenant</span>
+</div>
+<h1 class="font-sora text-3xl md:text-5xl font-bold text-text leading-tight">
+              DigitalFlow
+            </h1>
+<p class="font-geist text-lg text-muted max-w-3xl leading-relaxed">
+              SaaS multi-tenant para vender productos digitales, cobrar con Mercado Pago y gestionar entregas automatizadas, clientes y analytics en tiempo real.
+            </p>
+<!-- Technical attributes chips -->
+<div class="flex flex-wrap gap-2 pt-2">
+<div class="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs text-muted flex items-center gap-1.5">
+<span class="text-text font-medium">Tipo:</span> Software como Servicio (SaaS)
+              </div>
+<div class="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs text-muted flex items-center gap-1.5">
+<span class="text-text font-medium">Pasarela:</span> Mercado Pago Webhooks
+              </div>
+<div class="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs text-muted flex items-center gap-1.5">
+<span class="text-text font-medium">Almacenamiento:</span> Google Drive API
+              </div>
+<div class="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs text-muted flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+<span class="text-accent font-medium">Producción Verificada</span>
+</div>
+</div>
+</div>
+<!-- Buttons & Demo Links -->
+<div class="lg:col-span-4 flex flex-col gap-3 lg:pt-4">
+<a class="w-full h-12 rounded-lg bg-primary text-text font-medium text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_0_20px_-3px_rgba(117,75,255,0.4)]" href="https://digitalflow-pagos.vercel.app/" rel="noopener noreferrer" target="_blank">
+<span>Visitar Demo Real</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<a class="w-full h-12 rounded-lg bg-surface border border-border text-text font-medium text-sm flex items-center justify-center gap-2 hover:bg-surface-high transition-colors" href="/nexora/contacto?proyecto=SaaS">
+<span class="material-symbols-outlined text-[18px] text-accent">tune</span>
+<span>Solicitar desarrollo similar</span>
+</a>
+<p class="text-xs text-muted text-center pt-1">
+              Despliegue activo en Vercel Edge Runtime
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- REAL SCREENSHOT SHOWCASE WITH DESKTOP / MOBILE SIMULATOR -->
+<section class="w-full bg-surface-low border-b border-border py-12">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-6">
+<!-- Viewer Header Controls -->
+<div class="flex flex-wrap items-center justify-between gap-4 bg-surface border border-border px-5 py-3 rounded-xl">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-accent text-[20px]">monitor</span>
+<span class="font-sora font-semibold text-sm text-text">Captura Verificada de Producción</span>
+</div>
+<!-- Honest Selector -->
+<div class="flex items-center gap-1 bg-background p-1 rounded-lg border border-border">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface text-text font-medium text-xs border border-border shadow-sm transition-all" id="btn-desktop" onclick="setViewMode('desktop')" type="button">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+<span>Vista Desktop</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-muted hover:text-text font-medium text-xs transition-all" id="btn-mobile" onclick="setViewMode('mobile')" type="button">
+<span class="material-symbols-outlined text-[16px]">smartphone</span>
+<span>Vista Adaptada</span>
+</button>
+</div>
+</div>
+<!-- Frame Container -->
+<div class="w-full flex justify-center items-center">
+<div class="w-full transition-all duration-300 ease-in-out border border-border bg-surface rounded-xl overflow-hidden shadow-2xl flex flex-col" id="preview-wrapper">
+<!-- Window Topbar -->
+<div class="bg-surface-card px-4 py-3 border-b border-border flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+<span class="ml-2 font-mono text-muted hidden sm:inline">digitalflow-pagos.vercel.app</span>
+</div>
+<!-- Badge visible cuando está en vista adaptada -->
+<div class="flex items-center gap-2">
+<span class="hidden px-2.5 py-0.5 rounded bg-accent/20 border border-accent/40 text-accent font-mono text-[11px] font-semibold" id="adapted-badge">
+                  Vista adaptada
+                </span>
+<a class="flex items-center gap-1 text-muted hover:text-accent font-mono text-xs transition-colors" href="https://digitalflow-pagos.vercel.app/" rel="noopener noreferrer" target="_blank">
+<span>Abrir enlace</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Image Viewport Container -->
+<div class="w-full bg-[#0a0f1d] flex justify-center items-center overflow-hidden" id="image-viewport">
+<img alt="Captura real de DigitalFlow" class="w-full h-auto object-cover block transition-all duration-300" id="project-screenshot" src="../../../assets/digitalflow.png">
+</div>
+<!-- Caption / Verified Attribution -->
+<div class="px-4 py-2.5 bg-surface-card border-t border-border flex flex-wrap items-center justify-between text-xs text-muted">
+<span>Captura de pantalla real de la interfaz del producto en producción</span>
+<span class="font-mono text-accent">ID: digitalflow_prod_2552x748</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROBLEMA Y SOLUCIÓN TÉCNICA -->
+<section class="w-full bg-background border-b border-border py-16">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="text-xs font-mono text-accent font-semibold">ARQUITECTURA DE CASO REAL</span>
+<h2 class="font-sora text-2xl md:text-3xl font-bold text-text">El Problema de Negocio vs. La Solución</h2>
+<p class="text-sm text-muted">Diagnóstico riguroso de requerimientos técnicos e implementación implementada en DigitalFlow.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Problem Box -->
+<div class="bg-surface border border-border p-8 rounded-xl flex flex-col gap-6">
+<div class="w-12 h-12 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div>
+<span class="text-xs font-mono text-red-400 font-semibold">PROBLEMA / NECESIDAD</span>
+<h3 class="font-sora text-xl font-semibold text-text mt-1">Fricción en venta y entregas manuales</h3>
+</div>
+<p class="text-sm text-muted leading-relaxed">
+              Los creadores y empresas que comercializan productos digitales (ebooks, plantillas, cursos, assets) sufren pérdidas continuas al utilizar flujos manuales de verificación de pagos y pasarelas genéricas sin automatización de entregas inmediatas.
+            </p>
+<ul class="flex flex-col gap-3 text-xs text-muted border-t border-border pt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-red-400 text-[18px] shrink-0">close</span>
+<span>Procesos de entrega manual propensos a demoras, pérdida de confianza y reclamos de clientes.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-red-400 text-[18px] shrink-0">close</span>
+<span>Falta de integración fluida con pasarelas de pago locales latinoamericanas como Mercado Pago.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-red-400 text-[18px] shrink-0">close</span>
+<span>Descargas directas desprotegidas o enlaces expuestos públicamente sin expiración de acceso.</span>
+</li>
+</ul>
+</div>
+<!-- Solution Box -->
+<div class="bg-surface border border-border p-8 rounded-xl flex flex-col gap-6">
+<div class="w-12 h-12 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[26px]">task_alt</span>
+</div>
+<div>
+<span class="text-xs font-mono text-accent font-semibold">SOLUCIÓN DESARROLLADA</span>
+<h3 class="font-sora text-xl font-semibold text-text mt-1">Infraestructura autónoma con Webhooks y Drive API</h3>
+</div>
+<p class="text-sm text-muted leading-relaxed">
+              Desarrollamos una plataforma SaaS completamente automatizada que procesa cobros mediante Mercado Pago, sincroniza notificaciones instantáneas por Webhooks seguros y entrega el acceso exclusivo a los archivos mediante la API de Google Drive.
+            </p>
+<ul class="flex flex-col gap-3 text-xs text-muted border-t border-border pt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-accent text-[18px] shrink-0">check</span>
+<span>Despacho automático e instantáneo del producto digital una vez confirmada la transacción.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-accent text-[18px] shrink-0">check</span>
+<span>Conexión directa con Mercado Pago Checkout Pro y Webhooks asíncronos con validación de firma.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-accent text-[18px] shrink-0">check</span>
+<span>Arquitectura multi-tenant con aislamiento por cuenta para gestionar catálogos y clientes.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FUNCIONALIDADES PRINCIPALES VERIFICADAS -->
+<section class="w-full bg-surface-low border-b border-border py-16">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="text-xs font-mono text-accent font-semibold">ALCANCE Y CARACTERÍSTICAS</span>
+<h2 class="font-sora text-2xl md:text-3xl font-bold text-text">Funcionalidades Principales Verificadas</h2>
+<p class="text-sm text-muted">Módulos operativos diseñados y construidos específicamente en el producto.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<h3 class="font-sora text-base font-semibold text-text">Pasarela Mercado Pago con Webhooks Resilientes</h3>
+<p class="text-xs text-muted leading-relaxed">
+              Integración completa de pagos mediante checkout estructurado y handlers de webhooks con manejo de idempotencia para garantizar que cada pago se acredite una única vez.
+            </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">cloud_download</span>
+</div>
+<h3 class="font-sora text-base font-semibold text-text">Despacho Seguro respaldado por Google Drive API</h3>
+<p class="text-xs text-muted leading-relaxed">
+              Almacenamiento seguro en la nube y generación programática de enlaces o accesos temporales directos a los productos adquiridos, evitando la filtración pública de archivos.
+            </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+</div>
+<h3 class="font-sora text-base font-semibold text-text">Panel de Gestión y Analytics</h3>
+<p class="text-xs text-muted leading-relaxed">
+              Vista unificada para el administrador con inventario de productos digitales, registro cronológico de órdenes, historial de cobros y métricas de desempeño de ventas.
+            </p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<h3 class="font-sora text-base font-semibold text-text">Multi-tenant con Row Level Security</h3>
+<p class="text-xs text-muted leading-relaxed">
+              Políticas de seguridad a nivel de fila (RLS) en Supabase/PostgreSQL que impiden que los datos o productos de un vendedor sean accesibles por otros inquilinos de la aplicación.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- STACK TECNOLÓGICO VERIFICADO -->
+<section class="w-full bg-background border-b border-border py-16">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="text-xs font-mono text-accent font-semibold">FUNDACIÓN DE SOFTWARE</span>
+<h2 class="font-sora text-2xl md:text-3xl font-bold text-text">Stack Tecnológico Verificado</h2>
+<p class="text-sm text-muted">Tecnologías reales implementadas en la arquitectura de DigitalFlow.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Tech 1 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">Next.js &amp; React</h3>
+<p class="text-xs text-muted">Framework full-stack con Server Components para rendimiento y renderizado óptimo de rutas.</p>
+</div>
+</div>
+<!-- Tech 2 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">TypeScript</h3>
+<p class="text-xs text-muted">Tipado estricto de extremo a extremo que previene inconsistencias en modelos y respuestas de API.</p>
+</div>
+</div>
+<!-- Tech 3 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">Supabase &amp; PostgreSQL</h3>
+<p class="text-xs text-muted">Base de datos relacional con autenticación integrada y aislamiento por inquilino vía RLS.</p>
+</div>
+</div>
+<!-- Tech 4 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">Mercado Pago API</h3>
+<p class="text-xs text-muted">Gestión de pagos locales con Webhooks para confirmación transaccional inmediata en backend.</p>
+</div>
+</div>
+<!-- Tech 5 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">Google Drive API</h3>
+<p class="text-xs text-muted">Almacenamiento de archivos digitales y delegación segura de permisos de descarga al comprador.</p>
+</div>
+</div>
+<!-- Tech 6 -->
+<div class="bg-surface border border-border p-5 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border flex items-center justify-center text-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-sora text-sm font-semibold text-text">Tailwind CSS &amp; Zod</h3>
+<p class="text-xs text-muted">Estilos modulares sin runtime adicional y validación rigurosa de esquemas en endpoints y formularios.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROYECTOS RELACIONADOS VERIFICADOS -->
+<section class="w-full bg-surface-low border-b border-border py-16">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-10">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-mono text-muted">PORTFOLIO NEXORA</span>
+<h2 class="font-sora text-2xl font-bold text-text">Proyectos Relacionados Verificados</h2>
+</div>
+<a class="text-xs text-accent hover:underline flex items-center gap-1 font-medium" href="/nexora/proyectos">
+<span>Ver todos los proyectos</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Related 1: Herramientas de Guitarra -->
+<a class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4 hover:border-accent transition-all group" href="/nexora/proyectos/herramientas-de-guitarra">
+<div class="h-48 w-full rounded-lg overflow-hidden bg-background border border-border relative">
+<img alt="Captura real de Herramientas de Guitarra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../../../assets/guitarra.png">
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded bg-background/90 border border-border text-accent font-mono text-[11px]">Audio DSP / WebAssembly</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-sora text-base font-semibold text-text group-hover:text-accent transition-colors">Herramientas de Guitarra</h3>
+<span class="material-symbols-outlined text-muted group-hover:text-accent group-hover:translate-x-1 transition-all text-[18px]">arrow_forward</span>
+</div>
+<p class="text-xs text-muted leading-relaxed">
+                Suite interactiva de procesamiento de audio en navegador con Web Audio API y algoritmos DSP para guitarristas y productores.
+              </p>
+</div>
+</a>
+<!-- Related 2: Sitio para Bandas Musicales -->
+<a class="bg-surface border border-border p-6 rounded-xl flex flex-col gap-4 hover:border-accent transition-all group" href="/nexora/proyectos/sitio-para-bandas-musicales">
+<div class="h-48 w-full rounded-lg overflow-hidden bg-background border border-border relative">
+<img alt="Captura real de Sitio para Bandas Musicales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="../../../assets/bandas.png">
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded bg-background/90 border border-border text-primary font-mono text-[11px]">Web Platform / Media</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-sora text-base font-semibold text-text group-hover:text-primary transition-colors">Sitio para Bandas Musicales</h3>
+<span class="material-symbols-outlined text-muted group-hover:text-primary group-hover:translate-x-1 transition-all text-[18px]">arrow_forward</span>
+</div>
+<p class="text-xs text-muted leading-relaxed">
+                Plataforma web con reproductores de streaming, calendario de conciertos y venta de merchandising integrado para artistas independientes.
+              </p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- FINAL CALL TO ACTION -->
+<section class="w-full bg-background py-16">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="bg-surface border border-border p-10 md:p-14 rounded-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="flex flex-col gap-3 max-w-xl text-left">
+<span class="px-3 py-1 rounded bg-primary/20 border border-primary/40 text-primary font-mono text-xs font-semibold self-start">
+              DESARROLLO DE SOFTWARE A MEDIDA
+            </span>
+<h2 class="font-sora text-2xl md:text-3xl font-bold text-text">
+              ¿Quieres construir un SaaS o plataforma con este nivel técnico?
+            </h2>
+<p class="text-sm text-muted leading-relaxed">
+              Diseñamos y desarrollamos soluciones web robustas, pasarelas de pago y sistemas automatizados listos para operar y monetizar.
+            </p>
+</div>
+<div class="w-full lg:w-auto flex flex-col sm:flex-row gap-4 shrink-0">
+<a class="px-8 h-12 rounded-lg bg-primary text-text font-medium text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_0_20px_-3px_rgba(117,75,255,0.4)]" href="/nexora/contacto">
+<span>Hablemos de tu proyecto</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-background border-t border-border py-12">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Logo and Bio -->
+<div class="md:col-span-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Nexora Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v">
+<span class="font-sora font-bold text-lg text-text">Nexora</span>
+</div>
+<p class="text-sm text-muted max-w-md">
+            Estudio de desarrollo y arquitectura de software especializado en productos digitales, aplicaciones web escalables y plataformas de pago.
+          </p>
+<div>
+<a class="inline-flex items-center gap-1.5 text-xs text-accent hover:underline" href="/">
+<span class="material-symbols-outlined text-[15px]">person_outline</span>
+<span>Portfolio de Enrique Manterola</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="md:col-span-3 flex flex-col gap-3">
+<span class="text-xs font-mono text-text uppercase font-semibold">Navegación</span>
+<ul class="flex flex-col gap-2 text-xs text-muted">
+<li><a class="hover:text-text transition-colors" href="/nexora">Inicio</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/servicios">Servicios</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/contacto">Contacto</a></li>
+</ul>
+</div>
+<!-- Social Profiles (Enrique Manterola) -->
+<div class="md:col-span-3 flex flex-col gap-3">
+<span class="text-xs font-mono text-text uppercase font-semibold">Perfiles Verificados</span>
+<div class="flex items-center gap-3">
+<a aria-label="GitHub Enrique Manterola" class="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-accent transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a aria-label="LinkedIn Enrique Manterola" class="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-accent transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</a>
+</div>
+<span class="text-xs text-muted pt-2">Enrique Manterola · Desarrollador de Software</span>
+</div>
+</div>
+<div class="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+<span>© 2026 Nexora Software Studio.</span>
+<span class="font-mono text-accent">DigitalFlow · Producción Activa</span>
+</div>
+</div>
+</footer>
+<!-- SCRIPT FOR HONEST DESKTOP / MOBILE VIEWER -->
+<script>
+    function setViewMode(mode) {
+      const frame = document.getElementById('preview-wrapper');
+      const badge = document.getElementById('adapted-badge');
+      const btnDesktop = document.getElementById('btn-desktop');
+      const btnMobile = document.getElementById('btn-mobile');
+
+      if (!frame || !badge || !btnDesktop || !btnMobile) return;
+
+      if (mode === 'mobile') {
+        frame.classList.remove('w-full');
+        frame.classList.add('max-w-[420px]', 'w-full');
+        badge.classList.remove('hidden');
+
+        btnMobile.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface text-text font-medium text-xs border border-border shadow-sm transition-all';
+        btnDesktop.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded text-muted hover:text-text font-medium text-xs transition-all';
+      } else {
+        frame.classList.remove('max-w-[420px]');
+        frame.classList.add('w-full');
+        badge.classList.add('hidden');
+
+        btnDesktop.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface text-text font-medium text-xs border border-border shadow-sm transition-all';
+        btnMobile.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded text-muted hover:text-text font-medium text-xs transition-all';
+      }
+    }
+  </script>
+</body></html>

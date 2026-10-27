@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Nexora Software Studio - Servicios</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#090D18",
+            surface: "#151B2E",
+            primary: "#754BFF",
+            accent: "#22D3C5",
+            text: "#F3F5FF",
+            muted: "#AAB4CB",
+            border: "#303850",
+          },
+          fontFamily: {
+            sora: ["Sora", "sans-serif"],
+            geist: ["Geist", "sans-serif"],
+          },
+          letterSpacing: {
+            DEFAULT: "0",
+            normal: "0",
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #090D18;
+        color: #F3F5FF;
+        letter-spacing: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      * {
+        letter-spacing: 0;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #22D3C5;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-background font-geist text-text min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#090D18]/90 backdrop-blur-md border-b border-border">
+<div class="h-20 max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3 group" href="/nexora">
+<img alt="Nexora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v"/>
+<span class="font-sora text-xl font-bold tracking-normal text-text group-hover:text-primary transition-colors">Nexora</span>
+</a>
+<a class="hidden xl:inline-flex items-center gap-1.5 text-xs text-accent hover:underline transition-colors font-medium" href="/">
+<span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          Portfolio Enrique Manterola
+          <span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora">Inicio</a>
+<a aria-current="page" class="text-sm font-semibold text-text bg-surface px-3.5 py-1.5 rounded-md border border-border" href="/nexora/servicios">Servicios</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-white font-medium text-sm hover:opacity-95 transition-opacity" href="/nexora/contacto">
+          Hablemos de tu proyecto
+        </a>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full pt-20 flex-grow">
+<!-- Hero Section (Full-width unframed page band) -->
+<section class="w-full border-b border-border py-20 bg-background">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border mb-6">
+<span class="w-2 h-2 rounded-full bg-accent"></span>
+<span class="text-xs font-semibold text-accent uppercase tracking-normal">Ingeniería de Software</span>
+</div>
+<h1 class="font-sora text-3xl md:text-5xl font-bold tracking-normal text-text leading-tight mb-6">
+            Servicios de Ingeniería y Desarrollo de Software
+          </h1>
+<p class="font-geist text-lg text-muted font-normal leading-relaxed">
+            Construimos soluciones digitales robustas, arquitecturas modernas y código mantenible directamente de la mano de ingenieros especializados.
+          </p>
+</div>
+</div>
+</section>
+<!-- Services Section (Only the 5 cards here) -->
+<section class="w-full border-b border-border py-20 bg-[#090D18]">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex flex-col gap-8">
+<!-- Row 1: Cards 1 and 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- 1. Desarrollo de aplicaciones web (7 cols) -->
+<article class="lg:col-span-7 bg-surface border border-border rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border">
+<div class="w-12 h-12 rounded-lg bg-[#090D18] border border-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">code</span>
+</div>
+<span class="text-xs font-mono text-muted">01 / WEB</span>
+</div>
+<h2 class="font-sora text-2xl font-bold text-text mb-4">
+                  Desarrollo de aplicaciones web
+                </h2>
+<div class="mb-6 p-4 rounded-lg bg-[#090D18] border border-border/80">
+<span class="text-xs font-semibold uppercase text-muted block mb-1">Problema que resolvemos:</span>
+<p class="text-sm text-text">
+                    Interfaces lentas, código legacy o falta de adaptabilidad responsive.
+                  </p>
+</div>
+<div class="mb-8">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Entregables:</span>
+<p class="text-sm text-muted leading-relaxed">
+                    Frontend de alta velocidad en Next.js/React, SSR/SSG optimizado, accesibilidad y Core Web Vitals de primer nivel.
+                  </p>
+</div>
+</div>
+<div class="pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-95 transition-opacity" href="/nexora/contacto?servicio=web">
+                  Consultar por este servicio
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<span class="text-xs font-mono text-muted">Next.js • React • TypeScript</span>
+</div>
+</article>
+<!-- 2. Sistemas de gestión a medida (5 cols) -->
+<article class="lg:col-span-5 bg-surface border border-border rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border">
+<div class="w-12 h-12 rounded-lg bg-[#090D18] border border-border flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[28px]">database</span>
+</div>
+<span class="text-xs font-mono text-muted">02 / SISTEMAS</span>
+</div>
+<h2 class="font-sora text-2xl font-bold text-text mb-4">
+                  Sistemas de gestión a medida
+                </h2>
+<div class="mb-6 p-4 rounded-lg bg-[#090D18] border border-border/80">
+<span class="text-xs font-semibold uppercase text-muted block mb-1">Problema que resolvemos:</span>
+<p class="text-sm text-text">
+                    Herramientas desconectadas, planillas dispersas y procesos manuales propensos a error.
+                  </p>
+</div>
+<div class="mb-8">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Entregables:</span>
+<p class="text-sm text-muted leading-relaxed">
+                    Paneles de control, portales operativos B2B, integración con bases de datos relacionales y autenticación con roles RBAC.
+                  </p>
+</div>
+</div>
+<div class="pt-4 border-t border-border">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-95 transition-opacity" href="/nexora/contacto?servicio=sistemas">
+                  Consultar por este servicio
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Row 2: Cards 3, 4, and 5 -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- 3. Desarrollo de plataformas SaaS -->
+<article class="bg-surface border border-border rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border">
+<div class="w-12 h-12 rounded-lg bg-[#090D18] border border-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">rocket_launch</span>
+</div>
+<span class="text-xs font-mono text-muted">03 / SAAS</span>
+</div>
+<h2 class="font-sora text-xl font-bold text-text mb-4">
+                  Desarrollo de plataformas SaaS
+                </h2>
+<div class="mb-6 p-4 rounded-lg bg-[#090D18] border border-border/80">
+<span class="text-xs font-semibold uppercase text-muted block mb-1">Problema:</span>
+<p class="text-sm text-text">
+                    Dificultad para monetizar servicios o escalar arquitecturas multi-inquilino seguras.
+                  </p>
+</div>
+<div class="mb-8">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Entregables:</span>
+<p class="text-sm text-muted leading-relaxed">
+                    Arquitectura multi-tenant, facturación y cobros recurrentes vía Stripe, dashboards de analítica y APIs de alta disponibilidad.
+                  </p>
+</div>
+</div>
+<div class="pt-4 border-t border-border">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-surface border border-border text-text hover:border-primary hover:text-primary text-sm font-semibold transition-colors" href="/nexora/contacto?servicio=saas">
+                  Consultar por este servicio
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- 4. Automatización de procesos e integraciones -->
+<article class="bg-surface border border-border rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border">
+<div class="w-12 h-12 rounded-lg bg-[#090D18] border border-border flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[28px]">bolt</span>
+</div>
+<span class="text-xs font-mono text-muted">04 / INTEGRACIONES</span>
+</div>
+<h2 class="font-sora text-xl font-bold text-text mb-4">
+                  Automatización de procesos e integraciones
+                </h2>
+<div class="mb-6 p-4 rounded-lg bg-[#090D18] border border-border/80">
+<span class="text-xs font-semibold uppercase text-muted block mb-1">Problema:</span>
+<p class="text-sm text-text">
+                    Pérdida de tiempo en tareas repetitivas y silos de información entre sistemas.
+                  </p>
+</div>
+<div class="mb-8">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Entregables:</span>
+<p class="text-sm text-muted leading-relaxed">
+                    Conexión de APIs de terceros (CRMs, pasarelas de pago, ERPs), webhooks resilientes con colas de reintentos y scripts automatizados.
+                  </p>
+</div>
+</div>
+<div class="pt-4 border-t border-border">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-surface border border-border text-text hover:border-accent hover:text-accent text-sm font-semibold transition-colors" href="/nexora/contacto?servicio=automatizacion">
+                  Consultar por este servicio
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- 5. Mantenimiento y evolución de software -->
+<article class="bg-surface border border-border rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border">
+<div class="w-12 h-12 rounded-lg bg-[#090D18] border border-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">published_with_changes</span>
+</div>
+<span class="text-xs font-mono text-muted">05 / EVOLUCIÓN</span>
+</div>
+<h2 class="font-sora text-xl font-bold text-text mb-4">
+                  Mantenimiento y evolución de software
+                </h2>
+<div class="mb-6 p-4 rounded-lg bg-[#090D18] border border-border/80">
+<span class="text-xs font-semibold uppercase text-muted block mb-1">Problema:</span>
+<p class="text-sm text-text">
+                    Sistemas obsoletos, deuda técnica acumulada y riesgos de seguridad.
+                  </p>
+</div>
+<div class="mb-8">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Entregables:</span>
+<p class="text-sm text-muted leading-relaxed">
+                    Auditorías de código y rendimiento, refactorización gradual, monitoreo de errores, parches continuos y roadmap evolutivo.
+                  </p>
+</div>
+</div>
+<div class="pt-4 border-t border-border">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-surface border border-border text-text hover:border-primary hover:text-primary text-sm font-semibold transition-colors" href="/nexora/contacto?servicio=mantenimiento">
+                  Consultar por este servicio
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Metodología de Trabajo (Full-width band, unframed) -->
+<section class="w-full border-b border-border py-20 bg-background">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="max-w-2xl mb-12">
+<span class="text-xs font-semibold uppercase text-accent block mb-2">Proceso de Trabajo</span>
+<h2 class="font-sora text-3xl font-bold text-text mb-4">Metodología de Trabajo</h2>
+<p class="text-muted text-base">
+            Colaboración directa, entregas continuas y absoluta transparencia en cada etapa del desarrollo.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pilar 1 -->
+<div class="p-6 border-l-2 border-primary bg-surface">
+<span class="text-xs font-mono text-primary font-bold block mb-2">PILAR 01</span>
+<h3 class="font-sora text-base font-bold text-text mb-2">
+              Diagnóstico inicial sin compromiso
+            </h3>
+<p class="text-sm text-muted leading-relaxed">
+              Analizamos a fondo los requisitos, viabilidad técnica y objetivos estratégicos antes de cualquier compromiso formal.
+            </p>
+</div>
+<!-- Pilar 2 -->
+<div class="p-6 border-l-2 border-accent bg-surface">
+<span class="text-xs font-mono text-accent font-bold block mb-2">PILAR 02</span>
+<h3 class="font-sora text-base font-bold text-text mb-2">
+              Presupuesto cerrado y alcance claro
+            </h3>
+<p class="text-sm text-muted leading-relaxed">
+              Alcance especificado punto por punto, costos cerrados y plazos predecibles sin sorpresas presupuestarias.
+            </p>
+</div>
+<!-- Pilar 3 -->
+<div class="p-6 border-l-2 border-primary bg-surface">
+<span class="text-xs font-mono text-primary font-bold block mb-2">PILAR 03</span>
+<h3 class="font-sora text-base font-bold text-text mb-2">
+              Sprints semanales con demos funcionales
+            </h3>
+<p class="text-sm text-muted leading-relaxed">
+              Avances tangibles cada 7 días en entornos de pruebas interactivos para validar y ajustar en tiempo real.
+            </p>
+</div>
+<!-- Pilar 4 -->
+<div class="p-6 border-l-2 border-accent bg-surface">
+<span class="text-xs font-mono text-accent font-bold block mb-2">PILAR 04</span>
+<h3 class="font-sora text-base font-bold text-text mb-2">
+              Traspaso total de código e infraestructura
+            </h3>
+<p class="text-sm text-muted leading-relaxed">
+              Propiedad 100% tuya: repositorios, documentación completa, pipelines y despliegues sin dependencia técnica cautiva.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA (Full-width block section) -->
+<section class="w-full py-20 bg-surface border-b border-border">
+<div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+<div class="max-w-xl">
+<h2 class="font-sora text-3xl font-bold text-text mb-3">
+            ¿Listo para llevar adelante tu proyecto de software?
+          </h2>
+<p class="text-muted text-base">
+            Diseñamos e implementamos software a medida listo para producción. Conversemos sobre tu arquitectura hoy.
+          </p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-semibold text-base hover:opacity-95 transition-opacity" href="/nexora/contacto">
+            Iniciar conversación
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#090D18] text-muted py-14">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-border">
+<div class="md:col-span-5 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Nexora Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v"/>
+<span class="font-sora text-xl font-bold text-text">Nexora</span>
+</div>
+<p class="text-sm text-text font-medium">De tu idea a un producto digital real.</p>
+<p class="text-sm text-muted max-w-sm">
+            Estudio de ingeniería y desarrollo de software especializado en productos web y herramientas operativas.
+          </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1.5 text-xs text-accent hover:underline" href="/">
+              Explorar Portfolio de Enrique Manterola
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col gap-3">
+<span class="text-xs font-semibold uppercase text-text tracking-normal">Navegación</span>
+<ul class="flex flex-col gap-2.5 text-sm">
+<li><a class="hover:text-text transition-colors" href="/nexora">Inicio</a></li>
+<li><a class="text-text font-medium hover:text-text transition-colors" href="/nexora/servicios">Servicios</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/contacto">Contacto</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col gap-3">
+<span class="text-xs font-semibold uppercase text-text tracking-normal">Contacto &amp; Redes</span>
+<p class="text-sm text-muted mb-2">
+            Perfil profesional y repositorios de código abierto:
+          </p>
+<div class="flex items-center gap-3">
+<a aria-label="GitHub de Enrique Manterola" class="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-accent transition-colors" href="https://github.com/manterolaenrique" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a aria-label="LinkedIn de Enrique Manterola" class="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-primary transition-colors" href="https://www.linkedin.com/in/enrique-manterola-8bb572189/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">work</span>
+</a>
+<a aria-label="Formulario de contacto" class="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-primary transition-colors" href="/nexora/contacto">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted">
+<span>© 2026 Nexora Software Studio. Todos los derechos reservados.</span>
+<span>Desarrollo directo con ingeniería senior</span>
+</div>
+</div>
+</footer>
+</body></html>

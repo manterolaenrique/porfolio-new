@@ -23,9 +23,11 @@ const Navbar: React.FC = () => {
     { label: 'Proyectos', href: '#projects' },
     { label: 'Visión', href: '#business-vision' },
     { label: 'Contacto', href: '#contact' },
+    { label: 'Nexora', href: '/nexora' },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/')) { setIsOpen(false); return }
     e.preventDefault()
     const element = document.querySelector(href)
     if (element) {

@@ -7,6 +7,7 @@ import skill from './skill'
 import socialLink from './socialLink'
 import contactInfo from './contactInfo'
 import commercialProfile from './commercialProfile'
+import { nexoraSettings, nexoraService, nexoraProject } from './nexora'
 
 export const schemaTypes = [
   siteSettings,
@@ -18,4 +19,7 @@ export const schemaTypes = [
   socialLink,
   contactInfo,
   commercialProfile,
+  nexoraSettings,
+  nexoraService,
+  nexoraProject,
 ]

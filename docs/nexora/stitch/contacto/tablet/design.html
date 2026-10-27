@@ -1,0 +1,661 @@
+<!DOCTYPE html><html class="dark" lang="es" data-nexora-artifact="design-review-only"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nexora | Contacto | Tablet</title>
+<!-- Google Fonts: Sora & Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+
+
+<style>
+    body {
+      min-height: 100vh;
+      background-color: #090D18;
+      color: #F3F5FF;
+      font-family: 'Geist', sans-serif;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      accent-color: #754BFF;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #2A334E;
+      border-radius: 4px;
+    }
+  </style>
+<link rel="stylesheet" href="./review.css"></head>
+<body class="bg-background text-on-surface antialiased flex flex-col items-center">
+<!-- Container Tablet (768px referencia fluida) -->
+<div class="w-full max-w-[768px] min-h-screen flex flex-col bg-background border-x border-outline-variant shadow-2xl relative">
+<!-- HEADER CONSISTENTE -->
+<header class="sticky top-0 z-40 bg-[#090D18]/90 backdrop-blur-md border-b border-outline-variant px-5 py-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="terminal">terminal</span>
+<a class="font-headline font-bold text-lg tracking-tight text-on-surface hover:text-white transition-colors" href="/nexora">Nexora</a>
+</div>
+<nav class="hidden sm:flex items-center gap-5 text-sm font-medium">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/servicios">Servicios</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/nosotros">Nosotros</a>
+<a class="text-accent font-semibold" href="/nexora/contacto">Contacto</a>
+</nav>
+<button aria-label="Abrir menú" class="sm:hidden p-1.5 text-on-surface-variant hover:text-on-surface active:scale-95 transition-all" id="open-drawer-btn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</header>
+<!-- DRAWER MÓVIL COMPLEMENTARIO -->
+<div class="fixed inset-0 bg-black/70 backdrop-blur-xs z-50 hidden" id="mobile-drawer-overlay">
+<aside class="fixed right-0 top-0 bottom-0 w-64 bg-surface border-l border-outline-variant p-6 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-3">
+<span class="font-headline font-bold text-base text-on-surface">Nexora Studio</span>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-on-surface" id="close-drawer-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2 text-sm font-medium">
+<a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container" href="/">Portfolio</a>
+<a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container" href="/nexora">Inicio Nexora</a>
+<a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container" href="/nexora/servicios">Servicios</a>
+<a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container" href="/nexora/proyectos">Proyectos</a>
+<a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container" href="/nexora/nosotros">Nosotros</a>
+<a class="px-3 py-2 rounded-lg bg-surface-container text-accent font-semibold" href="/nexora/contacto">Contacto</a>
+</nav>
+</div>
+<p class="text-xs text-on-surface-variant">Nexora Software Studio • 2026</p>
+</aside>
+</div>
+<!-- BANCO DE INSPECCIÓN DE DISEÑO (CODEX TESTING BAR) -->
+<section class="bg-surface-dim border-b border-outline-variant px-5 py-2.5 flex flex-col gap-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<span class="font-mono text-accent font-semibold tracking-wider uppercase">Banco de Inspección de Diseño</span>
+</div>
+<span class="text-on-surface-variant text-[11px] font-mono">Tablet 768px • Modo Codex</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar text-xs font-medium">
+<button class="px-2.5 py-1 rounded bg-surface border border-outline-variant hover:border-primary text-on-surface whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('step1')" type="button">
+          Paso 1
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface border border-outline-variant hover:border-primary text-on-surface whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('step2')" type="button">
+          Paso 2
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface border border-error/50 hover:bg-error/10 text-error whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('validation')" type="button">
+          Errores
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface border border-outline-variant hover:border-primary text-primary whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('loading')" type="button">
+          Carga
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface border border-outline-variant hover:border-accent text-on-surface whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('partial')" type="button">
+          Parcial
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface border border-accent/60 hover:bg-accent/10 text-accent whitespace-nowrap active:scale-95 transition-all" onclick="setSandboxState('confirmation')" type="button">
+          Confirmación
+        </button>
+<button class="ml-auto px-2.5 py-1 rounded bg-surface-container border border-outline-variant hover:text-white text-on-surface-variant whitespace-nowrap active:scale-95 transition-all flex items-center gap-1" onclick="toggleEmailTemplates()" type="button">
+<span class="material-symbols-outlined text-[14px]">mail</span> Emails Codex
+        </button>
+</div>
+</section>
+<!-- AVISO PROMINENTE DE MODO DE PRUEBA -->
+<div class="bg-surface-dim/80 border-b border-outline-variant px-5 py-2 flex items-center justify-between text-xs text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-base">info</span>
+<span>Modo de prueba: <strong class="text-on-surface font-semibold">no se enviaron correos</strong></span>
+</div>
+<span class="hidden sm:inline font-mono text-[11px] text-on-surface-variant/80">Prototipo interactivo cliente</span>
+</div>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="flex-1 px-5 sm:px-8 py-8 flex flex-col gap-7">
+<!-- ENCABEZADO DE SECCIÓN -->
+<section class="flex flex-col gap-2.5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-outline-variant w-fit text-xs text-accent font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+<span>Presupuesto y Planificación Técnica</span>
+</div>
+<h1 class="font-headline font-bold text-2xl sm:text-3xl text-on-surface tracking-tight leading-tight">
+          Hablemos de tu proyecto y planifiquemos tu software
+        </h1>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+          Completa el formulario en 2 pasos para dimensionar requerimientos, arquitectura recomendada y tiempos estimados de ejecución.
+        </p>
+</section>
+<!-- TARJETA DEL FORMULARIO EN 2 PASOS -->
+<section class="bg-surface border border-outline-variant rounded-xl p-5 sm:p-7 shadow-lg">
+<!-- INDICADOR DE PASOS -->
+<div class="mb-6 pb-4 border-b border-outline-variant">
+<div class="flex items-center justify-between mb-3 text-sm">
+<div class="flex items-center gap-2.5" id="step-indicator-1">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs" id="step-badge-1">1</span>
+<div>
+<span class="font-headline font-semibold text-on-surface block text-xs sm:text-sm">Paso 1: Sobre el proyecto</span>
+<span class="text-xs text-on-surface-variant hidden sm:block">Tipo, marco presupuestario y alcance</span>
+</div>
+</div>
+<div class="h-[1px] flex-1 mx-4 bg-outline-variant hidden sm:block"></div>
+<div class="flex items-center gap-2.5 opacity-50" id="step-indicator-2">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-xs" id="step-badge-2">2</span>
+<div>
+<span class="font-headline font-semibold text-on-surface block text-xs sm:text-sm">Paso 2: Datos de contacto</span>
+<span class="text-xs text-on-surface-variant hidden sm:block">Información para enviar el diagnóstico</span>
+</div>
+</div>
+</div>
+<!-- Barra de progreso -->
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-300 w-1/2" id="form-progress"></div>
+</div>
+</div>
+<!-- FORMULARIO -->
+<form id="contact-form" novalidate="" onsubmit="event.preventDefault(); handleFormSubmit();">
+<!-- ================= PASO 1 ================= -->
+<div class="flex flex-col gap-5" id="step-1-fields">
+<!-- Campo 1: Tipo de Proyecto (Obligatorio) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-on-surface">
+                  Tipo de proyecto <span class="text-accent">*</span>
+</label>
+<span class="text-xs text-on-surface-variant">Obligatorio</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="group-project-type">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="projectType" onchange="clearError('projectType')" type="radio" value="Web">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Web</span>
+<span class="text-xs text-on-surface-variant">Sitio corporativo o aplicación web</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="projectType" onchange="clearError('projectType')" type="radio" value="SaaS">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">SaaS</span>
+<span class="text-xs text-on-surface-variant">Producto digital bajo suscripción</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="projectType" onchange="clearError('projectType')" type="radio" value="Sistema a medida">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Sistema a medida</span>
+<span class="text-xs text-on-surface-variant">Software para procesos internos</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="projectType" onchange="clearError('projectType')" type="radio" value="Automatización / integración">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Automatización / integración</span>
+<span class="text-xs text-on-surface-variant">Conexión de APIs y flujos de trabajo</span>
+</div>
+</label>
+<label class="sm:col-span-2 flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="projectType" onchange="clearError('projectType')" type="radio" value="Otro">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Otro</span>
+<span class="text-xs text-on-surface-variant">Consultoría técnica o arquitectura de software</span>
+</div>
+</label>
+</div>
+<span class="text-error text-xs hidden flex items-center gap-1 mt-0.5" id="error-projectType">
+<span class="material-symbols-outlined text-sm">error</span> Selecciona un tipo de proyecto.
+              </span>
+</div>
+<!-- Campo 2: Presupuesto (Obligatorio, sin pedir montos numéricos) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-on-surface">
+                  Presupuesto estimado <span class="text-accent">*</span>
+</label>
+<span class="text-xs text-on-surface-variant">Sin montos obligatorios</span>
+</div>
+<div class="flex flex-col gap-2" id="group-budget">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="budget" onchange="clearError('budget')" type="radio" value="unknown">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Aún no lo sé</span>
+<span class="text-xs text-on-surface-variant">Necesito un diagnóstico técnico previo para dimensionar la inversión.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="budget" onchange="clearError('budget')" type="radio" value="defined">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Tengo un presupuesto</span>
+<span class="text-xs text-on-surface-variant">Contamos con fondos definidos y buscamos ajustar el alcance técnico.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container/60 border border-outline-variant hover:border-primary/60 cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="w-4 h-4 text-primary focus:ring-0" name="budget" onchange="clearError('budget')" type="radio" value="discuss">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Prefiero conversarlo</span>
+<span class="text-xs text-on-surface-variant">Revisar opciones técnicas y modelos de entrega en una llamada.</span>
+</div>
+</label>
+</div>
+<span class="text-error text-xs hidden flex items-center gap-1 mt-0.5" id="error-budget">
+<span class="material-symbols-outlined text-sm">error</span> Selecciona tu estado de presupuesto.
+              </span>
+</div>
+<!-- Campo 3: Descripción (Opcional, máx 2000 chars) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-on-surface" for="description">
+                  Descripción del requerimiento <span class="text-on-surface-variant font-normal text-xs">(Opcional)</span>
+</label>
+<span class="text-xs font-mono text-on-surface-variant" id="char-counter">0 / 2000</span>
+</div>
+<textarea class="w-full bg-surface-container/50 border border-outline-variant rounded-lg p-3 text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-y" id="description" maxlength="2000" name="description" oninput="handleDescriptionInput(this)" placeholder="Detalles de funcionalidades clave, tecnologías preferidas o metas..." rows="4"></textarea>
+</div>
+<!-- Botón hacia Paso 2 -->
+<div class="flex justify-end pt-2">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-semibold text-sm transition-all active:scale-95 flex items-center justify-center gap-2" onclick="goToStep(2)" type="button">
+<span>Continuar al Paso 2</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ================= PASO 2 ================= -->
+<div class="hidden flex-col gap-5" id="step-2-fields">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Nombre y apellido (Obligatorio) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-on-surface" for="name">
+                  Nombre y apellido <span class="text-accent">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container/50 border border-outline-variant rounded-lg text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="name" name="name" oninput="clearError('name')" placeholder="Ej. Camila Morales" type="text">
+<span class="text-error text-xs hidden flex items-center gap-1" id="error-name">
+<span class="material-symbols-outlined text-sm">error</span> Ingresa tu nombre.
+                </span>
+</div>
+<!-- Correo electrónico (Obligatorio) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-on-surface" for="email">
+                  Correo electrónico <span class="text-accent">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container/50 border border-outline-variant rounded-lg text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="email" name="email" oninput="clearError('email')" placeholder="camila@empresa.com" type="email">
+<span class="text-error text-xs hidden flex items-center gap-1" id="error-email">
+<span class="material-symbols-outlined text-sm">error</span> Ingresa un correo electrónico válido.
+                </span>
+</div>
+<!-- Empresa / Organización (Opcional) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-on-surface" for="company">
+                  Empresa / Organización <span class="text-on-surface-variant font-normal text-xs">(Opcional)</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container/50 border border-outline-variant rounded-lg text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="company" name="company" placeholder="Nombre de empresa o proyecto" type="text">
+</div>
+<!-- Plazo de inicio previsto (Opcional) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-on-surface" for="timeframe">
+                  Plazo de inicio previsto <span class="text-on-surface-variant font-normal text-xs">(Opcional)</span>
+</label>
+<select class="w-full h-10 px-3 bg-surface-container/50 border border-outline-variant rounded-lg text-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all cursor-pointer" id="timeframe" name="timeframe">
+<option class="bg-surface text-on-surface" value="">Seleccionar plazo estimado...</option>
+<option class="bg-surface text-on-surface" value="Inmediato (< 2 semanas)">Inmediato (&lt; 2 semanas)</option>
+<option class="bg-surface text-on-surface" value="Próximo mes">Próximo mes</option>
+<option class="bg-surface text-on-surface" value="Próximo trimestre">Próximo trimestre</option>
+<option class="bg-surface text-on-surface" value="Exploratorio / Sin definir">Exploratorio / Sin definir</option>
+</select>
+</div>
+</div>
+<!-- Turnstile Placeholder Neutral -->
+<div class="p-3 rounded-lg bg-surface-container/40 border border-outline-variant flex items-center justify-between text-xs">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">shield</span>
+<span class="text-on-surface-variant">Cloudflare Turnstile: <span class="text-on-surface">Verificación no ejecutada en esta maqueta</span></span>
+</div>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-surface border border-outline-variant text-on-surface-variant">Simulado</span>
+</div>
+<!-- Consentimiento obligatorio (Inicialmente desmarcado) -->
+<div class="flex flex-col gap-1">
+<label class="flex items-start gap-2.5 cursor-pointer text-xs text-on-surface-variant leading-relaxed select-none">
+<input class="mt-0.5 rounded border-outline-variant bg-surface-container text-primary focus:ring-0" id="consent" name="consent" onchange="clearError('consent')" type="checkbox">
+<span>Acepto el uso de estos datos exclusivamente para evaluar la solicitud técnica y responder esta consulta. Sin publicidad no deseada ni transferencias a terceros. <span class="text-accent">*</span></span>
+</label>
+<span class="text-error text-xs hidden flex items-center gap-1 ml-6" id="error-consent">
+<span class="material-symbols-outlined text-sm">error</span> Debes aceptar los términos de privacidad para continuar.
+              </span>
+</div>
+<!-- Botones de Navegación de Paso 2 -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-3 pt-3 border-t border-outline-variant">
+<!-- Botón Atrás que CONSERVA datos -->
+<button class="w-full sm:w-auto px-4 py-2 rounded-lg border border-outline-variant bg-surface hover:bg-surface-container text-on-surface text-sm font-medium transition-all active:scale-95 flex items-center justify-center gap-1.5" onclick="goToStep(1)" type="button">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>Atrás</span>
+</button>
+<!-- Botón Probar solicitud con aviso de prueba -->
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-semibold text-sm transition-all active:scale-95 flex items-center justify-center gap-2" id="submit-button" type="submit">
+<span id="submit-label">Probar solicitud</span>
+<span class="material-symbols-outlined text-sm" id="submit-icon">send</span>
+<span class="material-symbols-outlined text-sm animate-spin hidden" id="submit-spinner">sync</span>
+</button>
+</div>
+</div>
+<!-- ================= PANTALLA DE CONFIRMACIÓN ================= -->
+<div class="hidden flex-col items-center text-center py-6 gap-4" id="confirmation-screen">
+<div class="w-14 h-14 rounded-full bg-accent/15 border border-accent/40 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-3xl">check_circle</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<h2 class="font-headline font-bold text-xl text-on-surface">¡Solicitud recibida con éxito!</h2>
+<p class="text-sm text-on-surface-variant">
+                Hemos registrado los requerimientos de tu proyecto. El equipo técnico revisará los detalles y te responderá a la brevedad.
+              </p>
+</div>
+<!-- Resumen de datos -->
+<div class="w-full max-w-md bg-surface-dim border border-outline-variant rounded-lg p-4 text-left text-xs flex flex-col gap-2">
+<div class="flex justify-between border-b border-outline-variant/60 pb-1.5">
+<span class="text-on-surface-variant">Tipo de proyecto:</span>
+<span class="font-medium text-accent" id="summary-type">-</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/60 pb-1.5">
+<span class="text-on-surface-variant">Marco presupuestario:</span>
+<span class="font-medium text-on-surface" id="summary-budget">-</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/60 pb-1.5">
+<span class="text-on-surface-variant">Contacto:</span>
+<span class="font-medium text-on-surface" id="summary-name">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Email:</span>
+<span class="font-mono text-primary font-medium" id="summary-email">-</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg border border-outline-variant bg-surface-container hover:bg-surface-container-high text-xs text-on-surface transition-all active:scale-95 flex items-center gap-1.5" onclick="resetFormToStart()" type="button">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+<span>Comenzar otra solicitud</span>
+</button>
+</div>
+</form>
+</section>
+<!-- VISTAS PREVIAS DE PLANTILLAS DE EMAIL PARA CODEX (EQUIPO NEXORA) -->
+<section class="bg-surface border border-outline-variant rounded-xl p-5 flex flex-col gap-3" id="email-previews-section">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleEmailTemplates()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-lg">mail</span>
+<h3 class="font-headline font-semibold text-sm text-on-surface">Vistas previas de plantillas de email (Codex)</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base transition-transform" id="email-chevron">expand_more</span>
+</div>
+<div class="flex flex-col gap-3 pt-2" id="email-templates-body">
+<!-- Plantilla 1: Notificación Equipo Nexora -->
+<div class="bg-surface-dim border border-outline-variant rounded-lg p-3.5 text-xs flex flex-col gap-2 font-mono">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<span class="text-accent font-semibold">1. Correo Interno: Equipo Nexora</span>
+<span class="text-on-surface-variant text-[11px]">equipo@nexora.studio</span>
+</div>
+<div class="text-on-surface-variant flex flex-col gap-1">
+<p><strong class="text-on-surface">Asunto:</strong> [Nuevo Requerimiento] Contacto Tablet - Solicitud de Presupuesto</p>
+<p><strong class="text-on-surface">Remitente:</strong> <span id="tpl-team-name">[Nombre Cliente]</span> &lt;<span id="tpl-team-email">[correo]</span>&gt;</p>
+<p><strong class="text-on-surface">Empresa:</strong> <span id="tpl-team-company">[Empresa / Particular]</span></p>
+<p><strong class="text-on-surface">Tipo / Presupuesto:</strong> <span id="tpl-team-type">[Tipo]</span> / <span id="tpl-team-budget">[Marco Presupuestario]</span></p>
+<p><strong class="text-on-surface">Plazo estimado:</strong> <span id="tpl-team-timeframe">[Plazo]</span></p>
+<p><strong class="text-on-surface">Detalle técnico:</strong> <span id="tpl-team-desc">[Descripción proporcionada o requerimiento base]</span></p>
+</div>
+</div>
+<!-- Plantilla 2: Confirmación al Cliente -->
+<div class="bg-surface-dim border border-outline-variant rounded-lg p-3.5 text-xs flex flex-col gap-2">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2 font-mono">
+<span class="text-primary font-semibold">2. Confirmación Automática: Cliente</span>
+<span class="text-on-surface-variant text-[11px]">Destino: Solicitante</span>
+</div>
+<div class="text-on-surface-variant flex flex-col gap-1.5 leading-relaxed">
+<p class="text-on-surface font-medium">Hola, hemos recibido tu consulta en Nexora Software Studio.</p>
+<p>Tu solicitud ha sido ingresada para diagnóstico técnico de factibilidad y arquitectura. Nuestro equipo revisará los requerimientos para ofrecerte una respuesta clara y adaptada a tus objetivos.</p>
+<p class="font-mono text-[11px] text-accent">• Tiempo de respuesta estimado: Dentro de las próximas 24 horas hábiles.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER CONSISTENTE -->
+<footer class="bg-surface border-t border-outline-variant px-5 sm:px-8 py-6 flex flex-col gap-4 mt-auto">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+<span class="font-headline font-bold text-sm text-on-surface">Nexora</span>
+<span class="text-xs text-on-surface-variant">| Estudio de software moderno</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora">Inicio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/servicios">Servicios</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/nexora/nosotros">Nosotros</a>
+<a class="text-accent font-semibold" href="/nexora/contacto">Contacto</a>
+</div>
+</div>
+<div class="border-t border-outline-variant/40 pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-on-surface-variant">
+<span>© 2026 Nexora Software Studio. Todos los derechos reservados.</span>
+<span class="font-mono text-[11px]">Diseño para tablet 768px</span>
+</div>
+</footer>
+</div>
+<!-- LÓGICA DE CONTROL JAVASCRIPT -->
+<script>
+    // Navegación móvil drawer
+    const drawerOverlay = document.getElementById('mobile-drawer-overlay');
+    const openDrawerBtn = document.getElementById('open-drawer-btn');
+    const closeDrawerBtn = document.getElementById('close-drawer-btn');
+
+    openDrawerBtn?.addEventListener('click', () => drawerOverlay.classList.remove('hidden'));
+    closeDrawerBtn?.addEventListener('click', () => drawerOverlay.classList.add('hidden'));
+    drawerOverlay?.addEventListener('click', (e) => {
+      if (e.target === drawerOverlay) drawerOverlay.classList.add('hidden');
+    });
+
+    // Contador de caracteres descripción
+    function handleDescriptionInput(el) {
+      document.getElementById('char-counter').textContent = `${el.value.length} / 2000`;
+    }
+
+    // Navegación entre pasos
+    let activeStep = 1;
+
+    function goToStep(step) {
+      if (step === 2) {
+        // Validar Paso 1
+        const typeChecked = document.querySelector('input[name="projectType"]:checked');
+        const budgetChecked = document.querySelector('input[name="budget"]:checked');
+
+        let hasError = false;
+
+        if (!typeChecked) {
+          document.getElementById('error-projectType').classList.remove('hidden');
+          hasError = true;
+        } else {
+          document.getElementById('error-projectType').classList.add('hidden');
+        }
+
+        if (!budgetChecked) {
+          document.getElementById('error-budget').classList.remove('hidden');
+          hasError = true;
+        } else {
+          document.getElementById('error-budget').classList.add('hidden');
+        }
+
+        if (hasError) return;
+      }
+
+      activeStep = step;
+      const step1El = document.getElementById('step-1-fields');
+      const step2El = document.getElementById('step-2-fields');
+      const confirmEl = document.getElementById('confirmation-screen');
+      const progressBar = document.getElementById('form-progress');
+      const ind2 = document.getElementById('step-indicator-2');
+      const badge2 = document.getElementById('step-badge-2');
+
+      confirmEl.classList.add('hidden');
+
+      if (step === 1) {
+        step1El.classList.remove('hidden');
+        step2El.classList.add('hidden');
+        progressBar.style.width = '50%';
+        ind2.classList.add('opacity-50');
+        badge2.classList.remove('bg-primary', 'text-on-primary');
+        badge2.classList.add('bg-surface-container', 'text-on-surface-variant');
+      } else if (step === 2) {
+        step1El.classList.add('hidden');
+        step2El.classList.remove('hidden');
+        progressBar.style.width = '100%';
+        ind2.classList.remove('opacity-50');
+        badge2.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        badge2.classList.add('bg-primary', 'text-on-primary');
+      }
+    }
+
+    function clearError(field) {
+      const errEl = document.getElementById(`error-${field}`);
+      if (errEl) errEl.classList.add('hidden');
+    }
+
+    // Envío del Formulario
+    function handleFormSubmit() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const consent = document.getElementById('consent').checked;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      let hasError = false;
+
+      if (!name) {
+        document.getElementById('error-name').classList.remove('hidden');
+        hasError = true;
+      }
+      if (!email || !emailRegex.test(email)) {
+        document.getElementById('error-email').classList.remove('hidden');
+        hasError = true;
+      }
+      if (!consent) {
+        document.getElementById('error-consent').classList.remove('hidden');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      // Estado de carga simulado
+      setFormLoading(true);
+
+      setTimeout(() => {
+        setFormLoading(false);
+        renderConfirmation();
+      }, 700);
+    }
+
+    function setFormLoading(isLoading) {
+      const btn = document.getElementById('submit-button');
+      const label = document.getElementById('submit-label');
+      const icon = document.getElementById('submit-icon');
+      const spinner = document.getElementById('submit-spinner');
+
+      if (isLoading) {
+        btn.disabled = true;
+        label.textContent = 'Procesando...';
+        icon.classList.add('hidden');
+        spinner.classList.remove('hidden');
+      } else {
+        btn.disabled = false;
+        label.textContent = 'Probar solicitud';
+        icon.classList.remove('hidden');
+        spinner.classList.add('hidden');
+      }
+    }
+
+    function renderConfirmation() {
+      const type = document.querySelector('input[name="projectType"]:checked')?.value || 'No seleccionado';
+      const budget = document.querySelector('input[name="budget"]:checked')?.value || 'No seleccionado';
+      const name = document.getElementById('name').value.trim() || 'No proporcionado';
+      const email = document.getElementById('email').value.trim() || 'No proporcionado';
+      const company = document.getElementById('company').value.trim() || 'Particular';
+      const timeframe = document.getElementById('timeframe').value || 'Sin especificar';
+      const desc = document.getElementById('description').value.trim() || 'Sin descripción adicional';
+
+      document.getElementById('summary-type').textContent = type;
+      document.getElementById('summary-budget').textContent = budget;
+      document.getElementById('summary-name').textContent = name;
+      document.getElementById('summary-email').textContent = email;
+
+      // Actualizar vista previa del equipo
+      document.getElementById('tpl-team-name').textContent = name;
+      document.getElementById('tpl-team-email').textContent = email;
+      document.getElementById('tpl-team-company').textContent = company;
+      document.getElementById('tpl-team-type').textContent = type;
+      document.getElementById('tpl-team-budget').textContent = budget;
+      document.getElementById('tpl-team-timeframe').textContent = timeframe;
+      document.getElementById('tpl-team-desc').textContent = desc;
+
+      document.getElementById('step-2-fields').classList.add('hidden');
+      document.getElementById('confirmation-screen').classList.remove('hidden');
+    }
+
+    function resetFormToStart() {
+      document.getElementById('contact-form').reset();
+      document.getElementById('char-counter').textContent = '0 / 2000';
+      document.getElementById('confirmation-screen').classList.add('hidden');
+      goToStep(1);
+    }
+
+    function toggleEmailTemplates() {
+      const body = document.getElementById('email-templates-body');
+      const chevron = document.getElementById('email-chevron');
+      body.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180');
+    }
+
+    // CONTROL DEL BANCO DE INSPECCIÓN DE DISEÑO (ESTADOS LOCALES)
+    function setSandboxState(state) {
+      if (state === 'step1') {
+        document.getElementById('confirmation-screen').classList.add('hidden');
+        goToStep(1);
+      } else if (state === 'step2') {
+        document.getElementById('confirmation-screen').classList.add('hidden');
+        document.getElementById('step-1-fields').classList.add('hidden');
+        document.getElementById('step-2-fields').classList.remove('hidden');
+        document.getElementById('form-progress').style.width = '100%';
+        const ind2 = document.getElementById('step-indicator-2');
+        const badge2 = document.getElementById('step-badge-2');
+        ind2.classList.remove('opacity-50');
+        badge2.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        badge2.classList.add('bg-primary', 'text-on-primary');
+      } else if (state === 'validation') {
+        goToStep(1);
+        document.getElementById('error-projectType').classList.remove('hidden');
+        document.getElementById('error-budget').classList.remove('hidden');
+      } else if (state === 'loading') {
+        setSandboxState('step2');
+        setFormLoading(true);
+        setTimeout(() => setFormLoading(false), 2000);
+      } else if (state === 'partial') {
+        // Estado Parcial: Rellenar paso 1 y dejar paso 2 listo para pruebas
+        const radioType = document.querySelector('input[name="projectType"][value="SaaS"]');
+        if (radioType) radioType.checked = true;
+        const radioBudget = document.querySelector('input[name="budget"][value="Tengo un presupuesto"]');
+        if (radioBudget) radioBudget.checked = true;
+        document.getElementById('description').value = 'Diseño de arquitectura de microservicios y frontend responsivo.';
+        handleDescriptionInput(document.getElementById('description'));
+        goToStep(2);
+      } else if (state === 'confirmation') {
+        // Forzar datos para verificar pantalla de éxito
+        const radioType = document.querySelector('input[name="projectType"][value="SaaS"]');
+        if (radioType) radioType.checked = true;
+        const radioBudget = document.querySelector('input[name="budget"][value="Tengo un presupuesto"]');
+        if (radioBudget) radioBudget.checked = true;
+        document.getElementById('name').value = 'Mariana Silva';
+        document.getElementById('email').value = 'mariana@nexora-eval.io';
+        document.getElementById('company').value = 'Silva Tech Group';
+        document.getElementById('timeframe').value = 'Inmediato (< 2 semanas)';
+        document.getElementById('description').value = 'Migración de plataforma legado a stack distribuido.';
+        document.getElementById('consent').checked = true;
+        document.getElementById('step-1-fields').classList.add('hidden');
+        document.getElementById('step-2-fields').classList.add('hidden');
+        renderConfirmation();
+      }
+    }
+  </script>
+</body></html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexora | Contacto | Desktop</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      * {
+        letter-spacing: 0 !important;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#090D18",
+            surface: "#151B2E",
+            primary: "#754BFF",
+            accent: "#22D3C5",
+            text: "#F3F5FF",
+            muted: "#AAB4CB",
+            border: "#303850",
+          },
+          fontFamily: {
+            sora: ["Sora", "sans-serif"],
+            geist: ["Geist", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-background font-geist text-text min-h-screen flex flex-col selection:bg-primary selection:text-text">
+<!-- Header canónico idéntico -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#090D18]/90 backdrop-blur-md border-b border-border/60">
+<div class="max-w-[1440px] mx-auto h-20 px-8 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3 group" href="/nexora">
+<img alt="Nexora Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v"/>
+<span class="font-sora text-xl font-bold text-text group-hover:text-primary transition-colors">Nexora</span>
+</a>
+<a class="hidden xl:inline-flex items-center gap-1.5 text-xs font-geist text-accent hover:text-[#5ef9ea] transition-colors pl-2" href="/">
+<span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          Portfolio Enrique Manterola
+          <span class="material-symbols-outlined text-[13px]">north_east</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-7">
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora">Inicio</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/servicios">Servicios</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="text-sm font-medium text-muted hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a>
+<a class="text-sm font-medium text-primary border-b-2 border-primary pb-0.5" href="/nexora/contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-primary text-text font-medium text-sm hover:bg-[#6334ed] transition-colors shadow-[0_0_20px_-3px_rgba(117,75,255,0.5)]" href="/nexora/contacto">
+          Hablemos de tu proyecto
+        </a>
+</div>
+</div>
+</header>
+<!-- Banner persistente de modo prueba -->
+<div class="pt-20 w-full">
+<div class="w-full bg-[#1b1733] border-b border-[#4f319c]/60 px-4 py-2 text-center">
+<p class="text-xs md:text-sm font-geist text-[#cebdff] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-accent text-[18px]">info</span>
+<strong>Modo de prueba:</strong> no se enviaron correos ni se ejecutaron llamadas externas en esta maqueta.
+      </p>
+</div>
+</div>
+<main class="w-full max-w-[1440px] mx-auto px-8 py-10 flex-grow flex flex-col gap-12">
+<!-- Hero Unframed -->
+<section class="max-w-3xl flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border w-fit">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<span class="text-xs font-medium text-accent">Planificación y estimación técnica</span>
+</div>
+<h1 class="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-text leading-tight">
+        Hablemos de tu proyecto y planifiquemos tu software
+      </h1>
+<p class="font-geist text-base md:text-lg text-muted font-normal leading-relaxed">
+        Completa el formulario en dos pasos para definir el alcance, necesidades arquitectónicas y el contexto del sistema que deseas construir.
+      </p>
+</section>
+<!-- Layout Grid: Formulario en tarjeta estructurada + Panel lateral -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Columna Principal: Tarjeta estructurada del Formulario -->
+<section class="lg:col-span-8 flex flex-col gap-6">
+<div class="bg-surface border border-border rounded-xl p-6 md:p-8 shadow-2xl relative">
+<!-- Stepper Header -->
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-border/80">
+<div class="flex items-center gap-4 w-full">
+<!-- Paso 1 Tab Indicator -->
+<button class="flex items-center gap-3 text-left focus:outline-none transition-all" id="step-tab-1" onclick="goToStep(1)" type="button">
+<span class="w-8 h-8 rounded-full bg-primary text-text font-bold text-sm flex items-center justify-center" id="step-badge-1">1</span>
+<div>
+<span class="block text-[11px] uppercase tracking-wider text-muted font-medium">Requerimientos</span>
+<span class="font-sora text-sm font-semibold text-text" id="step-label-1">Paso 1: Sobre el proyecto</span>
+</div>
+</button>
+<div class="flex-1 h-[2px] bg-border mx-3 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 transition-all duration-300" id="step-progress"></div>
+</div>
+<!-- Paso 2 Tab Indicator -->
+<button class="flex items-center gap-3 text-left focus:outline-none transition-all opacity-60" id="step-tab-2" onclick="goToStep(2)" type="button">
+<span class="w-8 h-8 rounded-full bg-[#1e263d] text-muted font-bold text-sm flex items-center justify-center" id="step-badge-2">2</span>
+<div>
+<span class="block text-[11px] uppercase tracking-wider text-muted font-medium">Contacto</span>
+<span class="font-sora text-sm font-semibold text-muted" id="step-label-2">Paso 2: Datos de contacto</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Mensaje de error de validación local -->
+<div class="hidden mb-6 p-4 rounded-lg bg-red-950/40 border border-red-800 text-red-200 text-sm flex items-start gap-3" id="validation-alert">
+<span class="material-symbols-outlined text-red-400 text-[20px] mt-0.5">error</span>
+<span id="validation-alert-text">Por favor, completa los campos requeridos antes de continuar.</span>
+</div>
+<!-- Formulario Real de 2 Pasos -->
+<form id="contact-multistep-form" novalidate="" onsubmit="handleFormSubmit(event)">
+<!-- PASO 1 -->
+<div class="flex flex-col gap-6" id="form-step-1">
+<!-- 1. projectType (Radio obligatorio, sin selección inicial) -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<label class="font-sora text-sm md:text-base font-semibold text-text">
+                    Tipo de proyecto <span class="text-accent">*</span>
+</label>
+<span class="text-xs text-muted">Selecciona 1 opción</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="projectType-options">
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="projectType" type="radio" value="Web"/>
+<span class="text-sm font-medium text-text">Web</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="projectType" type="radio" value="SaaS"/>
+<span class="text-sm font-medium text-text">SaaS</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="projectType" type="radio" value="Sistema a medida"/>
+<span class="text-sm font-medium text-text">Sistema a medida</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="projectType" type="radio" value="Automatización / integración"/>
+<span class="text-sm font-medium text-text">Automatización / integración</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors sm:col-span-2">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="projectType" type="radio" value="Otro"/>
+<span class="text-sm font-medium text-text">Otro</span>
+</label>
+</div>
+</div>
+<!-- 2. budget (Radio obligatorio, sin selección inicial, no pide montos) -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<label class="font-sora text-sm md:text-base font-semibold text-text">
+                    Presupuesto estimado <span class="text-accent">*</span>
+</label>
+<span class="text-xs text-muted">Orientación de alcance</span>
+</div>
+<div class="flex flex-col gap-2.5" id="budget-options">
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="budget" type="radio" value="unknown"/>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-text">Aún no lo sé</span>
+<span class="text-xs text-muted">Deseo estructurar los requerimientos técnicos y evaluar estimaciones.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="budget" type="radio" value="defined"/>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-text">Tengo un presupuesto</span>
+<span class="text-xs text-muted">Contamos con un rango objetivo reservado internamente.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-lg border border-border bg-[#0d1222] hover:border-primary/60 cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" name="budget" type="radio" value="discuss"/>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-text">Prefiero conversarlo</span>
+<span class="text-xs text-muted">Abordaremos las opciones de arquitectura técnica directamente en llamada.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- 3. description (Opcional, max 2000, inicia vacío) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-sora text-sm md:text-base font-semibold text-text" for="field-description">
+                    Descripción del proyecto <span class="text-xs font-normal text-muted">(Opcional)</span>
+</label>
+<span class="text-xs font-mono text-muted" id="char-counter">0 / 2000</span>
+</div>
+<textarea class="w-full bg-[#0d1222] border border-border rounded-lg p-3 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors resize-none" id="field-description" maxlength="2000" name="description" oninput="handleCharCount(this)" placeholder="Detalles de la arquitectura, stack preferido, integraciones o alcance funcional..." rows="4"></textarea>
+</div>
+<!-- Botón Paso 1: Valida ÚNICAMENTE Paso 1 -->
+<div class="flex justify-end pt-2">
+<button class="px-6 py-3 rounded-lg bg-primary text-text font-medium text-sm flex items-center gap-2 hover:bg-[#6334ed] transition-colors" onclick="validateAndGoToStep2()" type="button">
+<span>Continuar al Paso 2</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- PASO 2 -->
+<div class="hidden flex-col gap-6" id="form-step-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- name (Obligatorio, vacío) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-text" for="field-name">
+                    Nombre y apellido <span class="text-accent">*</span>
+</label>
+<input class="w-full bg-[#0d1222] border border-border rounded-lg p-3 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors" id="field-name" name="name" placeholder="Tu nombre completo" type="text"/>
+</div>
+<!-- email (Obligatorio, vacío) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-text" for="field-email">
+                    Correo electrónico <span class="text-accent">*</span>
+</label>
+<input class="w-full bg-[#0d1222] border border-border rounded-lg p-3 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors" id="field-email" name="email" placeholder="correo@empresa.com" type="email"/>
+</div>
+<!-- company (Opcional, vacío) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-text" for="field-company">
+                    Empresa / Organización <span class="text-xs text-muted font-normal">(Opcional)</span>
+</label>
+<input class="w-full bg-[#0d1222] border border-border rounded-lg p-3 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors" id="field-company" name="company" placeholder="Nombre de empresa u organización" type="text"/>
+</div>
+<!-- timeframe (Opcional, select vacío) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-text" for="field-timeframe">
+                    Plazo estimado de inicio <span class="text-xs text-muted font-normal">(Opcional)</span>
+</label>
+<select class="w-full bg-[#0d1222] border border-border rounded-lg p-3 text-sm text-text focus:outline-none focus:border-primary transition-colors" id="field-timeframe" name="timeframe">
+<option selected="" value="">Seleccionar plazo (opcional)</option>
+<option value="inmediato">Inmediato (&lt; 2 semanas)</option>
+<option value="proximo_mes">Próximo mes</option>
+<option value="trimestral">Próximo trimestre</option>
+<option value="exploratorio">Fase exploratoria / Sin definir</option>
+</select>
+</div>
+</div>
+<!-- consent (Obligatorio, desmarcado inicialmente) -->
+<div class="flex flex-col gap-2 p-3.5 rounded-lg border border-border bg-[#0d1222]">
+<label class="flex items-start gap-3 cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary bg-[#151B2E] border-border focus:ring-primary focus:ring-offset-0" id="field-consent" name="consent" type="checkbox"/>
+<span class="text-xs md:text-sm text-muted leading-relaxed">
+                    Acepto el tratamiento de mis datos exclusivamente para responder y confirmar mi consulta técnica.
+                  </span>
+</label>
+</div>
+<!-- Turnstile Neutral Placeholder (Sin PASS, sin fake badge, neutral) -->
+<div class="p-3.5 rounded-lg border border-border/80 bg-[#0d1222] flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-muted text-[20px]">shield</span>
+<div class="flex flex-col">
+<span class="text-xs font-mono font-medium text-text">Cloudflare Turnstile (Sandbox)</span>
+<span class="text-[11px] text-muted">Verificación no ejecutada en esta maqueta</span>
+</div>
+</div>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-surface border border-border text-muted">Simulado</span>
+</div>
+<!-- Botones de Navegación Paso 2 -->
+<div class="flex items-center justify-between pt-2">
+<button class="px-5 py-2.5 rounded-lg border border-border bg-[#0d1222] text-text font-medium text-sm flex items-center gap-2 hover:bg-surface transition-colors" onclick="goToStep(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Atrás</span>
+</button>
+<button class="px-6 py-3 rounded-lg bg-primary text-text font-medium text-sm flex items-center gap-2 hover:bg-[#6334ed] transition-colors shadow-[0_0_20px_-3px_rgba(117,75,255,0.5)]" id="btn-submit" type="submit">
+<span id="btn-submit-text">Probar solicitud</span>
+<span class="hidden material-symbols-outlined animate-spin text-[18px]" id="btn-submit-spinner">progress_activity</span>
+</button>
+</div>
+</div>
+</form>
+<!-- ESTADO: Confirmación Completa -->
+<div class="hidden flex-col gap-4 p-6 rounded-xl bg-[#112423] border border-accent/40 text-text" id="state-success">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-[32px]">check_circle</span>
+<div>
+<h3 class="font-sora text-lg font-bold text-accent">Solicitud registrada en modo maqueta</h3>
+<p class="text-xs md:text-sm text-text">Se recopilaron los datos del proyecto y la información de contacto correctamente.</p>
+</div>
+</div>
+<div class="p-3.5 bg-[#090D18]/80 rounded-lg text-xs font-mono text-muted flex flex-col gap-1 border border-border/40">
+<span>Estado: Completo (Simulación)</span>
+<span>Notificación interna y acuse de cliente listos para inspección.</span>
+</div>
+</div>
+<!-- ESTADO: Parcial (Nexora recibió pero cliente pendiente de acuse) -->
+<div class="hidden flex-col gap-4 p-6 rounded-xl bg-[#261f10] border border-amber-500/50 text-text" id="state-partial">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-400 text-[28px] mt-0.5">warning</span>
+<div class="flex flex-col gap-1 flex-1">
+<h3 class="font-sora text-base font-bold text-amber-300">Recepción interna exitosa — Acuse al cliente pendiente</h3>
+<p class="text-xs md:text-sm text-amber-100/90 leading-relaxed">
+                  Nexora recibió la solicitud correctamente. Sin embargo, el envío del acuse automático al cliente está pendiente debido a una interrupción transitoria del servicio emisor.
+                </p>
+<div class="pt-2 flex items-center gap-3">
+<button class="px-3.5 py-1.5 rounded bg-amber-500 text-black font-semibold text-xs flex items-center gap-1.5 hover:bg-amber-400 transition-colors" onclick="retryCustomerConfirmation()" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Reintentar solo confirmación de cliente</span>
+</button>
+<span class="text-xs text-amber-300 font-mono" id="retry-status-text"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Previsualización de Plantillas de Email Transaccionales (Solo maqueta) -->
+<div class="flex flex-col gap-4 bg-surface border border-border rounded-xl p-6">
+<div class="flex items-center justify-between">
+<h3 class="font-sora text-sm font-semibold text-text flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-[18px]">mark_email_read</span>
+              Previsualización de plantillas de email transactional
+            </h3>
+<span class="text-[11px] font-mono text-muted bg-[#090D18] px-2 py-0.5 rounded border border-border">Sandbox inspect</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Plantilla 1: Notificación Interna -->
+<div class="flex flex-col gap-2 p-4 rounded-lg bg-[#0d1222] border border-border text-xs">
+<div class="flex items-center justify-between border-b border-border/80 pb-2">
+<span class="font-semibold text-accent">1. Notificación interna</span>
+<span class="font-mono text-muted">Destino: Equipo Nexora</span>
+</div>
+<div class="text-muted flex flex-col gap-1 font-mono pt-1">
+<p><strong class="text-text font-sans">Asunto:</strong> [Nueva Consulta] <span id="tpl-subject-type">Web</span> - <span id="tpl-subject-name">Nombre</span></p>
+<p><strong class="text-text font-sans">De:</strong> sistema-notificaciones (interno)</p>
+<p><strong class="text-text font-sans">Para:</strong> Equipo Nexora</p>
+<hr class="border-border/60 my-1"/>
+<div class="text-[11px] text-muted space-y-0.5">
+<p>• <strong>Tipo:</strong> <span id="tpl-data-type">-</span></p>
+<p>• <strong>Presupuesto:</strong> <span id="tpl-data-budget">-</span></p>
+<p>• <strong>Contacto:</strong> <span id="tpl-data-name">-</span> (<span id="tpl-data-email">-</span>)</p>
+<p>• <strong>Empresa:</strong> <span id="tpl-data-company">-</span></p>
+<p>• <strong>Plazo:</strong> <span id="tpl-data-timeframe">-</span></p>
+<p>• <strong>Detalle:</strong> <span id="tpl-data-desc">-</span></p>
+</div>
+</div>
+</div>
+<!-- Plantilla 2: Acuse de Recibo al Cliente -->
+<div class="flex flex-col gap-2 p-4 rounded-lg bg-[#0d1222] border border-border text-xs">
+<div class="flex items-center justify-between border-b border-border/80 pb-2">
+<span class="font-semibold text-primary">2. Acuse de recibo</span>
+<span class="font-mono text-muted">Destino: Cliente</span>
+</div>
+<div class="text-muted flex flex-col gap-1 font-mono pt-1">
+<p><strong class="text-text font-sans">Asunto:</strong> Hemos recibido tu solicitud - Nexora</p>
+<p><strong class="text-text font-sans">De:</strong> Nexora Software Studio</p>
+<p><strong class="text-text font-sans">Para:</strong> <span id="tpl-client-email">correo del cliente</span></p>
+<hr class="border-border/60 my-1"/>
+<div class="text-[11px] text-muted font-sans space-y-1">
+<p>Hola <span class="font-medium text-text" id="tpl-client-name">[Nombre]</span>,</p>
+<p>Confirmamos la recepción de tu consulta técnica sobre tu proyecto. El equipo revisará el stack requerido y coordinará los siguientes pasos.</p>
+<p class="text-[10px] text-muted/80 pt-1 font-mono">ID de referencia: #NX-REQ-LOCAL</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Columna Lateral: Información Directa Unframed -->
+<aside class="lg:col-span-4 flex flex-col gap-6">
+<!-- Tarjeta de Contacto Directo -->
+<div class="bg-surface border border-border rounded-xl p-6 flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-medium text-accent uppercase tracking-wider">Canal Directo</span>
+<h3 class="font-sora text-lg font-bold text-text">Coordinación de proyectos</h3>
+<p class="text-xs text-muted leading-relaxed">
+              Si cuentas con especificaciones o documentación técnica previa, puedes coordinar una llamada de evaluación de arquitectura.
+            </p>
+</div>
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full py-2.5 px-4 rounded-lg bg-[#0d1222] border border-border hover:border-primary text-text text-sm font-medium flex items-center justify-center gap-2 transition-colors" href="https://calendly.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span>Agendar llamada técnica</span>
+</a>
+<span class="text-[11px] text-muted text-center">Sesión técnica centrada en requerimientos y viabilidad.</span>
+</div>
+<div class="border-t border-border pt-4 flex flex-col gap-2">
+<span class="text-xs font-medium text-text">Fundador &amp; Arquitectura</span>
+<div class="flex items-center justify-between">
+<span class="text-sm text-muted">Enrique Manterola</span>
+<a class="text-xs text-accent hover:underline flex items-center gap-1" href="/">
+                Portfolio personal <span class="material-symbols-outlined text-[13px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Proceso Operativo -->
+<div class="bg-surface border border-border rounded-xl p-6 flex flex-col gap-4">
+<span class="text-xs font-medium text-muted uppercase tracking-wider">Etapas de evaluación</span>
+<div class="flex flex-col gap-3.5">
+<div class="flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-[#1e263d] text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-text">Revisión de arquitectura</span>
+<span class="text-xs text-muted">Evaluación de factibilidad, dependencias y riesgos técnicos.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-[#1e263d] text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-text">Alineación de alcance</span>
+<span class="text-xs text-muted">Definición de límites funcionales e hitos modulares de desarrollo.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-[#1e263d] text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-text">Propuesta técnica detallada</span>
+<span class="text-xs text-muted">Documento técnico desglosado con estimaciones de sprints.</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- PANEL DE INSPECCIÓN DE ESTADOS PARA CODEX (Independiente de la maqueta principal) -->
+<section class="w-full bg-[#0d1222] border border-border rounded-xl p-5 flex flex-col gap-3.5">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
+<h4 class="font-sora text-xs md:text-sm font-semibold text-text uppercase tracking-wider">
+            Panel de Inspección de Estados (Codex Inspector)
+          </h4>
+</div>
+<span class="text-[11px] font-mono text-muted">Control interactivo 100% local — Sin fetch ni mailto</span>
+</div>
+<p class="text-xs text-muted leading-relaxed">
+        Alterna instantáneamente entre los estados del formulario, validaciones, flujos de carga y casos de error o confirmación:
+      </p>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('step1')" type="button">
+          [Paso 1]
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('step2')" type="button">
+          [Paso 2]
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('errors')" type="button">
+          [Simular Errores]
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('loading')" type="button">
+          [Simular Carga / Spinner]
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('partial')" type="button">
+          [Simular Parcial]
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface hover:bg-[#1f2842] border border-border text-xs font-medium text-text transition-colors" onclick="setInspectorState('confirmation')" type="button">
+          [Simular Confirmación]
+        </button>
+</div>
+</section>
+</main>
+<!-- Footer Canónico Consistente -->
+<footer class="w-full bg-[#05070e] border-t border-border mt-auto">
+<div class="max-w-[1440px] mx-auto px-8 py-12 flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-5 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Nexora Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UsL5rruUkC_2m6GNFDtttKyTsqNJ-QorN_92OPE4_yiWqSXq6-WqZImtQU0e83Ezf9vICcQdTGcVcQ3s-aPx7EhdsqaWWHa-6rGL9nzEyhbH1dnFQGSljkX0Q58bFGexcuNWj2igEu-GxnY8FMdsOzl--o48Y2xgWTKoCxGwfy3co2UCoqJv20bSwIL8lFMmBc53rfzddabSz8yQ22BwTWfk3PI5MDWOG4Pg48WI4v"/>
+<span class="font-sora text-lg font-bold text-text">Nexora</span>
+</div>
+<p class="text-sm text-muted max-w-sm">
+            Estudio de desarrollo y arquitectura de software de alta gama para fundadores e ingenierías con ambición global.
+          </p>
+<div class="pt-2">
+<a class="text-xs text-accent hover:underline inline-flex items-center gap-1" href="/">
+<span>Explorar Portfolio de Enrique Manterola</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col gap-3">
+<span class="text-xs uppercase tracking-wider text-muted font-semibold">Navegación</span>
+<ul class="flex flex-col gap-2 text-sm text-muted">
+<li><a class="hover:text-text transition-colors" href="/nexora">Inicio</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/servicios">Servicios</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/proyectos">Proyectos</a></li>
+<li><a class="hover:text-text transition-colors" href="/nexora/nosotros">Sobre Nosotros</a></li>
+<li><a class="text-primary font-medium" href="/nexora/contacto">Contacto</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col gap-3">
+<span class="text-xs uppercase tracking-wider text-muted font-semibold">Conectar</span>
+<p class="text-sm text-muted">Perfiles profesionales y repositorios de ingeniería:</p>
+<div class="flex items-center gap-3 pt-1">
+<a aria-label="GitHub" class="w-9 h-9 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-primary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-surface border border-border flex items-center justify-center text-muted hover:text-text hover:border-primary transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">work</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+<span>© 2026 Nexora Software Studio. Todos los derechos reservados.</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent"></span>
+<span>Sistemas y arquitectura en producción</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Lógica Interactiva Local (Sin llamadas de red) -->
+<script>
+    let activeStep = 1;
+
+    function handleCharCount(textarea) {
+      const counter = document.getElementById('char-counter');
+      counter.innerText = `${textarea.value.length} / 2000`;
+      updateEmailPreviews();
+    }
+
+    function goToStep(step) {
+      const step1Div = document.getElementById('form-step-1');
+      const step2Div = document.getElementById('form-step-2');
+      const badge1 = document.getElementById('step-badge-1');
+      const badge2 = document.getElementById('step-badge-2');
+      const label1 = document.getElementById('step-label-1');
+      const label2 = document.getElementById('step-label-2');
+      const tab1 = document.getElementById('step-tab-1');
+      const tab2 = document.getElementById('step-tab-2');
+      const progress = document.getElementById('step-progress');
+      const alertBox = document.getElementById('validation-alert');
+      const successBox = document.getElementById('state-success');
+      const partialBox = document.getElementById('state-partial');
+      const form = document.getElementById('contact-multistep-form');
+
+      alertBox.classList.add('hidden');
+      successBox.classList.add('hidden');
+      partialBox.classList.add('hidden');
+      form.classList.remove('hidden');
+
+      if (step === 1) {
+        activeStep = 1;
+        step1Div.classList.remove('hidden');
+        step2Div.classList.add('hidden');
+
+        badge1.className = 'w-8 h-8 rounded-full bg-primary text-text font-bold text-sm flex items-center justify-center';
+        badge2.className = 'w-8 h-8 rounded-full bg-[#1e263d] text-muted font-bold text-sm flex items-center justify-center';
+
+        label1.className = 'font-sora text-sm font-semibold text-text';
+        label2.className = 'font-sora text-sm font-semibold text-muted';
+
+        tab1.classList.remove('opacity-60');
+        tab2.classList.add('opacity-60');
+
+        progress.className = 'h-full bg-primary w-1/2 transition-all duration-300';
+      } else {
+        activeStep = 2;
+        step1Div.classList.add('hidden');
+        step2Div.classList.remove('hidden');
+
+        badge1.className = 'w-8 h-8 rounded-full bg-[#112423] text-accent font-bold text-sm flex items-center justify-center border border-accent/40';
+        badge2.className = 'w-8 h-8 rounded-full bg-primary text-text font-bold text-sm flex items-center justify-center';
+
+        label1.className = 'font-sora text-sm font-semibold text-accent';
+        label2.className = 'font-sora text-sm font-semibold text-text';
+
+        tab1.classList.add('opacity-60');
+        tab2.classList.remove('opacity-60');
+
+        progress.className = 'h-full bg-accent w-full transition-all duration-300';
+      }
+    }
+
+    function validateAndGoToStep2() {
+      const alertBox = document.getElementById('validation-alert');
+      const alertText = document.getElementById('validation-alert-text');
+      
+      const projectType = document.querySelector('input[name="projectType"]:checked');
+      const budget = document.querySelector('input[name="budget"]:checked');
+
+      if (!projectType || !budget) {
+        alertText.innerText = 'Paso 1 incompleto: Selecciona obligatoriamente un Tipo de proyecto y una opción de Presupuesto.';
+        alertBox.classList.remove('hidden');
+        return;
+      }
+
+      alertBox.classList.add('hidden');
+      goToStep(2);
+      updateEmailPreviews();
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('validation-alert');
+      const alertText = document.getElementById('validation-alert-text');
+
+      const nameInput = document.getElementById('field-name');
+      const emailInput = document.getElementById('field-email');
+      const consentInput = document.getElementById('field-consent');
+
+      if (!nameInput.value.trim() || !emailInput.value.trim() || !consentInput.checked) {
+        alertText.innerText = 'Paso 2 incompleto: Nombre, correo electrónico y aceptación de política son obligatorios.';
+        alertBox.classList.remove('hidden');
+        return;
+      }
+
+      alertBox.classList.add('hidden');
+      updateEmailPreviews();
+
+      // Efecto local de envío en modo prueba
+      const btn = document.getElementById('btn-submit');
+      const btnText = document.getElementById('btn-submit-text');
+      const spinner = document.getElementById('btn-submit-spinner');
+
+      btn.disabled = true;
+      btnText.innerText = 'Procesando simulación...';
+      spinner.classList.remove('hidden');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btnText.innerText = 'Probar solicitud';
+        spinner.classList.add('hidden');
+
+        document.getElementById('contact-multistep-form').classList.add('hidden');
+        document.getElementById('state-success').classList.remove('hidden');
+      }, 700);
+    }
+
+    function updateEmailPreviews() {
+      const projectType = document.querySelector('input[name="projectType"]:checked');
+      const budget = document.querySelector('input[name="budget"]:checked');
+      const desc = document.getElementById('field-description').value;
+      const name = document.getElementById('field-name').value;
+      const email = document.getElementById('field-email').value;
+      const company = document.getElementById('field-company').value;
+      const timeframe = document.getElementById('field-timeframe').value;
+
+      const pTypeValue = projectType ? projectType.value : '(No seleccionado)';
+      const budgetValue = budget ? (budget.value === 'unknown' ? 'Aún no lo sé' : budget.value === 'defined' ? 'Tengo un presupuesto' : 'Prefiero conversarlo') : '(No seleccionado)';
+      const nameValue = name.trim() || '(No ingresado)';
+      const emailValue = email.trim() || '(No ingresado)';
+
+      // Preview 1 (Interna)
+      document.getElementById('tpl-subject-type').innerText = pTypeValue;
+      document.getElementById('tpl-subject-name').innerText = nameValue;
+      document.getElementById('tpl-data-type').innerText = pTypeValue;
+      document.getElementById('tpl-data-budget').innerText = budgetValue;
+      document.getElementById('tpl-data-name').innerText = nameValue;
+      document.getElementById('tpl-data-email').innerText = emailValue;
+      document.getElementById('tpl-data-company').innerText = company.trim() || '(Opcional sin indicar)';
+      document.getElementById('tpl-data-timeframe').innerText = timeframe || '(Sin plazo especificado)';
+      document.getElementById('tpl-data-desc').innerText = desc.trim() || '(Sin descripción opcional)';
+
+      // Preview 2 (Cliente)
+      document.getElementById('tpl-client-name').innerText = nameValue !== '(No ingresado)' ? nameValue : '[Nombre del Cliente]';
+      document.getElementById('tpl-client-email').innerText = emailValue !== '(No ingresado)' ? emailValue : '[correo@cliente.com]';
+    }
+
+    function retryCustomerConfirmation() {
+      const statusText = document.getElementById('retry-status-text');
+      statusText.innerText = 'Reintentando confirmación...';
+      setTimeout(() => {
+        statusText.innerText = '✓ Acuse reenviado con éxito (Simulado)';
+      }, 600);
+    }
+
+    // Panel de inspección Codex
+    function setInspectorState(state) {
+      const alertBox = document.getElementById('validation-alert');
+      const alertText = document.getElementById('validation-alert-text');
+      const form = document.getElementById('contact-multistep-form');
+      const successBox = document.getElementById('state-success');
+      const partialBox = document.getElementById('state-partial');
+      const btn = document.getElementById('btn-submit');
+      const btnText = document.getElementById('btn-submit-text');
+      const spinner = document.getElementById('btn-submit-spinner');
+
+      // Reset base
+      alertBox.classList.add('hidden');
+      successBox.classList.add('hidden');
+      partialBox.classList.add('hidden');
+      form.classList.remove('hidden');
+      btn.disabled = false;
+      btnText.innerText = 'Probar solicitud';
+      spinner.classList.add('hidden');
+
+      if (state === 'step1') {
+        goToStep(1);
+      } else if (state === 'step2') {
+        goToStep(2);
+      } else if (state === 'errors') {
+        goToStep(activeStep);
+        alertText.innerText = 'Simulación de error: Campos obligatorios vacíos o datos con formato no válido.';
+        alertBox.classList.remove('hidden');
+      } else if (state === 'loading') {
+        goToStep(2);
+        btn.disabled = true;
+        btnText.innerText = 'Procesando simulación...';
+        spinner.classList.remove('hidden');
+      } else if (state === 'partial') {
+        form.classList.add('hidden');
+        partialBox.classList.remove('hidden');
+        document.getElementById('retry-status-text').innerText = '';
+      } else if (state === 'confirmation') {
+        form.classList.add('hidden');
+        successBox.classList.remove('hidden');
+      }
+    }
+
+    // Escucha interactiva en inputs para sincronizar plantillas
+    document.querySelectorAll('input, select, textarea').forEach(elem => {
+      elem.addEventListener('input', updateEmailPreviews);
+      elem.addEventListener('change', updateEmailPreviews);
+    });
+  </script>
+</body></html>

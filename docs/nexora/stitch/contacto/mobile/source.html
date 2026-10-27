@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexora | Contacto | Mobile</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#090D18",
+            "surface": "#151B2E",
+            "surface-dim": "#090D18",
+            "surface-container": "#151B2E",
+            "surface-container-high": "#1E263E",
+            "surface-container-highest": "#28324F",
+            "surface-container-low": "#0F1424",
+            "surface-container-lowest": "#060911",
+            "primary": "#754BFF",
+            "primary-container": "#754BFF",
+            "on-primary": "#FFFFFF",
+            "on-primary-container": "#F8F2FF",
+            "secondary": "#CEBDFF",
+            "secondary-container": "#4F319C",
+            "tertiary": "#22D3C5",
+            "tertiary-container": "#007D74",
+            "on-surface": "#F3F5FF",
+            "on-surface-variant": "#9CA3AF",
+            "outline": "#48536F",
+            "outline-variant": "#303850",
+            "error": "#FF6B6B"
+          },
+          fontFamily: {
+            "body-sm": ["Geist", "sans-serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "code-sm": ["Geist", "monospace"],
+            "title-md": ["Sora", "sans-serif"],
+            "headline-sm": ["Sora", "sans-serif"],
+            "headline-md": ["Sora", "sans-serif"],
+            "headline-lg": ["Sora", "sans-serif"],
+            "headline-lg-mobile": ["Sora", "sans-serif"],
+            "display-hero-mobile": ["Sora", "sans-serif"]
+          },
+          spacing: {
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #090D18;
+      color: #F3F5FF;
+      font-family: 'Geist', sans-serif;
+      min-height: max(884px, 100dvh);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .ambient-bloom {
+      background: radial-gradient(circle at 50% 0%, rgba(117, 75, 255, 0.16) 0%, rgba(9, 13, 24, 0) 72%);
+    }
+    .glow-violet {
+      box-shadow: 0 0 24px -2px rgba(117, 75, 255, 0.45);
+    }
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+  </style>
+</head>
+<body class="bg-[#090D18] text-[#F3F5FF] min-h-screen flex justify-center selection:bg-primary selection:text-white">
+<!-- Mobile Reference Frame (Standard 390px) -->
+<div class="w-full max-w-[390px] min-h-screen bg-[#090D18] flex flex-col relative overflow-x-hidden border-x border-[#303850]/40 shadow-2xl">
+<!-- Top Ambient Bloom -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-72 ambient-bloom pointer-events-none z-0"></div>
+<!-- 1. Header Móvil -->
+<header class="bg-[#090D18]/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#303850]/50 flex justify-between items-center w-full px-space-margin-mobile py-2.5 h-14">
+<div class="flex items-center gap-1.5">
+<a class="flex items-center gap-1.5 focus:outline-none" href="/">
+<span class="material-symbols-outlined text-[#22D3C5] text-xl" data-icon="terminal">terminal</span>
+<span class="font-headline-sm font-bold text-[#F3F5FF] tracking-tight text-lg">Nexora</span>
+</a>
+</div>
+<div class="flex items-center gap-2">
+<a class="font-label-md text-sm text-gray-400 hover:text-[#22D3C5] transition-colors flex items-center gap-1 px-2 py-1 rounded" href="/">
+<span>Portfolio</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="north_east">north_east</span>
+</a>
+<button aria-label="Abrir menú" class="p-1.5 text-[#F3F5FF] hover:text-[#22D3C5] active:scale-95 transition-transform" id="open-drawer-btn" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Navigation Drawer -->
+<div class="fixed inset-0 bg-[#090D18]/85 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300" id="drawer-backdrop">
+<div class="fixed inset-y-0 right-0 w-full max-w-xs z-50 flex flex-col bg-[#151B2E] border-l border-[#303850] shadow-2xl translate-x-full transition-transform duration-300 ease-out" id="drawer-panel">
+<div class="flex flex-col h-full justify-between p-space-margin-mobile">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-[#303850]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#22D3C5]" data-icon="terminal">terminal</span>
+<span class="font-headline-sm font-bold text-[#F3F5FF] text-base">Nexora Studio</span>
+</div>
+<button aria-label="Cerrar menú" class="p-1 text-gray-400 hover:text-white active:scale-95" id="close-drawer-btn" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+</div>
+<!-- Enlaces Canónicos -->
+<nav class="flex flex-col gap-1.5 mt-4">
+<a class="text-[#F3F5FF] hover:bg-[#1E263E] rounded-lg px-3 py-2.5 flex items-center gap-2.5 font-label-md text-sm transition-colors" href="/">
+<span class="material-symbols-outlined text-gray-400 text-lg" data-icon="home">home</span>
+<span>Portfolio</span>
+</a>
+<a class="text-[#F3F5FF] hover:bg-[#1E263E] rounded-lg px-3 py-2.5 flex items-center gap-2.5 font-label-md text-sm transition-colors" href="/nexora/servicios">
+<span class="material-symbols-outlined text-gray-400 text-lg" data-icon="code">code</span>
+<span>Servicios</span>
+</a>
+<a class="text-[#F3F5FF] hover:bg-[#1E263E] rounded-lg px-3 py-2.5 flex items-center gap-2.5 font-label-md text-sm transition-colors" href="/nexora/proyectos">
+<span class="material-symbols-outlined text-gray-400 text-lg" data-icon="folder_open">folder_open</span>
+<span>Proyectos</span>
+</a>
+<a class="text-[#F3F5FF] hover:bg-[#1E263E] rounded-lg px-3 py-2.5 flex items-center gap-2.5 font-label-md text-sm transition-colors" href="/nexora/nosotros">
+<span class="material-symbols-outlined text-gray-400 text-lg" data-icon="groups">groups</span>
+<span>Nosotros</span>
+</a>
+<a class="bg-[#4F319C]/50 text-[#CEBDFF] border border-[#754BFF]/40 font-medium rounded-lg px-3 py-2.5 flex items-center gap-2.5 font-label-md text-sm" href="/nexora/contacto">
+<span class="material-symbols-outlined text-[#22D3C5] text-lg" data-icon="mail">mail</span>
+<span>Contacto</span>
+</a>
+</nav>
+</div>
+<div class="pt-4 border-t border-[#303850] flex flex-col gap-1">
+<span class="font-code-sm text-xs text-gray-400">Nexora Engine • Mobile Edition</span>
+<span class="font-body-sm text-xs text-gray-400">Atención técnica: Enrique Manterola</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN CONTENT -->
+<main class="flex-1 px-space-margin-mobile pt-4 pb-10 relative z-10 flex flex-col gap-6">
+<!-- HERO -->
+<section class="flex flex-col gap-2">
+<div class="inline-flex items-center gap-2 self-start px-2.5 py-1 rounded-full bg-[#1E263E] border border-[#303850]">
+<span class="w-2 h-2 rounded-full bg-[#22D3C5] animate-pulse shadow-[0_0_8px_#22D3C5]"></span>
+<span class="font-label-sm text-xs text-[#22D3C5] font-medium">Disponibilidad abierta</span>
+</div>
+<h1 class="font-headline-lg-mobile text-[26px] font-bold text-[#F3F5FF] leading-tight">
+          Hablemos de tu proyecto y planifiquemos tu software
+        </h1>
+<p class="font-body-md text-sm text-gray-300 leading-relaxed">
+          Cuéntanos qué necesitas construir. Recibirás un diagnóstico inicial transparente y una propuesta técnica sin intermediarios ni jerga innecesaria.
+        </p>
+</section>
+<!-- FORMULARIO TÁCTIL EN 2 PASOS -->
+<section class="bg-[#151B2E] rounded-2xl border border-[#303850] p-4 shadow-xl flex flex-col gap-4 relative">
+<!-- Indicador de Pasos -->
+<div class="flex flex-col gap-2 pb-3 border-b border-[#303850]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-[#754BFF] text-white font-code-sm text-xs font-semibold flex items-center justify-center" id="step-badge-1">1</span>
+<span class="font-label-md text-xs font-semibold text-[#F3F5FF]" id="step-label-1">Sobre el proyecto</span>
+</div>
+<div class="w-8 h-[1px] bg-[#303850]"></div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-[#28324F] text-gray-400 font-code-sm text-xs font-semibold flex items-center justify-center" id="step-badge-2">2</span>
+<span class="font-label-md text-xs text-gray-400" id="step-label-2">Datos de contacto</span>
+</div>
+</div>
+<!-- Barra de Progreso -->
+<div class="w-full bg-[#090D18] h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-[#22D3C5] w-1/2 transition-all duration-300" id="step-bar"></div>
+</div>
+</div>
+<form class="flex flex-col gap-4" id="contact-budget-form" onsubmit="event.preventDefault();">
+<!-- PASO 1: SOBRE EL PROYECTO -->
+<div class="flex flex-col gap-4 transition-opacity duration-200" id="step-1-container">
+<!-- 1.1 Tipo de desarrollo -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-xs font-semibold text-[#F3F5FF]">Tipo de desarrollo <span class="text-[#22D3C5]">*</span></span>
+<span class="font-code-sm text-[11px] text-gray-400">Obligatorio</span>
+</div>
+<div aria-label="Tipo de desarrollo" class="grid grid-cols-1 gap-2" role="radiogroup">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="projectType" type="radio" value="Web"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]/10 flex items-center justify-between transition-all min-h-[48px]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-gray-400 peer-checked:text-[#22D3C5] text-lg" data-icon="language">language</span>
+<span class="font-body-md text-sm text-[#F3F5FF] font-medium">Web</span>
+</div>
+<div class="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#090D18] hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="projectType" type="radio" value="SaaS"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]/10 flex items-center justify-between transition-all min-h-[48px]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-gray-400 peer-checked:text-[#22D3C5] text-lg" data-icon="cloud">cloud</span>
+<span class="font-body-md text-sm text-[#F3F5FF] font-medium">SaaS</span>
+</div>
+<div class="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#090D18] hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="projectType" type="radio" value="Sistema a medida"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]/10 flex items-center justify-between transition-all min-h-[48px]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-gray-400 peer-checked:text-[#22D3C5] text-lg" data-icon="layers">layers</span>
+<span class="font-body-md text-sm text-[#F3F5FF] font-medium">Sistema a medida</span>
+</div>
+<div class="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#090D18] hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="projectType" type="radio" value="Automatización / integración"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]/10 flex items-center justify-between transition-all min-h-[48px]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-gray-400 peer-checked:text-[#22D3C5] text-lg" data-icon="account_tree">account_tree</span>
+<span class="font-body-md text-sm text-[#F3F5FF] font-medium">Automatización / integración</span>
+</div>
+<div class="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#090D18] hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="projectType" type="radio" value="Otro"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]/10 flex items-center justify-between transition-all min-h-[48px]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-gray-400 peer-checked:text-[#22D3C5] text-lg" data-icon="widgets">widgets</span>
+<span class="font-body-md text-sm text-[#F3F5FF] font-medium">Otro</span>
+</div>
+<div class="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center peer-checked:border-[#22D3C5] peer-checked:bg-[#22D3C5]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#090D18] hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+</div>
+<p class="text-[#FF6B6B] font-body-sm text-xs hidden items-center gap-1 mt-1" id="error-projectType">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Por favor selecciona un tipo de desarrollo.</span>
+</p>
+</div>
+<!-- 1.2 Presupuesto previsto -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-xs font-semibold text-[#F3F5FF]">Presupuesto previsto <span class="text-[#22D3C5]">*</span></span>
+<span class="font-code-sm text-[11px] text-gray-400">Obligatorio</span>
+</div>
+<div aria-label="Presupuesto previsto" class="flex flex-col gap-2" role="radiogroup">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio" value="unknown"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#754BFF] peer-checked:bg-[#754BFF]/10 flex items-center justify-between transition-all min-h-[46px]">
+<span class="font-body-md text-sm text-[#F3F5FF]">Aún no lo sé</span>
+<span class="font-code-sm text-xs text-gray-400">Diagnóstico previo</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio" value="defined"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#754BFF] peer-checked:bg-[#754BFF]/10 flex items-center justify-between transition-all min-h-[46px]">
+<span class="font-body-md text-sm text-[#F3F5FF]">Tengo un presupuesto</span>
+<span class="font-code-sm text-xs text-[#22D3C5]">Capacidad asignada</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio" value="discuss"/>
+<div class="p-3 rounded-xl border border-[#303850] bg-[#090D18] peer-checked:border-[#754BFF] peer-checked:bg-[#754BFF]/10 flex items-center justify-between transition-all min-h-[46px]">
+<span class="font-body-md text-sm text-[#F3F5FF]">Prefiero conversarlo</span>
+<span class="font-code-sm text-xs text-gray-400">Llamada técnica</span>
+</div>
+</label>
+</div>
+<p class="text-[#FF6B6B] font-body-sm text-xs hidden items-center gap-1 mt-1" id="error-budget">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Por favor selecciona una opción de presupuesto.</span>
+</p>
+</div>
+<!-- 1.3 Textarea opcional 2000 chars con contador -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-xs font-semibold text-[#F3F5FF]" for="description">
+                  Descripción del requerimiento
+                </label>
+<span class="font-code-sm text-xs text-gray-400" id="char-counter">0 / 2.000</span>
+</div>
+<textarea class="w-full bg-[#090D18] border border-[#303850] rounded-xl px-3.5 py-2.5 text-[#F3F5FF] placeholder:text-gray-500 focus:border-[#754BFF] focus:ring-1 focus:ring-[#754BFF] outline-none transition-colors resize-none text-sm" id="description" maxlength="2000" placeholder="Objetivo, usuarios actuales, stack técnico preferido o alcance esperado..." rows="4"></textarea>
+</div>
+<!-- Siguiente Paso -->
+<button class="w-full min-h-[48px] bg-[#754BFF] hover:bg-[#855EFF] text-white font-label-md text-sm font-semibold rounded-xl flex items-center justify-center gap-2 glow-violet active:scale-[0.98] transition-all" id="goto-step-2-btn" type="button">
+<span>Continuar al Paso 2</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- PASO 2: DATOS DE CONTACTO (Campos vacíos de inicio) -->
+<div class="hidden flex-col gap-4 transition-opacity duration-200" id="step-2-container">
+<!-- Name* -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-xs font-semibold text-[#F3F5FF]" for="fullName">
+                Nombre y apellido <span class="text-[#22D3C5]">*</span>
+</label>
+<input class="w-full min-h-[46px] bg-[#090D18] border border-[#303850] rounded-xl px-3.5 text-[#F3F5FF] placeholder:text-gray-500 focus:border-[#754BFF] focus:ring-1 focus:ring-[#754BFF] outline-none transition-colors text-sm" id="fullName" placeholder="Tu nombre completo" required="" type="text" value=""/>
+<p class="text-[#FF6B6B] font-body-sm text-xs hidden items-center gap-1 mt-0.5" id="error-fullName">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Ingresa tu nombre y apellido.</span>
+</p>
+</div>
+<!-- Email* -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-xs font-semibold text-[#F3F5FF]" for="email">
+                Correo electrónico <span class="text-[#22D3C5]">*</span>
+</label>
+<input class="w-full min-h-[46px] bg-[#090D18] border border-[#303850] rounded-xl px-3.5 text-[#F3F5FF] placeholder:text-gray-500 focus:border-[#754BFF] focus:ring-1 focus:ring-[#754BFF] outline-none transition-colors text-sm" id="email" placeholder="correo@empresa.com" required="" type="email" value=""/>
+<p class="text-[#FF6B6B] font-body-sm text-xs hidden items-center gap-1 mt-0.5" id="error-email">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Ingresa una dirección de correo válida.</span>
+</p>
+</div>
+<!-- Company -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-xs font-semibold text-[#F3F5FF]" for="company">Empresa o emprendimiento</label>
+<span class="font-code-sm text-[11px] text-gray-400">Opcional</span>
+</div>
+<input class="w-full min-h-[46px] bg-[#090D18] border border-[#303850] rounded-xl px-3.5 text-[#F3F5FF] placeholder:text-gray-500 focus:border-[#754BFF] focus:ring-1 focus:ring-[#754BFF] outline-none transition-colors text-sm" id="company" placeholder="Nombre de la empresa" type="text" value=""/>
+</div>
+<!-- Timeframe -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-xs font-semibold text-[#F3F5FF]" for="timeline">Plazo previsto de inicio</label>
+<span class="font-code-sm text-[11px] text-gray-400">Opcional</span>
+</div>
+<div class="relative">
+<select class="w-full min-h-[46px] bg-[#090D18] border border-[#303850] rounded-xl px-3.5 pr-8 text-[#F3F5FF] focus:border-[#754BFF] focus:ring-1 focus:ring-[#754BFF] outline-none transition-colors appearance-none text-sm" id="timeline">
+<option value="Lo antes posible">Lo antes posible (1 - 2 semanas)</option>
+<option value="Próximo mes">Próximo mes</option>
+<option value="Sin fecha definida">Sin fecha definida / Exploratorio</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-gray-400 pointer-events-none text-xl" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Turnstile Placeholder Contract -->
+<div class="p-3 rounded-xl bg-[#090D18] border border-[#303850] flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded border border-[#22D3C5]/40 bg-[#22D3C5]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#22D3C5] text-base" data-icon="shield">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-xs text-[#F3F5FF] font-medium">Cloudflare Turnstile</span>
+<span class="font-code-sm text-[11px] text-gray-400">Verificación no ejecutada en esta maqueta</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-500 text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<!-- Consentimiento Obligatorio (DESMARCADO) -->
+<div class="flex flex-col gap-1">
+<label class="flex items-start gap-2.5 cursor-pointer select-none">
+<input class="mt-0.5 w-4 h-4 rounded bg-[#090D18] border border-[#303850] text-[#754BFF] focus:ring-0 focus:ring-offset-0" id="consent" type="checkbox"/>
+<span class="font-body-sm text-xs text-gray-300 leading-tight">
+                  Acepto el tratamiento de mis datos para responder a esta consulta técnica. <span class="text-[#22D3C5]">*</span>
+</span>
+</label>
+<p class="text-[#FF6B6B] font-body-sm text-xs hidden items-center gap-1 mt-0.5" id="error-consent">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Debes aceptar el tratamiento para continuar.</span>
+</p>
+</div>
+<!-- Aviso Visible Obligatorio -->
+<div class="p-2.5 rounded-lg bg-[#090D18] border border-[#303850] flex items-center gap-2 text-gray-300" id="test-mode-notice">
+<span class="material-symbols-outlined text-[#22D3C5] text-base" data-icon="info">info</span>
+<span class="font-code-sm text-xs">Modo de prueba: no se enviaron correos</span>
+</div>
+<!-- Botones de Acción Paso 2 -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full min-h-[48px] bg-[#754BFF] hover:bg-[#855EFF] text-white font-label-md text-sm font-semibold rounded-xl flex items-center justify-center gap-2 glow-violet active:scale-[0.98] transition-all" id="submit-form-btn" type="button">
+<span>Probar solicitud</span>
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+<button class="w-full min-h-[44px] bg-[#090D18] border border-[#303850] text-[#F3F5FF] hover:border-gray-400 font-label-md text-sm rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all" id="back-to-step-1-btn" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+<span>Volver al Paso 1</span>
+</button>
+</div>
+</div>
+<!-- ESTADOS DEL FORMULARIO -->
+<!-- Loading -->
+<div class="hidden flex-col items-center justify-center py-6 gap-3" id="state-loading">
+<div class="w-8 h-8 border-2 border-[#754BFF] border-t-[#22D3C5] rounded-full animate-spin"></div>
+<p class="font-label-md text-sm text-[#F3F5FF] font-medium">Procesando solicitud de prueba...</p>
+<span class="font-code-sm text-xs text-gray-400">Sin llamadas externas ni endpoints activos</span>
+</div>
+<!-- Éxito -->
+<div class="hidden flex-col items-center text-center p-4 rounded-xl bg-[#22D3C5]/10 border border-[#22D3C5]/40 gap-3" id="state-success">
+<div class="w-11 h-11 rounded-full bg-[#22D3C5]/20 flex items-center justify-center text-[#22D3C5]">
+<span class="material-symbols-outlined text-2xl" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-base font-bold text-[#F3F5FF]">¡Solicitud simulada con éxito!</h3>
+<p class="font-body-sm text-xs text-gray-300">
+                La solicitud ha sido procesada en el entorno local. Se responderá formalmente dentro de las 24 horas hábiles.
+              </p>
+</div>
+<div class="w-full bg-[#090D18] rounded-lg p-2.5 border border-[#303850] text-left flex items-center justify-between">
+<span class="font-code-sm text-xs text-gray-400">Ticket: #NX-SIM-104</span>
+<span class="font-label-sm text-xs text-[#22D3C5]">Modo seguro local</span>
+</div>
+</div>
+<!-- Envío Parcial -->
+<div class="hidden flex-col p-4 rounded-xl bg-[#1E263E] border border-[#303850] gap-2" id="state-partial">
+<div class="flex items-center gap-2 text-[#754BFF]">
+<span class="material-symbols-outlined" data-icon="sync_saved_locally">sync_saved_locally</span>
+<span class="font-headline-sm text-sm font-bold text-[#F3F5FF]">Envío Parcial</span>
+</div>
+<p class="font-body-sm text-xs text-gray-300">
+              Solicitud archivada internamente; la confirmación transaccional quedó en cola de reintento.
+            </p>
+</div>
+</form>
+</section>
+<!-- INSPECCIÓN LOCAL Y ESTADOS PARA CODEX -->
+<section class="flex flex-col gap-3 bg-[#0F1424] rounded-xl p-3.5 border border-[#303850]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#22D3C5] text-lg" data-icon="terminal">terminal</span>
+<span class="font-headline-sm font-bold text-xs text-[#F3F5FF]">Toggles de Inspección Local</span>
+</div>
+<span class="font-code-sm text-[10px] text-gray-400 uppercase tracking-wider">Codex Sandbox</span>
+</div>
+<p class="font-body-sm text-xs text-gray-400">
+          Previsualiza rápidamente los distintos estados UI y las plantillas transaccionales:
+        </p>
+<!-- Botones de Sandbox -->
+<div class="grid grid-cols-2 gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-[#F3F5FF] hover:border-[#22D3C5] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('step1')" type="button">
+            Ver Paso 1
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-[#F3F5FF] hover:border-[#22D3C5] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('step2')" type="button">
+            Ver Paso 2
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-[#FF6B6B] hover:border-[#FF6B6B] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('errors')" type="button">
+            Simular Validación Error
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-[#F3F5FF] hover:border-[#22D3C5] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('loading')" type="button">
+            Simular Loading
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-[#22D3C5] hover:border-[#22D3C5] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('success')" type="button">
+            Confirmación Exitosa
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-[#151B2E] text-left font-label-sm text-xs text-gray-300 hover:border-[#22D3C5] border border-[#303850] active:scale-95 transition-all" onclick="setPrototypeState('partial')" type="button">
+            Envío Parcial
+          </button>
+</div>
+<!-- Previsualización de Emails para Codex -->
+<div class="mt-1 pt-2.5 border-t border-[#303850] flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-xs font-semibold text-[#F3F5FF]">Previsualización de Emails</span>
+<button class="text-[#22D3C5] font-label-sm text-xs hover:underline flex items-center gap-1" id="toggle-emails-btn" type="button">
+<span>Ver plantillas</span>
+<span class="material-symbols-outlined text-sm" id="email-icon">expand_more</span>
+</button>
+</div>
+<div class="hidden flex-col gap-3 pt-1" id="email-previews-container">
+<!-- Plantilla 1: Interna -->
+<div class="bg-[#090D18] p-3 rounded-xl border border-[#303850] flex flex-col gap-2 text-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-[#303850]">
+<span class="font-code-sm text-[#22D3C5] font-medium">[Simulación] Lead Interno</span>
+<span class="font-code-sm text-[10px] text-gray-400">admin-preview</span>
+</div>
+<p><strong class="text-gray-400">Asunto:</strong> [NUEVO PROYECTO] Solicitud Web recibida</p>
+<div class="p-2.5 bg-[#151B2E] rounded-lg border border-[#303850] space-y-1 text-gray-300">
+<p>• <strong>Tipo:</strong> Web</p>
+<p>• <strong>Presupuesto:</strong> Aún no lo sé</p>
+<p>• <strong>Modo:</strong> Modo de prueba activo</p>
+<p>• <strong>Turnstile:</strong> Mocked Pass (score 1.0)</p>
+</div>
+</div>
+<!-- Plantilla 2: Confirmación Cliente -->
+<div class="bg-[#090D18] p-3 rounded-xl border border-[#303850] flex flex-col gap-2 text-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-[#303850]">
+<span class="font-code-sm text-[#CEBDFF] font-medium">[Simulación] Confirmación Cliente</span>
+<span class="font-code-sm text-[10px] text-gray-400">client-preview</span>
+</div>
+<p><strong class="text-gray-400">Asunto:</strong> Nexora Studio — Confirmación de solicitud técnica</p>
+<div class="p-2.5 bg-[#151B2E] rounded-lg border border-[#303850] space-y-1 text-gray-300">
+<p>Hola,</p>
+<p>Confirmamos la recepción de tu requerimiento técnico. El análisis de factibilidad y arquitectura técnica está en proceso.</p>
+<p class="text-gray-400 pt-1">— Enrique Manterola, Nexora Studio</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CANAL DIRECTO Y POLÍTICA -->
+<section class="flex flex-col gap-3">
+<h2 class="font-title-md text-base font-bold text-[#F3F5FF]">Canal directo y atención técnica</h2>
+<div class="bg-[#151B2E] p-4 rounded-2xl border border-[#303850] flex flex-col gap-3.5">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#1E263E] flex items-center justify-center text-[#22D3C5] shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="font-label-md text-xs font-semibold text-[#F3F5FF]">Horario de análisis</p>
+<p class="font-body-sm text-xs text-gray-400">Lunes a Viernes, 09:00 - 18:00 (GMT-4). Respuestas en &lt; 24h hábiles.</p>
+</div>
+</div>
+<div class="h-[1px] bg-[#303850]/70 w-full"></div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#1E263E] flex items-center justify-center text-[#754BFF] shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="person_outline">person_outline</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-label-md text-xs font-semibold text-[#F3F5FF]">Dirección de ingeniería</p>
+<p class="font-body-sm text-xs text-gray-400">
+                Enrique Manterola lidera el diseño de sistemas y entrega de software en Nexora:
+              </p>
+<a class="inline-flex items-center gap-1 font-label-md text-xs text-[#22D3C5] hover:underline mt-0.5" href="/">
+<span>Visitar enrique.software (/)</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-[#0F1424] border border-[#303850] flex items-start gap-2.5">
+<span class="material-symbols-outlined text-gray-400 text-base mt-0.5" data-icon="lock">lock</span>
+<p class="font-body-sm text-xs text-gray-400 leading-relaxed">
+<strong>Privacidad garantizada:</strong> Tus requerimientos y datos de contacto se procesan únicamente con fines de evaluación técnica. Nexora no comercializa ni comparte información con terceros ni genera spam.
+          </p>
+</div>
+</section>
+</main>
+<!-- FOOTER CANÓNICO -->
+<footer class="bg-[#060911] border-t border-[#303850] flex flex-col w-full px-space-margin-mobile py-6 gap-5 relative z-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#22D3C5] text-lg" data-icon="terminal">terminal</span>
+<span class="font-headline-sm font-bold text-[#F3F5FF] text-base">Nexora</span>
+</div>
+<p class="font-body-sm text-xs text-gray-400">
+          Bespoke software architecture &amp; high-performance engineering.
+        </p>
+</div>
+<!-- Links Canónicos -->
+<div class="flex flex-wrap gap-y-2 gap-x-4">
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors" href="/">Portafolio</a>
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors" href="/nexora/servicios">Servicios</a>
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors" href="/nexora/proyectos">Proyectos</a>
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors" href="/nexora/nosotros">Nosotros</a>
+<a class="font-label-sm text-xs text-[#22D3C5] font-semibold" href="/nexora/contacto">Contacto</a>
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>GitHub</span>
+<span class="material-symbols-outlined text-xs" data-icon="open_in_new">open_in_new</span>
+</a>
+<a class="font-label-sm text-xs text-gray-400 hover:text-[#22D3C5] transition-colors flex items-center gap-1" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span>LinkedIn</span>
+<span class="material-symbols-outlined text-xs" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="pt-3 border-t border-[#303850]/60 flex flex-col gap-1">
+<span class="font-body-sm text-xs text-gray-400">
+          © 2024 Nexora Software Studio. Todos los derechos reservados.
+        </span>
+</div>
+</footer>
+</div>
+<!-- Scripts Funcionales -->
+<script>
+    // 1. Mobile Drawer
+    const openBtn = document.getElementById('open-drawer-btn');
+    const closeBtn = document.getElementById('close-drawer-btn');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+
+    function openDrawer() {
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        panel.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeDrawer() {
+      panel.classList.add('translate-x-full');
+      backdrop.classList.add('opacity-0');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) closeDrawer();
+      });
+    }
+
+    // 2. Contador de caracteres (máx 2000)
+    const descInput = document.getElementById('description');
+    const charCounter = document.getElementById('char-counter');
+    if (descInput && charCounter) {
+      descInput.addEventListener('input', () => {
+        charCounter.textContent = `${descInput.value.length} / 2.000`;
+      });
+    }
+
+    // 3. Navegación Multi-paso
+    const step1 = document.getElementById('step-1-container');
+    const step2 = document.getElementById('step-2-container');
+    const gotoStep2Btn = document.getElementById('goto-step-2-btn');
+    const backToStep1Btn = document.getElementById('back-to-step-1-btn');
+    const stepBadge1 = document.getElementById('step-badge-1');
+    const stepBadge2 = document.getElementById('step-badge-2');
+    const stepLabel1 = document.getElementById('step-label-1');
+    const stepLabel2 = document.getElementById('step-label-2');
+    const stepBar = document.getElementById('step-bar');
+
+    const errProjectType = document.getElementById('error-projectType');
+    const errBudget = document.getElementById('error-budget');
+
+    function showStep1() {
+      step1.classList.remove('hidden');
+      step2.classList.add('hidden');
+      hideFeedbackStates();
+      
+      stepBadge1.className = "w-6 h-6 rounded-full bg-[#754BFF] text-white font-code-sm text-xs font-semibold flex items-center justify-center";
+      stepBadge1.textContent = "1";
+      stepBadge2.className = "w-6 h-6 rounded-full bg-[#28324F] text-gray-400 font-code-sm text-xs font-semibold flex items-center justify-center";
+      stepBadge2.textContent = "2";
+      stepLabel1.className = "font-label-md text-xs font-semibold text-[#F3F5FF]";
+      stepLabel2.className = "font-label-md text-xs text-gray-400";
+      stepBar.style.width = "50%";
+    }
+
+    function showStep2() {
+      // Validar paso 1: projectType y budget
+      const projectTypeChecked = document.querySelector('input[name="projectType"]:checked');
+      const budgetChecked = document.querySelector('input[name="budget"]:checked');
+
+      let validStep1 = true;
+      if (!projectTypeChecked) {
+        errProjectType.classList.remove('hidden');
+        errProjectType.classList.add('flex');
+        validStep1 = false;
+      } else {
+        errProjectType.classList.add('hidden');
+        errProjectType.classList.remove('flex');
+      }
+
+      if (!budgetChecked) {
+        errBudget.classList.remove('hidden');
+        errBudget.classList.add('flex');
+        validStep1 = false;
+      } else {
+        errBudget.classList.add('hidden');
+        errBudget.classList.remove('flex');
+      }
+
+      if (!validStep1) return;
+
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+      hideFeedbackStates();
+
+      stepBadge1.className = "w-6 h-6 rounded-full bg-[#28324F] text-[#22D3C5] font-code-sm text-xs font-semibold flex items-center justify-center";
+      stepBadge1.innerHTML = '<span class="material-symbols-outlined text-sm">check</span>';
+      stepBadge2.className = "w-6 h-6 rounded-full bg-[#754BFF] text-white font-code-sm text-xs font-semibold flex items-center justify-center";
+      stepBadge2.textContent = "2";
+      stepLabel1.className = "font-label-md text-xs text-gray-400";
+      stepLabel2.className = "font-label-md text-xs font-semibold text-[#F3F5FF]";
+      stepBar.style.width = "100%";
+    }
+
+    if (gotoStep2Btn) gotoStep2Btn.addEventListener('click', showStep2);
+    if (backToStep1Btn) backToStep1Btn.addEventListener('click', showStep1);
+
+    // 4. Validación Paso 2 y Submit Simulado
+    const submitBtn = document.getElementById('submit-form-btn');
+    const fullNameInput = document.getElementById('fullName');
+    const emailInput = document.getElementById('email');
+    const consentInput = document.getElementById('consent');
+
+    const errName = document.getElementById('error-fullName');
+    const errEmail = document.getElementById('error-email');
+    const errConsent = document.getElementById('error-consent');
+
+    const stateLoading = document.getElementById('state-loading');
+    const stateSuccess = document.getElementById('state-success');
+    const statePartial = document.getElementById('state-partial');
+
+    function hideFeedbackStates() {
+      stateLoading.classList.add('hidden');
+      stateSuccess.classList.add('hidden');
+      statePartial.classList.add('hidden');
+      stateLoading.classList.remove('flex');
+      stateSuccess.classList.remove('flex');
+      statePartial.classList.remove('flex');
+    }
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        let valid = true;
+
+        if (!fullNameInput.value.trim()) {
+          errName.classList.remove('hidden');
+          errName.classList.add('flex');
+          valid = false;
+        } else {
+          errName.classList.add('hidden');
+          errName.classList.remove('flex');
+        }
+
+        if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
+          errEmail.classList.remove('hidden');
+          errEmail.classList.add('flex');
+          valid = false;
+        } else {
+          errEmail.classList.add('hidden');
+          errEmail.classList.remove('flex');
+        }
+
+        if (!consentInput.checked) {
+          errConsent.classList.remove('hidden');
+          errConsent.classList.add('flex');
+          valid = false;
+        } else {
+          errConsent.classList.add('hidden');
+          errConsent.classList.remove('flex');
+        }
+
+        if (valid) {
+          step2.classList.add('hidden');
+          stateLoading.classList.remove('hidden');
+          stateLoading.classList.add('flex');
+          setTimeout(() => {
+            stateLoading.classList.add('hidden');
+            stateLoading.classList.remove('flex');
+            stateSuccess.classList.remove('hidden');
+            stateSuccess.classList.add('flex');
+          }, 800);
+        }
+      });
+    }
+
+    // 5. Toggles de inspección local para Codex
+    function setPrototypeState(mode) {
+      hideFeedbackStates();
+      errProjectType.classList.add('hidden');
+      errProjectType.classList.remove('flex');
+      errBudget.classList.add('hidden');
+      errBudget.classList.remove('flex');
+      errName.classList.add('hidden');
+      errName.classList.remove('flex');
+      errEmail.classList.add('hidden');
+      errEmail.classList.remove('flex');
+      errConsent.classList.add('hidden');
+      errConsent.classList.remove('flex');
+
+      if (mode === 'step1') {
+        showStep1();
+      } else if (mode === 'step2') {
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+        stepBadge1.className = "w-6 h-6 rounded-full bg-[#28324F] text-[#22D3C5] font-code-sm text-xs font-semibold flex items-center justify-center";
+        stepBadge1.innerHTML = '<span class="material-symbols-outlined text-sm">check</span>';
+        stepBadge2.className = "w-6 h-6 rounded-full bg-[#754BFF] text-white font-code-sm text-xs font-semibold flex items-center justify-center";
+        stepBadge2.textContent = "2";
+        stepLabel1.className = "font-label-md text-xs text-gray-400";
+        stepLabel2.className = "font-label-md text-xs font-semibold text-[#F3F5FF]";
+        stepBar.style.width = "100%";
+      } else if (mode === 'errors') {
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+        errName.classList.remove('hidden');
+        errName.classList.add('flex');
+        errEmail.classList.remove('hidden');
+        errEmail.classList.add('flex');
+        errConsent.classList.remove('hidden');
+        errConsent.classList.add('flex');
+      } else if (mode === 'loading') {
+        step1.classList.add('hidden');
+        step2.classList.add('hidden');
+        stateLoading.classList.remove('hidden');
+        stateLoading.classList.add('flex');
+      } else if (mode === 'success') {
+        step1.classList.add('hidden');
+        step2.classList.add('hidden');
+        stateSuccess.classList.remove('hidden');
+        stateSuccess.classList.add('flex');
+      } else if (mode === 'partial') {
+        step1.classList.add('hidden');
+        step2.classList.add('hidden');
+        statePartial.classList.remove('hidden');
+        statePartial.classList.add('flex');
+      }
+    }
+
+    // 6. Previsualización de emails toggle
+    const toggleEmailsBtn = document.getElementById('toggle-emails-btn');
+    const emailPreviews = document.getElementById('email-previews-container');
+    const emailIcon = document.getElementById('email-icon');
+    if (toggleEmailsBtn && emailPreviews) {
+      toggleEmailsBtn.addEventListener('click', () => {
+        if (emailPreviews.classList.contains('hidden')) {
+          emailPreviews.classList.remove('hidden');
+          emailPreviews.classList.add('flex');
+          toggleEmailsBtn.firstElementChild.textContent = 'Ocultar plantillas';
+          if (emailIcon) emailIcon.textContent = 'expand_less';
+        } else {
+          emailPreviews.classList.add('hidden');
+          emailPreviews.classList.remove('flex');
+          toggleEmailsBtn.firstElementChild.textContent = 'Ver plantillas';
+          if (emailIcon) emailIcon.textContent = 'expand_more';
+        }
+      });
+    }
+  </script>
+</body></html>

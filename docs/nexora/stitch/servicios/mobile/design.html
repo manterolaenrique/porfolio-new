@@ -1,0 +1,509 @@
+<!DOCTYPE html><html class="dark" lang="es" data-nexora-artifact="design-review-only"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Nexora | Servicios | Mobile</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+
+
+<style>
+    body {
+      letter-spacing: 0px !important;
+      background-color: #090D18;
+      color: #F3F5FF;
+      font-family: 'Geist', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    /* Ambient Glow Accents */
+    .glow-violet {
+      background: radial-gradient(circle, rgba(117, 75, 255, 0.14) 0%, rgba(9, 13, 24, 0) 70%);
+    }
+    .glow-cyan {
+      background: radial-gradient(circle, rgba(34, 211, 197, 0.12) 0%, rgba(9, 13, 24, 0) 70%);
+    }
+    .glass-panel {
+      background: rgba(21, 27, 46, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(48, 56, 80, 0.6);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="./review.css"></head>
+<body class="bg-surface-container-lowest text-on-surface flex justify-center min-h-screen">
+<!-- Mobile Viewport Container (390px canonical design frame) -->
+<div class="w-full max-w-[390px] relative min-h-screen flex flex-col bg-surface-container-lowest overflow-x-hidden border-x border-outline-variant/40 shadow-2xl">
+<!-- Ambient Chromatic Blobs -->
+<div class="absolute -top-16 -right-16 w-64 h-64 glow-violet pointer-events-none rounded-full blur-3xl z-0"></div>
+<div class="absolute top-[480px] -left-20 w-72 h-72 glow-cyan pointer-events-none rounded-full blur-3xl z-0"></div>
+<div class="absolute top-[1250px] right-[-20%] w-64 h-64 glow-violet pointer-events-none rounded-full blur-3xl z-0"></div>
+<!-- SHARED COMPONENT: TopAppBar -->
+<header class="bg-surface/85 backdrop-blur-md text-primary border-b border-outline-variant/60 shadow-sm docked full-width top sticky top-0 z-50 flex justify-between items-center w-full px-space-margin-mobile py-space-sm h-14">
+<div class="flex items-center gap-space-sm">
+<a class="flex items-center gap-2" href="/">
+<span class="material-symbols-outlined text-primary text-headline-sm" data-icon="terminal">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Nexora</span>
+</a>
+</div>
+<div class="flex items-center gap-2">
+<a class="text-label-sm font-label-sm px-2.5 py-1 rounded bg-surface-container-high/60 border border-outline-variant/50 text-on-surface hover:text-tertiary transition-colors duration-150" href="/">
+          Portfolio
+        </a>
+<button aria-label="Abrir menú" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-tertiary active:scale-95 transition-all duration-150" id="menu-toggle-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- SHARED COMPONENT: NavigationDrawer (Mobile Modal Drawer) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden transition-opacity duration-300 opacity-0" id="drawer-overlay">
+<div class="fixed inset-y-0 right-0 w-full max-w-xs z-50 flex flex-col bg-surface-container border-l border-outline-variant/60 shadow-2xl translate-x-full transition-transform duration-300" id="drawer-panel">
+<div class="flex flex-col h-full justify-between p-space-margin-mobile">
+<!-- Drawer Header -->
+<div>
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/40 mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="terminal">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Nexora Studio</span>
+</div>
+<button aria-label="Cerrar menú" class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" id="menu-close-btn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Drawer Links -->
+<nav class="flex flex-col gap-1.5 font-label-md text-label-md">
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm active:scale-[0.98] transition-all duration-150" href="/nexora">
+<span class="material-symbols-outlined text-outline" data-icon="home">home</span>
+<span>Inicio</span>
+</a>
+<!-- Active state mapped precisely to /nexora/servicios (Servicios) -->
+<a class="bg-secondary-container text-on-secondary-container font-medium rounded-lg px-space-md py-space-sm flex items-center gap-space-sm active:scale-[0.98] transition-all duration-150" href="/nexora/servicios">
+<span class="material-symbols-outlined text-tertiary" data-icon="code">code</span>
+<span>Servicios</span>
+</a>
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm active:scale-[0.98] transition-all duration-150" href="/nexora/proyectos">
+<span class="material-symbols-outlined text-outline" data-icon="folder_open">folder_open</span>
+<span>Proyectos</span>
+</a>
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm active:scale-[0.98] transition-all duration-150" href="/nexora/nosotros">
+<span class="material-symbols-outlined text-outline" data-icon="groups">groups</span>
+<span>Nosotros</span>
+</a>
+<a class="text-on-surface hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm active:scale-[0.98] transition-all duration-150" href="/nexora/contacto">
+<span class="material-symbols-outlined text-outline" data-icon="mail">mail</span>
+<span>Contacto</span>
+</a>
+</nav>
+</div>
+<!-- Drawer Footer Note -->
+<div class="pt-space-md border-t border-outline-variant/40">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
+<span class="font-code-sm text-code-sm text-tertiary">Ingeniería Disponible Q3</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Software boutique de alto rendimiento para proyectos exigentes.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN CONTENT CANVAS -->
+<main class="flex-1 z-10 px-space-margin-mobile pb-space-xl">
+<!-- HERO SECTION -->
+<section class="pt-7 pb-8 flex flex-col gap-3">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-tertiary/30 bg-tertiary/10 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-tertiary">Capacidades de Ingeniería</span>
+</div>
+<!-- H1 Headline -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-surface tracking-tight mt-1">
+          Servicios de Software
+        </h1>
+<!-- Subtitle Description -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Soluciones digitales de alto nivel, arquitecturas modernas y código mantenible directamente de la mano de ingenieros especializados.
+        </p>
+<!-- Metrics Strip (Mobile Studio Aesthetic) -->
+<div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">Propio</span>
+<span class="font-label-sm text-label-sm text-outline">Código propio</span>
+</div>
+
+
+</div>
+</section>
+<!-- 5 SERVICIOS CARDS (1 Columna Móvil, touch targets >= 44px) -->
+<section class="flex flex-col gap-space-md mb-10">
+<!-- 01 / Desarrollo de aplicaciones web -->
+<article class="glass-panel rounded-xl p-space-md flex flex-col justify-between transition-all duration-200 border border-outline-variant/60 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold tracking-wider">01 / WEB APPS</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high/80 border border-outline-variant/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="web">web</span>
+</div>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface mb-2.5">
+              Desarrollo de aplicaciones web
+            </h2>
+<!-- Problem -->
+<div class="mb-3.5 bg-surface-container-lowest/60 rounded-lg p-2.5 border border-outline-variant/30">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span class="font-medium">Problema que resolvemos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Interfaces lentas, código legacy o falta de adaptabilidad responsive.
+              </p>
+</div>
+<!-- Deliverables -->
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1.5 font-medium">Entregables clave</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Frontend de alta velocidad en Next.js/React, SSR/SSG optimizado, accesibilidad y Core Web Vitals.
+              </p>
+</div>
+</div>
+<!-- CTA Button (Touch target >= 44px) -->
+<a class="h-11 w-full rounded-lg bg-surface-container-high/90 border border-outline-variant hover:border-tertiary/70 text-on-surface flex items-center justify-between px-4 font-label-md text-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/contacto?tipo=web">
+<span>Consultar por este servicio</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- 02 / Sistemas de gestión a medida -->
+<article class="glass-panel rounded-xl p-space-md flex flex-col justify-between transition-all duration-200 border border-outline-variant/60 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold tracking-wider">02 / SISTEMAS B2B</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high/80 border border-outline-variant/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+</div>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface mb-2.5">
+              Sistemas de gestión a medida
+            </h2>
+<!-- Problem -->
+<div class="mb-3.5 bg-surface-container-lowest/60 rounded-lg p-2.5 border border-outline-variant/30">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span class="font-medium">Problema que resolvemos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Herramientas desconectadas, planillas dispersas y procesos manuales propensos a error.
+              </p>
+</div>
+<!-- Deliverables -->
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1.5 font-medium">Entregables clave</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Paneles de control, portales B2B, integración con bases de datos relacionales y roles RBAC.
+              </p>
+</div>
+</div>
+<!-- CTA Button -->
+<a class="h-11 w-full rounded-lg bg-surface-container-high/90 border border-outline-variant hover:border-tertiary/70 text-on-surface flex items-center justify-between px-4 font-label-md text-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/contacto?tipo=sistema">
+<span>Consultar por este servicio</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- 03 / Desarrollo de plataformas SaaS -->
+<article class="glass-panel rounded-xl p-space-md flex flex-col justify-between transition-all duration-200 border border-primary-container/40 relative overflow-hidden group shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary-container to-tertiary"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-sm text-code-sm text-primary font-semibold tracking-wider">03 / SAAS PLATFORMS</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-fixed text-[11px] font-label-sm border border-primary-container/40">Alta Demanda</span>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface mb-2.5">
+              Desarrollo de plataformas SaaS
+            </h2>
+<!-- Problem -->
+<div class="mb-3.5 bg-surface-container-lowest/60 rounded-lg p-2.5 border border-outline-variant/30">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span class="font-medium">Problema que resolvemos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Dificultad para monetizar servicios o escalar arquitecturas multi-inquilino seguras.
+              </p>
+</div>
+<!-- Deliverables -->
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1.5 font-medium">Entregables clave</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Arquitectura multi-tenant, facturación y cobros recurrentes vía Stripe/Mercado Pago, dashboards analíticos.
+              </p>
+</div>
+</div>
+<!-- CTA Button (Primary Gradient Emphasis) -->
+<a class="h-11 w-full rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary-container flex items-center justify-between px-4 font-label-md text-label-md active:scale-[0.98] transition-all duration-150 shadow-[0_0_20px_-2px_rgba(117,75,255,0.45)]" href="/nexora/contacto?tipo=saas">
+<span class="font-medium">Consultar por este servicio</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- 04 / Automatización de procesos e integraciones -->
+<article class="glass-panel rounded-xl p-space-md flex flex-col justify-between transition-all duration-200 border border-outline-variant/60 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-container/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold tracking-wider">04 / INTEGRACIONES &amp; APIS</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high/80 border border-outline-variant/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface mb-2.5">
+              Automatización de procesos e integraciones
+            </h2>
+<!-- Problem -->
+<div class="mb-3.5 bg-surface-container-lowest/60 rounded-lg p-2.5 border border-outline-variant/30">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span class="font-medium">Problema que resolvemos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Pérdida de tiempo en tareas repetitivas y silos de información entre sistemas.
+              </p>
+</div>
+<!-- Deliverables -->
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1.5 font-medium">Entregables clave</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Conexión de APIs de terceros (CRMs, pasarelas de pago, ERPs), webhooks resilientes con colas de reintentos.
+              </p>
+</div>
+</div>
+<!-- CTA Button -->
+<a class="h-11 w-full rounded-lg bg-surface-container-high/90 border border-outline-variant hover:border-tertiary/70 text-on-surface flex items-center justify-between px-4 font-label-md text-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/contacto?tipo=automatizacion">
+<span>Consultar por este servicio</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- 05 / Mantenimiento y evolución de aplicaciones -->
+<article class="glass-panel rounded-xl p-space-md flex flex-col justify-between transition-all duration-200 border border-outline-variant/60 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-container/10 rounded-bl-full pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold tracking-wider">05 / EVOLUCIÓN CONTINUA</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high/80 border border-outline-variant/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="build">build</span>
+</div>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface mb-2.5">
+              Mantenimiento y evolución de aplicaciones
+            </h2>
+<!-- Problem -->
+<div class="mb-3.5 bg-surface-container-lowest/60 rounded-lg p-2.5 border border-outline-variant/30">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span class="font-medium">Problema que resolvemos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Sistemas obsoletos, deuda técnica acumulada y riesgos de seguridad.
+              </p>
+</div>
+<!-- Deliverables -->
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1.5 font-medium">Entregables clave</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Auditorías de código y rendimiento, refactorización gradual, monitoreo de errores, parches continuos.
+              </p>
+</div>
+</div>
+<!-- CTA Button -->
+<a class="h-11 w-full rounded-lg bg-surface-container-high/90 border border-outline-variant hover:border-tertiary/70 text-on-surface flex items-center justify-between px-4 font-label-md text-label-md active:scale-[0.98] transition-all duration-150" href="/nexora/contacto?tipo=mantenimiento">
+<span>Consultar por este servicio</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+</section>
+<!-- METODOLOGÍA DE TRABAJO (Tarjetas verticales móviles) -->
+<section class="mb-12">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Cultura de Entrega</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-4">
+          Metodología de Trabajo
+        </h2>
+<div class="flex flex-col gap-3">
+<!-- Metodología 01 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-3.5">
+<div class="w-8 h-8 shrink-0 rounded-lg bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-code-sm text-code-sm text-primary font-bold">
+              01
+            </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+                Diagnóstico inicial sin compromiso
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Evaluamos factibilidad técnica, arquitectura y stack adecuado para tu objetivo de negocio.
+              </p>
+</div>
+</div>
+<!-- Metodología 02 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-3.5">
+<div class="w-8 h-8 shrink-0 rounded-lg bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-code-sm text-code-sm text-primary font-bold">
+              02
+            </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+                Presupuesto cerrado y alcance claro
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Definición explícita de hitos sin sorpresas ni costos ocultos durante el ciclo de vida.
+              </p>
+</div>
+</div>
+<!-- Metodología 03 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-3.5">
+<div class="w-8 h-8 shrink-0 rounded-lg bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-code-sm text-code-sm text-primary font-bold">
+              03
+            </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+                Sprints semanales con demos funcionales
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Iteración continua con despliegues tangibles testeables desde la primera semana.
+              </p>
+</div>
+</div>
+<!-- Metodología 04 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-3.5 border-l-2 border-l-tertiary">
+<div class="w-8 h-8 shrink-0 rounded-lg bg-surface-container-high border border-outline-variant/60 flex items-center justify-center font-code-sm text-code-sm text-tertiary font-bold">
+              04
+            </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+                Traspaso total de código e infraestructura
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Propiedad 100% del cliente: repositorios Git, variables de entorno y cloud sin ataduras de vendor.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="rounded-2xl p-5 border border-primary-container/40 bg-gradient-to-b from-surface-container to-surface-container-lowest relative overflow-hidden text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 border border-primary-container/50 flex items-center justify-center text-primary-fixed mb-3">
+<span class="material-symbols-outlined text-[28px]" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-2">
+          ¿Listo para llevar adelante tu proyecto de software?
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[290px] mb-5">
+          Construimos arquitecturas escalables preparadas para soportar el crecimiento de tu empresa.
+        </p>
+<a class="h-12 w-full rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary-container flex items-center justify-center gap-2 font-label-md text-label-md font-semibold shadow-[0_0_24px_rgba(117,75,255,0.5)] active:scale-[0.98] transition-all duration-150" href="/nexora/contacto">
+<span>Hablemos de tu proyecto</span>
+<span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</a>
+</section>
+</main>
+<!-- SHARED COMPONENT: Footer -->
+<footer class="bg-surface-container-lowest text-primary border-t border-outline-variant/40 flat no shadows flex flex-col w-full px-space-margin-mobile py-space-xl gap-space-lg z-10">
+<!-- Brand & Mission in footer -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm" data-icon="terminal">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Nexora</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+          Estudio de ingeniería de software de alto impacto y arquitectura computacional moderna.
+        </p>
+</div>
+<!-- Links Grid based exactly on JSON: ["Portafolio", "Servicios", "Proyectos", "Nosotros", "Contacto", "GitHub", "LinkedIn"] -->
+<div class="grid grid-cols-2 gap-y-2.5 gap-x-4 font-label-sm text-label-sm pt-2 border-t border-outline-variant/30">
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 transition-colors duration-150" href="/">
+          Portafolio
+        </a>
+<a class="text-tertiary font-medium active:opacity-80 transition-colors duration-150" href="/nexora/servicios">
+          Servicios
+        </a>
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 transition-colors duration-150" href="/nexora/proyectos">
+          Proyectos
+        </a>
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 transition-colors duration-150" href="/nexora/nosotros">
+          Nosotros
+        </a>
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 transition-colors duration-150" href="/nexora/contacto">
+          Contacto
+        </a>
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 flex items-center gap-1 transition-colors duration-150" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>GitHub</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="open_in_new">open_in_new</span>
+</a>
+<a class="text-on-surface-variant hover:text-tertiary active:opacity-80 flex items-center gap-1 transition-colors duration-150" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span>LinkedIn</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<!-- Copyright text exact from JSON -->
+<div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 font-body-sm text-body-sm text-outline">
+<p>© 2024 Nexora Software Studio. Todos los derechos reservados.</p>
+<span class="font-code-sm text-code-sm text-outline/70">v2.4.0 — Latency-Optimized Architecture</span>
+</div>
+</footer>
+</div>
+<!-- Interactive JavaScript for Mobile Drawer Handling -->
+<script>
+    const toggleBtn = document.getElementById('menu-toggle-btn');
+    const closeBtn = document.getElementById('menu-close-btn');
+    const overlay = document.getElementById('drawer-overlay');
+    const panel = document.getElementById('drawer-panel');
+
+    function openDrawer() {
+      overlay.classList.remove('hidden');
+      setTimeout(() => {
+        overlay.classList.remove('opacity-0');
+        overlay.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
+      }, 10);
+    }
+
+    function closeDrawer() {
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+      overlay.classList.remove('opacity-100');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+      }, 300);
+    }
+
+    toggleBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeDrawer();
+      }
+    });
+  </script>
+
+</body></html>

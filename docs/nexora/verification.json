@@ -1,0 +1,245 @@
+{
+  "method": "Static HTML, resources, syntax, and image metadata checks. No browser rendering verification.",
+  "results": [
+    {
+      "key": "inicio-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "159f0e8f6599c3667d6a6890309e0f14c7980ff3ca69827b2344ba8faab84af3",
+      "image": {
+        "width": 2560,
+        "height": 11462
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "inicio-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "d0205f7351b4985703db9f99227926a6b44becb1fe2150a38ae1058a4c137388",
+      "image": {
+        "width": 1420,
+        "height": 11008
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "inicio-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "d6591d40608804ae3139faa2702cbac61797dbf1bb29b456bdd18c72afe10026",
+      "image": {
+        "width": 780,
+        "height": 10188
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "servicios-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "9688ca0b00fb51b1b941d1be233bb3794d82b1a42456a258f194df6b0f197268",
+      "image": {
+        "width": 2560,
+        "height": 5856
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "servicios-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "521769e75d408ef454eb62b4f936e6b81acf6d2b1a80068e01e4f02508c33f51",
+      "image": {
+        "width": 2060,
+        "height": 9266
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "servicios-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "038a20fd5aaeaceac61223edd9b25eea6573f715224b258429750705a0760d54",
+      "image": {
+        "width": 780,
+        "height": 6836
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "proyectos-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "af08c385346bea96fba5737d47c57058ef619c73d30e6dcc98dd47c33fb7494b",
+      "image": {
+        "width": 2560,
+        "height": 5434
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "proyectos-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "10d2e9d9b1efca246659eaffc55094adf6cf9f8089d8c020af92601bd2994e0a",
+      "image": {
+        "width": 780,
+        "height": 7166
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "proyectos-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "971bbedc7dcdc33696ad727b1a3d8e5c759243cb90d9e83df70d5bc0adea0315",
+      "image": {
+        "width": 780,
+        "height": 5188
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "detalle-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "87365a56bfee27407ce35eec4a231cf232b1c890abc37d5e5a1cced6c961f092",
+      "image": {
+        "width": 2560,
+        "height": 8926
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "detalle-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "7ce683bf5edb96c75b22116a51272085bdafce1ca8cbeb56499f9c5c200c0594",
+      "image": {
+        "width": 1348,
+        "height": 7882
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "detalle-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "00766bdaac80e6889e420e50a7439f532347946199f6f7c9d3e58d06cb6868ac",
+      "image": {
+        "width": 780,
+        "height": 6910
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "nosotros-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "08dc609102be3afa57568e2afa581137de86cbb8a9ed6f133ed53f9ac8215220",
+      "image": {
+        "width": 2560,
+        "height": 10480
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "nosotros-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "b267e798745c0d0ec5fb0ade3f87f3063daf4638b27fa9795f6fe15ca2b61ed9",
+      "image": {
+        "width": 780,
+        "height": 11572
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "nosotros-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "30ef0b2068dcbb915c917fc836806d9181eb1970ebc268d114d5bac1468c4e1b",
+      "image": {
+        "width": 780,
+        "height": 9080
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "contacto-desktop",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "ce9d7d52c9336f822367ca851790b52e9e176e9d3d96add2b181063762c6da0e",
+      "image": {
+        "width": 2560,
+        "height": 4456
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "contacto-tablet",
+      "errors": [],
+      "warnings": [
+        "Original Stitch screenshot viewport differs from the review frame; inspect HTML at target width"
+      ],
+      "htmlSha256": "0372baa14a0125f6c23d0b72eea6f14e42cb58e71f28add85447f2a3ffd49b45",
+      "image": {
+        "width": 780,
+        "height": 4804
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    },
+    {
+      "key": "contacto-mobile",
+      "errors": [],
+      "warnings": [],
+      "htmlSha256": "5b5efe7beabb78583c1680d510f618878918555612c6f7772ab778af65e7667e",
+      "image": {
+        "width": 780,
+        "height": 3998
+      },
+      "automatedBrowserReview": "blocked_local_file_policy",
+      "visualApproval": "pending"
+    }
+  ]
+}

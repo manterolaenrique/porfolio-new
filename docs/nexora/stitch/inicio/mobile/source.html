@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Nexora | Inicio | Mobile</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Sora:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#bea8ff",
+            "inverse-primary": "#6334ed",
+            "primary-fixed-dim": "#cbbeff",
+            "on-surface": "#dfe2f2",
+            "on-surface-variant": "#cac3d9",
+            "surface-container-low": "#171b27",
+            "on-tertiary-fixed-variant": "#00504a",
+            "tertiary-fixed": "#5ef9ea",
+            "tertiary-container": "#007d74",
+            "outline-variant": "#484456",
+            "tertiary": "#35ddce",
+            "surface-container-highest": "#313441",
+            "secondary": "#cebdff",
+            "primary-fixed": "#e7deff",
+            "inverse-surface": "#dfe2f2",
+            "surface-container": "#1b1f2b",
+            "primary": "#cbbeff",
+            "on-tertiary": "#003733",
+            "surface-container-high": "#262a36",
+            "surface-container-lowest": "#0a0e19",
+            "secondary-container": "#4f319c",
+            "on-primary-fixed": "#1e0061",
+            "on-primary": "#330098",
+            "secondary-fixed": "#e8ddff",
+            "on-secondary-fixed-variant": "#4f319c",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#754bff",
+            "on-tertiary-fixed": "#00201d",
+            "on-primary-fixed-variant": "#4b00d4",
+            "on-secondary": "#381385",
+            "on-primary-container": "#f8f2ff",
+            "background": "#0f131e",
+            "inverse-on-surface": "#2c303c",
+            "surface": "#0f131e",
+            "on-tertiary-container": "#c5fff7",
+            "outline": "#938ea2",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "surface-tint": "#cbbeff",
+            "surface-dim": "#0f131e",
+            "on-secondary-fixed": "#21005e",
+            "surface-variant": "#313441",
+            "surface-bright": "#353945",
+            "on-background": "#dfe2f2",
+            "tertiary-fixed-dim": "#35ddce",
+            "on-error": "#690005",
+            "secondary-fixed-dim": "#cebdff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "3rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Geist"],
+            "headline-lg": ["Sora"],
+            "headline-md": ["Sora"],
+            "display-hero": ["Sora"],
+            "headline-lg-mobile": ["Sora"],
+            "headline-sm": ["Sora"],
+            "label-md": ["Geist"],
+            "display-hero-mobile": ["Sora"],
+            "title-md": ["Sora"],
+            "body-sm": ["Geist"],
+            "body-lg": ["Geist"],
+            "code-sm": ["Geist"],
+            "body-md": ["Geist"]
+          },
+          "fontSize": {
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "code-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      letter-spacing: 0;
+      background-color: #090D18;
+      color: #F3F5FF;
+      font-family: 'Geist', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col items-center">
+<!-- Mobile Viewport Shell (390px bounded container for precision mobile presentation) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface flex flex-col relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Chromatic Blobs (Depth and Lighting) -->
+<div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-primary-container/15 blur-[100px] z-0"></div>
+<div class="pointer-events-none absolute top-[900px] -right-20 w-60 h-60 rounded-full bg-tertiary/10 blur-[90px] z-0"></div>
+<!-- SHARED COMPONENT: TopAppBar (Strict JSON & Style Tokens) -->
+<header class="bg-surface/85 dark:bg-surface/85 backdrop-blur-md text-primary dark:text-primary docked full-width top sticky top-0 z-50 shadow-sm dark:shadow-none flex justify-between items-center w-full px-space-margin-mobile py-space-sm h-14">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface tracking-tight" href="/nexora">Nexora</a>
+</div>
+<div class="flex items-center gap-3">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/">Portfolio</a>
+<button aria-label="Abrir menú" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface hover:text-tertiary active:scale-95 transition-transform duration-150 bg-surface-container-high/60 border border-outline-variant/60" id="open-menu-btn">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</div>
+</header>
+<!-- SHARED COMPONENT: NavigationDrawer Overlay (Strictly matching JSON specs) -->
+<div class="fixed inset-0 bg-[#090D18]/80 backdrop-blur-md z-50 hidden transition-opacity duration-200" id="drawer-backdrop">
+<nav class="fixed inset-y-0 right-0 w-full max-w-xs z-50 flex flex-col bg-surface-container dark:bg-surface-container text-primary dark:text-primary shadow-2xl dark:shadow-2xl flex flex-col h-full justify-between p-space-margin-mobile border-l border-outline-variant/60 dark:border-outline-variant/60 transform translate-x-full transition-transform duration-300 ease-out" id="nav-drawer">
+<div>
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/40 mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Nexora Studio</span>
+</div>
+<button aria-label="Cerrar menú" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-tertiary active:scale-95" id="close-menu-btn">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Drawer Links (JSON verified) -->
+<div class="flex flex-col gap-1.5">
+<!-- Active: Inicio -->
+<a class="bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container font-medium rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all" href="/nexora">
+<span class="material-symbols-outlined text-lg">home</span>
+<span>Inicio</span>
+</a>
+<a class="text-on-surface dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all" href="/nexora/servicios">
+<span class="material-symbols-outlined text-lg text-outline">code</span>
+<span>Servicios</span>
+</a>
+<a class="text-on-surface dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all" href="/nexora/proyectos">
+<span class="material-symbols-outlined text-lg text-outline">folder_open</span>
+<span>Proyectos</span>
+</a>
+<a class="text-on-surface dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all" href="/nexora/nosotros">
+<span class="material-symbols-outlined text-lg text-outline">groups</span>
+<span>Nosotros</span>
+</a>
+<a class="text-on-surface dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container-high rounded-lg px-space-md py-space-sm flex items-center gap-space-sm text-label-md font-label-md active:scale-[0.98] transition-all" href="/nexora/contacto">
+<span class="material-symbols-outlined text-lg text-outline">mail</span>
+<span>Contacto</span>
+</a>
+</div>
+</div>
+<!-- Drawer Bottom Action -->
+<div class="pt-space-md border-t border-outline-variant/40 flex flex-col gap-3">
+<a class="w-full min-h-[44px] bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2 shadow-[0_0_20px_-2px_rgba(117,75,255,0.5)] active:scale-95 transition-transform" href="/nexora/contacto">
+<span>Hablemos de tu proyecto</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="text-center font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary" href="/">Volver a Portfolio Principal</a>
+</div>
+</nav>
+</div>
+<!-- MAIN CONTENT -->
+<main class="flex-1 flex flex-col z-10">
+<!-- 1. HERO SECTION -->
+<section class="px-space-margin-mobile pt-7 pb-8 flex flex-col relative">
+<!-- Status / Pill Badge -->
+<div class="inline-flex items-center gap-2 self-start rounded-full px-3 py-1 bg-tertiary/10 border border-tertiary/30 mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-wide font-medium">Estudio de Software</span>
+</div>
+<!-- Main H1 Mobile Token -->
+<h1 class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface tracking-tight leading-tight mb-3">
+          Nexora Software Studio
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+          De tu idea a un producto digital real. Diseñamos, desarrollamos y evolucionamos aplicaciones web, plataformas SaaS y soluciones de software a medida para empresas y emprendedores.
+        </p>
+<!-- CTA Buttons Stack -->
+<div class="flex flex-col gap-3 w-full mb-8">
+<a class="w-full min-h-[44px] bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2 shadow-[0_0_20px_-2px_rgba(117,75,255,0.5)] hover:bg-[#855EFF] active:scale-[0.98] transition-all" href="/nexora/contacto">
+<span>Hablemos de tu proyecto</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="w-full min-h-[44px] bg-[#151B2E]/80 border border-outline-variant text-on-surface font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2 hover:border-[#A78BFA] hover:bg-[#1E263D]/90 active:scale-[0.98] transition-all" href="/nexora/proyectos">
+<span class="material-symbols-outlined text-base text-tertiary">layers</span>
+<span>Ver proyectos</span>
+</a>
+</div>
+<!-- Real Screenshot Media Scene (DigitalFlow) -->
+<div class="w-full flex flex-col">
+<div class="relative w-full rounded-xl overflow-hidden border border-white/10 bg-surface-container-low shadow-2xl">
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-lowest/80 border-b border-outline-variant/40">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant/70"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/70"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/70"></span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant/70">app.digitalflow.io</span>
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span>
+</div>
+<img alt="DigitalFlow Software Interface" class="w-full h-auto object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF7nwK-3EgWfWUWOLY_2EZ4Ao5pzvRZHbP5fU0O8U0On8coyT4Zx4yzDbd0wAkb7lMDfKwoZ7YzFw-ee4um80StclmuRqVAcsnmvmghyagnHc3RVoA8TWHS-021GeJOC8ktBtI82BdxisbXOGeULp0KBQJiMjjFUBpCMnU-hM-ce_5qOavdjmuSvXYQ98QSgFDYzLVkL29BWWKAyfl4m-tG6QNU-ZGQLTPcqdnhFKBduT_d1BlfeU0H8-lCHiJyGMmQZWCxFGkvNk"/>
+</div>
+<span class="mt-2 text-center font-label-sm text-label-sm text-on-surface-variant/80">DigitalFlow — Plataforma web SaaS</span>
+</div>
+</section>
+<!-- 2. SERVICIOS DESTACADOS (Compact Mobile 1-Column List) -->
+<section class="px-space-margin-mobile py-8 bg-surface-container-lowest/60 border-t border-outline-variant/30 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Especialidades</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">Soluciones y Servicios de Software</h2>
+</div>
+</div>
+<div class="flex flex-col gap-3 mt-1">
+<!-- Servicio 1 -->
+<div class="p-4 rounded-xl bg-[#151B2E]/90 border border-outline-variant/60 flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">web</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Desarrollo de aplicaciones web</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-11">
+              Next.js, React, arquitecturas orientadas a Core Web Vitals de alta velocidad y rendimiento SEO nativo.
+            </p>
+</div>
+<!-- Servicio 2 -->
+<div class="p-4 rounded-xl bg-[#151B2E]/90 border border-outline-variant/60 flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">dashboard_customize</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Sistemas de gestión a medida</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-11">
+              Portales B2B, paneles administrativos con control de accesos RBAC y automatización de reglas de negocio complejas.
+            </p>
+</div>
+<!-- Servicio 3 -->
+<div class="p-4 rounded-xl bg-[#151B2E]/90 border border-outline-variant/60 flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">cloud</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Desarrollo de plataformas SaaS</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-11">
+              Infraestructura multi-tenant segura, pasarelas de pago recurrentes con suscripciones y facturación integrada.
+            </p>
+</div>
+<!-- Servicio 4 -->
+<div class="p-4 rounded-xl bg-[#151B2E]/90 border border-outline-variant/60 flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">hub</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Automatización e integraciones</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-11">
+              Conexión de APIs REST/GraphQL, gestión de webhooks, pipelines de datos y sincronización de sistemas legacy.
+            </p>
+</div>
+<!-- Servicio 5 -->
+<div class="p-4 rounded-xl bg-[#151B2E]/90 border border-outline-variant/60 flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">monitoring</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Mantenimiento y evolución</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pl-11">
+              Auditoría de seguridad y dependencias, observabilidad en tiempo real y refactorización continua de deuda técnica.
+            </p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 mt-2 py-3 px-4 rounded-lg border border-outline-variant/50 text-tertiary font-label-md text-label-md hover:bg-surface-container transition-colors" href="/nexora/servicios">
+<span>Ver catálogo de servicios completo</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</section>
+<!-- 3. PROYECTOS DESTACADOS (Single Column Verified Cards) -->
+<section class="px-space-margin-mobile py-8 flex flex-col gap-5">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Caso de éxito</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">Proyectos Verificados</h2>
+</div>
+<div class="flex flex-col gap-5">
+<!-- Card 1: DigitalFlow -->
+<div class="rounded-xl overflow-hidden bg-[#151B2E] border border-[#303850] flex flex-col">
+<div class="relative w-full aspect-[16/9] bg-surface-container-lowest overflow-hidden">
+<img alt="DigitalFlow Platform Overview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9THi6WhfPHJ__K_Poc2yOLBBtOf12z5r8NQ8s8Qcuxt2I6GPME6TNkw1BUmKbQmSKdHyMbLqZsKGHvrXtJsmkRJQC0JSWsAWULztendNP9kVxdex5ks74Q-tpqJIuVyekBG4BSD7JSl6a6Ha6lg182pscx9ypZIGsIzxmFCUadmFaHdbv7e6PPHCMuCkFRcjpv92YWvPgdfQ0zXRXKhhzTZrUfDXpA4VVtru9qRYvmbm3pLMElRn1PXJU2l6Feh0QI5GhRyb7fEQ"/>
+<div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/80 border border-tertiary/40 backdrop-blur-sm text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Producción</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">DigitalFlow</h3>
+<span class="font-label-sm text-label-sm text-primary">SaaS B2B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Plataforma integral de gestión operativa y control de flujos de trabajo en tiempo real con analítica unificada.
+              </p>
+<div class="flex flex-wrap gap-1.5 my-1">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Next.js</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">TypeScript</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Tailwind</span>
+</div>
+<a class="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md pt-1 hover:underline" href="/nexora/proyectos/digitalflow">
+<span>Ver caso de estudio</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Herramientas de Guitarra -->
+<div class="rounded-xl overflow-hidden bg-[#151B2E] border border-[#303850] flex flex-col">
+<div class="relative w-full aspect-[16/9] bg-surface-container-lowest overflow-hidden">
+<img alt="Herramientas de Guitarra Web App" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD6krfNSrZPzTloiwm0_PjFU0hOdNZaw-nzoLcSpTOPazDkfTpCabB961J7uVi7hVLv5TKOhVKD1TkLM_fqQywzLbr2G77THu7oEPJo-3FWJO1Ci4wZNTXBgO7ZvAUL6mYxJJTSJtQltZc2XqLu7mkRrsrwUpkKt4ZnjBXwx7g1eVVmiaOMaWVXZKWFHZHvnwKKRZlGC9rh505Fpi6ZpOxY6ZqVMygB1ZfikGarJ23IpxPPMtm3WiuRnvOXkjnRnkwZm9Tqr5BUcE"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Herramientas de Guitarra</h3>
+<span class="font-label-sm text-label-sm text-tertiary">Interactive Web</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Suite interactiva para músicos con cálculo de afinaciones armónicas, escalador digital y sintetizador de diapasón.
+              </p>
+<div class="flex flex-wrap gap-1.5 my-1">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Web Audio API</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">React</span>
+</div>
+<a class="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md pt-1 hover:underline" href="/nexora/proyectos">
+<span>Ver detalles del proyecto</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Sitio para Bandas Musicales -->
+<div class="rounded-xl overflow-hidden bg-[#151B2E] border border-[#303850] flex flex-col">
+<div class="relative w-full aspect-[16/9] bg-surface-container-lowest overflow-hidden">
+<img alt="Sitio para Bandas Musicales" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2CB-_GJTxZOosBVQU5AQZM5ONuSeE51CTkx8H939TsjzzokQTRSIchba-HQsw-_gnDFJB8VW8aXs2W3WQSTlYoatbzGpoMOnOMLqVYVB1tPmQLn7cWnn01kHvVeBNeBiiHfBzJlN--z3K5aEzH7HrItTMwKONdqUWUgBziCf5bN_D6WRnLB6qvXWg_T_1qKlYaikDaQVMhSqKwMvfmay6V2nkEQZt4W17WkVKaWtFiz-QqsgUcZix4ZDCxwqgaAI0AV6KxG-0qg4"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Sitio para Bandas Musicales</h3>
+<span class="font-label-sm text-label-sm text-secondary">Media Platform</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Plataforma de alta identidad artística con reproductor multimedia optimizado, tour dates y venta directa de merchandising.
+              </p>
+<div class="flex flex-wrap gap-1.5 my-1">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Headless CMS</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Performance 99+</span>
+</div>
+<a class="inline-flex items-center gap-1 text-tertiary font-label-md text-label-md pt-1 hover:underline" href="/nexora/proyectos">
+<span>Explorar arquitectura</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. PROCESO DE TRABAJO (Vertical Mobile Sequence) -->
+<section class="px-space-margin-mobile py-8 bg-surface-container-lowest/70 border-y border-outline-variant/30 flex flex-col gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Metodología</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">Proceso de Trabajo</h2>
+</div>
+<div class="relative pl-6 flex flex-col gap-6 mt-2">
+<!-- Vertical Line -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-gradient-to-b from-primary via-tertiary to-outline-variant"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0.5 w-4 h-4 rounded-full bg-surface border-2 border-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">1. Diagnóstico Técnico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Análisis exhaustivo de viabilidad, definición de stack, restricciones de infraestructura y modelado de datos inicial.
+            </p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0.5 w-4 h-4 rounded-full bg-surface border-2 border-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">2. Propuesta y Arquitectura</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Planificación modular, diagramas de arquitectura de software, estimación de hitos y acuerdos de rendimiento garantizados.
+            </p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0.5 w-4 h-4 rounded-full bg-surface border-2 border-tertiary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">3. Desarrollo Iterativo con Demos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Sprints bi-semanales con despliegues en entornos de staging. Acceso directo al código y feedback continuo.
+            </p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0.5 w-4 h-4 rounded-full bg-surface border-2 border-tertiary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">4. Entrega y Soporte</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Puesta en producción con CI/CD automatizado, transferencia técnica integral y monitoreo continuo de fiabilidad.
+            </p>
+</div>
+</div>
+</section>
+<!-- 5. DIRECCIÓN TÉCNICA (Strict Text Attribution, No fake portrait) -->
+<section class="px-space-margin-mobile py-8 flex flex-col gap-3">
+<div class="p-5 rounded-xl bg-[#151B2E] border border-[#303850] relative overflow-hidden">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Liderazgo de Ingeniería</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Enrique Manterola</h3>
+<p class="font-label-md text-label-md text-tertiary mt-0.5 mb-3">Fundador & Lead Software Architect</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+            Especialista en desarrollo web moderno, arquitectura de sistemas y aplicaciones full-stack de alto rendimiento. Conduce cada proyecto desde la conceptualización técnica hasta el despliegue final en producción.
+          </p>
+<a class="inline-flex items-center gap-1.5 text-on-surface font-label-md text-label-md font-medium hover:text-tertiary transition-colors" href="/">
+<span>Explorar portfolio personal del fundador</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 6. FINAL CTA (Hacia /nexora/contacto) -->
+<section class="px-space-margin-mobile py-8 my-2">
+<div class="p-6 rounded-2xl bg-gradient-to-b from-[#1E263D] to-[#151B2E] border border-outline-variant/60 relative overflow-hidden flex flex-col items-center text-center">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 border border-primary-container/40 flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+            ¿Tienes un proyecto en mente?
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            Conversemos sobre su arquitectura técnica, alcances de ingeniería y estimación de desarrollo sin compromiso.
+          </p>
+<a class="w-full min-h-[44px] bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2 shadow-[0_0_20px_-2px_rgba(117,75,255,0.5)] active:scale-95 transition-all" href="/nexora/contacto">
+<span>Hablemos de tu proyecto</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- SHARED COMPONENT: Footer (Verbatim casing & links) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary w-full border-t border-outline-variant/40 dark:border-outline-variant/40 flex flex-col w-full px-space-margin-mobile py-space-xl gap-space-lg">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Nexora</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estudio de desarrollo de software a medida y plataformas digitales.</p>
+</div>
+<!-- Links Grid -->
+<div class="flex flex-wrap gap-y-2.5 gap-x-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/">Portafolio</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/nexora/servicios">Servicios</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/nexora/proyectos">Proyectos</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/nexora/nosotros">Nosotros</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="/nexora/contacto">Contacto</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="https://github.com/manterolaenrique" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary dark:hover:text-tertiary transition-colors duration-150" href="https://www.linkedin.com/in/enrique-manterola-8bb572189/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-outline">© 2024 Nexora Software Studio. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+<!-- Interactive JavaScript for Mobile Drawer -->
+<script>
+    const openBtn = document.getElementById('open-menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const drawer = document.getElementById('nav-drawer');
+
+    function openMenu() {
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    openBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeMenu();
+    });
+  </script>
+</body></html>

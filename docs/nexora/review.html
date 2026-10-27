@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexora | Revision visual</title>
+  <style>
+    * { box-sizing: border-box; letter-spacing: 0; }
+    body { margin: 0; background: #0b1017; color: #edf3f7; font: 15px/1.5 system-ui, sans-serif; }
+    a { color: #68e4d2; text-underline-offset: 3px; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 2px solid #68e4d2; outline-offset: 4px; }
+    header { padding: 24px 28px; border-bottom: 1px solid #303a45; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+    h1 { font-size: 25px; margin: 0; }
+    header p { margin: 3px 0 0; color: #a8b7c5; }
+    .status { font-size: 13px; color: #f4d378; }
+    .workspace { display: grid; grid-template-columns: 200px minmax(0,1fr); }
+    aside { padding: 20px 12px; border-right: 1px solid #303a45; }
+    aside button { display: block; width: 100%; min-height: 44px; padding: 10px 14px; background: transparent; border: 0; text-align: left; border-radius: 4px; }
+    button[aria-pressed="true"] { background: #243239; color: #8df0df; }
+    aside footer { padding: 22px 14px; display: grid; gap: 10px; font-size: 13px; }
+    main { min-width: 0; padding: 24px; }
+    .toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 18px; }
+    h2 { margin: 0; font-size: 21px; }
+    #route { color: #a8b7c5; font-family: monospace; margin: 3px 0 0; overflow-wrap: anywhere; }
+    .devices { display: flex; border: 1px solid #41505b; border-radius: 4px; padding: 3px; }
+    .devices button { background: transparent; border: 0; min-height: 40px; padding: 7px 13px; border-radius: 2px; }
+    .devices button[aria-pressed="true"] { background: #243239; }
+    .links { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 14px; }
+    .canvas { height: 74vh; min-height: 480px; background: #18212a; border: 1px solid #303a45; overflow: auto; padding: 16px; }
+    .canvas iframe { display: block; height: 1100px; max-width: none; margin: auto; border: 0; background: #090d18; }
+    #caption { font-size: 13px; color: #a8b7c5; margin: 10px 0 0; }
+    .note { border-top: 1px solid #303a45; padding-top: 18px; color: #a8b7c5; font-size: 13px; }
+    @media (max-width: 700px) {
+      header, main { padding: 18px; }
+      .workspace { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid #303a45; padding: 8px; }
+      aside nav { display: flex; flex-wrap: wrap; }
+      aside button { width: auto; padding: 8px 12px; }
+      aside footer { display: flex; flex-wrap: wrap; padding: 10px 12px; }
+      .canvas { height: 65vh; padding: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>Nexora Software Studio</h1><p>Entrega visual de Stitch. Seis paginas, tres dispositivos.</p></div>
+    <span class="status">Pendiente de aprobacion visual</span>
+  </header>
+  <div class="workspace">
+    <aside>
+      <nav aria-label="Paginas" id="pages"></nav>
+      <footer>
+        <a href="https://stitch.withgoogle.com/projects/2133477259622614950" target="_blank" rel="noreferrer">Abrir Stitch</a>
+        <a href="overview.png">Vista de conjunto</a>
+        <a href="PLAN.md">Plan definitivo</a>
+        <a href="ANIMATIONS.md">Cinco animaciones</a>
+        <a href="manifest.json">Manifiesto</a>
+      </footer>
+    </aside>
+    <main>
+      <div class="toolbar">
+        <div><h2 id="title">Inicio</h2><p id="route">/nexora</p></div>
+        <div class="devices" role="group" aria-label="Dispositivo">
+          <button data-device="desktop" aria-pressed="true">Desktop</button>
+          <button data-device="tablet" aria-pressed="false">Tablet</button>
+          <button data-device="mobile" aria-pressed="false">Mobile</button>
+        </div>
+      </div>
+      <div class="links"><a id="html-link" target="_blank" rel="noreferrer">Abrir HTML de revision</a><a id="image-link" target="_blank" rel="noreferrer">Captura original de Stitch</a></div>
+      <div class="canvas"><iframe id="screen" title="Inicio de Nexora, referencia desktop" sandbox="allow-scripts"></iframe></div>
+      <p id="caption"></p>
+      <p class="note">Maquetas de revision, sin conexion a correo ni al backend. El HTML usa los recursos reales del portfolio. Las capturas originales de Stitch se conservan como referencias de composicion y pueden mostrar imagenes generadas. Consultar README.md para el alcance de la verificacion.</p>
+    </main>
+  </div>
+  <script>
+    const pages = [
+      { key: 'inicio', title: 'Inicio', route: '/nexora' },
+      { key: 'servicios', title: 'Servicios', route: '/nexora/servicios' },
+      { key: 'proyectos', title: 'Proyectos', route: '/nexora/proyectos' },
+      { key: 'detalle', title: 'Detalle', route: '/nexora/proyectos/[slug]' },
+      { key: 'nosotros', title: 'Sobre Nexora', route: '/nexora/nosotros' },
+      { key: 'contacto', title: 'Contacto', route: '/nexora/contacto' },
+    ];
+    let page = 'inicio';
+    let device = 'desktop';
+    const nav = document.getElementById('pages');
+    for (const item of pages) {
+      const button = document.createElement('button');
+      button.textContent = item.title;
+      button.dataset.page = item.key;
+      button.addEventListener('click', () => { page = item.key; render(); });
+      nav.append(button);
+    }
+    for (const button of document.querySelectorAll('[data-device]')) {
+      button.addEventListener('click', () => { device = button.dataset.device; render(); });
+    }
+    function render() {
+      const item = pages.find(item => item.key === page);
+      const prefix = 'stitch/' + page + '/' + device + '/';
+      document.getElementById('title').textContent = item.title;
+      document.getElementById('route').textContent = item.route;
+      const image = document.getElementById('screen');
+      image.src = prefix + 'design.html';
+      image.title = item.title + ' de Nexora, referencia ' + device;
+      image.style.width = (device === 'desktop' ? 1440 : device === 'tablet' ? 768 : 390) + 'px';
+      document.getElementById('html-link').href = prefix + 'design.html';
+      document.getElementById('image-link').href = prefix + 'screen.png';
+      document.getElementById('caption').textContent = item.title + ' / ' + device + ' / referencia pendiente de aprobacion';
+      for (const button of document.querySelectorAll('[data-page]')) button.setAttribute('aria-pressed', String(button.dataset.page === page));
+      for (const button of document.querySelectorAll('[data-device]')) button.setAttribute('aria-pressed', String(button.dataset.device === device));
+      history.replaceState(null, '', '#' + page + '-' + device);
+    }
+    const initial = location.hash.slice(1).split('-');
+    if (pages.some(item => item.key === initial[0])) page = initial[0];
+    if (['desktop', 'tablet', 'mobile'].includes(initial[1])) device = initial[1];
+    render();
+  </script>
+</body>
+</html>

@@ -8,7 +8,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export default defineConfig({
   name: 'default',
-  title: 'Enrique Manterola Portfolio',
+  title: `Portfolio y Nexora · ${dataset === 'production' ? 'PRODUCCIÓN' : 'DEV'}`,
   
   projectId,
   dataset,
@@ -21,6 +21,7 @@ export default defineConfig({
         S.list()
           .title('Contenido')
           .items([
+            S.listItem().title('Portfolio').child(S.list().title('Portfolio').items([
             S.listItem()
               .title('Configuración del Sitio')
               .child(
@@ -63,6 +64,12 @@ export default defineConfig({
             S.documentTypeListItem('skillGroup').title('Grupos de Skills'),
             S.documentTypeListItem('skill').title('Skills'),
             S.documentTypeListItem('socialLink').title('Redes Sociales'),
+            ])),
+            S.listItem().title('Nexora').child(S.list().title('Nexora Software Studio').items([
+              S.listItem().title('Configuración').child(S.document().schemaType('nexoraSettings').documentId('nexoraSettings')),
+              S.documentTypeListItem('nexoraService').title('Servicios'),
+              S.documentTypeListItem('nexoraProject').title('Proyectos comerciales'),
+            ])),
           ]),
     }),
     visionTool(),
@@ -70,5 +77,11 @@ export default defineConfig({
   
   schema: {
     types: schemaTypes,
+  },
+  document: {
+    newDocumentOptions: (options) => options.filter(option => option.templateId !== 'nexoraSettings'),
+    actions: (actions, context) => context.schemaType === 'nexoraSettings'
+      ? actions.filter(action => action.action !== 'duplicate' && action.action !== 'delete')
+      : actions,
   },
 })

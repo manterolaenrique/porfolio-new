@@ -16,7 +16,8 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: process.env.NODE_ENV === 'production',
+  // Next.js caches pages; read the source API so a publish webhook cannot cache stale CDN data.
+  useCdn: false,
   token: process.env.SANITY_READ_TOKEN,
   perspective: 'published',
 })
