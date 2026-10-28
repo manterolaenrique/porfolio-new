@@ -1,4 +1,5 @@
 import { defineType } from 'sanity'
+import ProjectImageInput from '../components/ProjectImageInput'
 
 export default defineType({
   name: 'project',
@@ -59,6 +60,8 @@ export default defineType({
       name: 'thumbnail',
       title: 'Imagen Principal',
       type: 'image',
+      components: { input: ProjectImageInput },
+      description: 'Usá Reemplazar imagen principal para cargar otra imagen. Después pulsá Publicar. Si el proyecto está relacionado con Nexora, allí también se actualizará.',
       options: {
         hotspot: true,
       },

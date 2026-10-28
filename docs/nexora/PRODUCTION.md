@@ -15,6 +15,10 @@ Para cambiar textos, imágenes, servicios, proyectos o el número de WhatsApp de
 
 El número se administra en **Portfolio → Información de Contacto → WhatsApp (portfolio y Nexora)**. Nexora usa ese dato compartido, no un número fijo en código o una variable de entorno.
 
+La portada de un proyecto se cambia en **Portfolio → Proyectos → Imagen Principal → Reemplazar imagen principal**. La imagen anterior se conserva hasta que la nueva termina de subir; luego se debe pulsar **Publicar**. Se reinician el recorte y el punto de interés para poder ajustarlos a la nueva imagen. Los proyectos comerciales relacionados de Nexora reutilizan esta misma portada.
+
+El favicon del sitio usa el logo original de Nexora, conservado en `public/nexora/logo.png`. Los archivos `src/app/favicon.ico`, `icon.png` y `apple-icon.png` son sus variantes para pestañas y accesos móviles, compartidas por el portfolio y Nexora.
+
 ## Separación de entornos
 
 Producción lee `production`. Docker, Development y Preview usan `development`. Publicar en DEV no modifica producción ni copia automáticamente el contenido entre datasets.
